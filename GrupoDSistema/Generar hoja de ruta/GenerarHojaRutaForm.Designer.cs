@@ -36,7 +36,7 @@
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(134, 56);
+            comboBox1.Location = new Point(226, 56);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(227, 23);
             comboBox1.TabIndex = 0;
@@ -46,7 +46,7 @@
             groupBox1.Controls.Add(comboBox1);
             groupBox1.Location = new Point(12, 12);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(398, 377);
+            groupBox1.Size = new Size(502, 465);
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
             groupBox1.Text = "Programación del despacho";
