@@ -70,7 +70,7 @@
             groupBox1.Controls.Add(comboBox1);
             groupBox1.Location = new Point(12, 12);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(803, 771);
+            groupBox1.Size = new Size(803, 1063);
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
             groupBox1.Text = "Programación del despacho";
@@ -184,7 +184,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(841, 788);
+            ClientSize = new Size(841, 1087);
             Controls.Add(groupBox1);
             Name = "GenerarHojaRutaForm";
             Text = "Generación de hoja de ruta";
