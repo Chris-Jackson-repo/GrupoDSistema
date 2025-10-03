@@ -1,8 +1,8 @@
 namespace GrupoDSistema
 {
-    public partial class Form1 : Form
+    public partial class GenerarHojaRutaForm : Form
     {
-        public Form1()
+        public GenerarHojaRutaForm()
         {
             InitializeComponent();
         }

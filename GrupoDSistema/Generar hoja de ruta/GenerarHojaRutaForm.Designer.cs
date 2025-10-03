@@ -1,6 +1,6 @@
 ﻿namespace GrupoDSistema
 {
-    partial class Form1
+    partial class GenerarHojaRutaForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,32 +28,44 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            comboBox1 = new ComboBox();
+            groupBox1 = new GroupBox();
+            groupBox1.SuspendLayout();
             SuspendLayout();
             // 
-            // dataGridView1
+            // comboBox1
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(174, 77);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(240, 150);
-            dataGridView1.TabIndex = 0;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(134, 56);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(227, 23);
+            comboBox1.TabIndex = 0;
             // 
-            // Form1
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(comboBox1);
+            groupBox1.Location = new Point(12, 12);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(398, 377);
+            groupBox1.TabIndex = 1;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Programación del despacho";
+            // 
+            // GenerarHojaRutaForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(628, 714);
-            Controls.Add(dataGridView1);
-            Name = "Form1";
-            Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Controls.Add(groupBox1);
+            Name = "GenerarHojaRutaForm";
+            Text = "Generación de hoja de ruta";
+            groupBox1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
 
-        private DataGridView dataGridView1;
+        private ComboBox comboBox1;
+        private GroupBox groupBox1;
     }
 }
