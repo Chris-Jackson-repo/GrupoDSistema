@@ -16,5 +16,10 @@ namespace GrupoDSistema.Rendir_hoja_de_ruta
         {
             InitializeComponent();
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
