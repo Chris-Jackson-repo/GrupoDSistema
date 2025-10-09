@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            ListViewItem listViewItem10 = new ListViewItem("Fecha");
-            ListViewItem listViewItem11 = new ListViewItem("Cantidad");
-            ListViewItem listViewItem12 = new ListViewItem("Tipo");
-            ListViewItem listViewItem13 = new ListViewItem("Peso");
-            ListViewItem listViewItem14 = new ListViewItem("Largo");
-            ListViewItem listViewItem15 = new ListViewItem("Ancho");
-            ListViewItem listViewItem16 = new ListViewItem("Profundidad");
-            ListViewItem listViewItem17 = new ListViewItem("Entrega en");
-            ListViewItem listViewItem18 = new ListViewItem("Num Tracking");
+            ListViewItem listViewItem28 = new ListViewItem("Fecha");
+            ListViewItem listViewItem29 = new ListViewItem("Cantidad");
+            ListViewItem listViewItem30 = new ListViewItem("Tipo");
+            ListViewItem listViewItem31 = new ListViewItem("Peso");
+            ListViewItem listViewItem32 = new ListViewItem("Largo");
+            ListViewItem listViewItem33 = new ListViewItem("Ancho");
+            ListViewItem listViewItem34 = new ListViewItem("Profundidad");
+            ListViewItem listViewItem35 = new ListViewItem("Entrega en");
+            ListViewItem listViewItem36 = new ListViewItem("Num Tracking");
             label1 = new Label();
             groupBox1 = new GroupBox();
             textBox3 = new TextBox();
@@ -87,6 +87,7 @@
             label7 = new Label();
             textBox4 = new TextBox();
             label8 = new Label();
+            label9 = new Label();
             groupBox1.SuspendLayout();
             groupBox3.SuspendLayout();
             groupBox4.SuspendLayout();
@@ -219,7 +220,7 @@
             // listView1
             // 
             listView1.Columns.AddRange(new ColumnHeader[] { Tipo, columnHeader1 });
-            listView1.Items.AddRange(new ListViewItem[] { listViewItem10, listViewItem11, listViewItem12, listViewItem13, listViewItem14, listViewItem15, listViewItem16, listViewItem17, listViewItem18 });
+            listView1.Items.AddRange(new ListViewItem[] { listViewItem28, listViewItem29, listViewItem30, listViewItem31, listViewItem32, listViewItem33, listViewItem34, listViewItem35, listViewItem36 });
             listView1.Location = new Point(40, 170);
             listView1.Name = "listView1";
             listView1.Size = new Size(1109, 156);
@@ -467,7 +468,7 @@
             // 
             // button3
             // 
-            button3.Location = new Point(1101, 889);
+            button3.Location = new Point(1101, 990);
             button3.Name = "button3";
             button3.Size = new Size(112, 34);
             button3.TabIndex = 27;
@@ -476,7 +477,7 @@
             // 
             // button4
             // 
-            button4.Location = new Point(921, 889);
+            button4.Location = new Point(921, 990);
             button4.Name = "button4";
             button4.Size = new Size(168, 34);
             button4.TabIndex = 26;
@@ -512,7 +513,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(439, 51);
+            label6.Location = new Point(427, 51);
             label6.Name = "label6";
             label6.Size = new Size(96, 25);
             label6.TabIndex = 30;
@@ -529,7 +530,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(659, 51);
+            label7.Location = new Point(646, 51);
             label7.Name = "label7";
             label7.Size = new Size(97, 25);
             label7.TabIndex = 32;
@@ -552,11 +553,21 @@
             label8.TabIndex = 34;
             label8.Text = "Profundidad (cm)";
             // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(537, 912);
+            label9.Name = "label9";
+            label9.Size = new Size(181, 25);
+            label9.TabIndex = 23;
+            label9.Text = "TOTAL TARIFA $00.00";
+            // 
             // ImposicionForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1238, 942);
+            ClientSize = new Size(1238, 1050);
+            Controls.Add(label9);
             Controls.Add(button3);
             Controls.Add(groupBox4);
             Controls.Add(button4);
@@ -572,6 +583,7 @@
             groupBox4.ResumeLayout(false);
             groupBox4.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -626,5 +638,6 @@
         private Label label6;
         private TextBox textBox4;
         private Label label8;
+        private Label label9;
     }
 }
