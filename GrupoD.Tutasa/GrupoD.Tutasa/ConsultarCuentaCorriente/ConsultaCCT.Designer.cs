@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
+            textBox6 = new TextBox();
+            label6 = new Label();
+            button3 = new Button();
+            button2 = new Button();
             textBox5 = new TextBox();
             label5 = new Label();
             dataGridView1 = new DataGridView();
@@ -47,10 +51,6 @@
             button1 = new Button();
             textBox1 = new TextBox();
             label1 = new Label();
-            button2 = new Button();
-            button3 = new Button();
-            label6 = new Label();
-            textBox6 = new TextBox();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -79,6 +79,40 @@
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Cuenta Corriente";
+            // 
+            // textBox6
+            // 
+            textBox6.Location = new Point(396, 71);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(146, 23);
+            textBox6.TabIndex = 22;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(296, 74);
+            label6.Name = "label6";
+            label6.Size = new Size(72, 15);
+            label6.TabIndex = 21;
+            label6.Text = "Razon social";
+            // 
+            // button3
+            // 
+            button3.Location = new Point(482, 598);
+            button3.Name = "button3";
+            button3.Size = new Size(136, 23);
+            button3.TabIndex = 20;
+            button3.Text = "EXPORTAR";
+            button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(316, 598);
+            button2.Name = "button2";
+            button2.Size = new Size(136, 23);
+            button2.TabIndex = 19;
+            button2.Text = "CERRAR";
+            button2.UseVisualStyleBackColor = true;
             // 
             // textBox5
             // 
@@ -207,46 +241,11 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(319, 33);
+            label1.Location = new Point(327, 33);
             label1.Name = "label1";
             label1.Size = new Size(29, 15);
             label1.TabIndex = 7;
             label1.Text = "Cuit";
-            // 
-            // button2
-            // 
-            button2.Location = new Point(316, 598);
-            button2.Name = "button2";
-            button2.Size = new Size(136, 23);
-            button2.TabIndex = 19;
-            button2.Text = "CERRAR";
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            button3.Location = new Point(482, 598);
-            button3.Name = "button3";
-            button3.Size = new Size(136, 23);
-            button3.TabIndex = 20;
-            button3.Text = "EXPORTAR";
-            button3.UseVisualStyleBackColor = true;
-            //button3.Click += this.button3_Click;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(296, 74);
-            label6.Name = "label6";
-            label6.Size = new Size(72, 15);
-            label6.TabIndex = 21;
-            label6.Text = "Razon social";
-            // 
-            // textBox6
-            // 
-            textBox6.Location = new Point(396, 71);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(146, 23);
-            textBox6.TabIndex = 22;
             // 
             // ConsultaCCT
             // 
