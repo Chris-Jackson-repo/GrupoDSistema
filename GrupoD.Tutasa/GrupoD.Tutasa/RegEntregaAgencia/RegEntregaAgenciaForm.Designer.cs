@@ -1,6 +1,6 @@
 ﻿namespace GrupoD.Tutasa.RegEntregaAgencia
 {
-    partial class EstadoActualLabel
+    partial class RegEntregaAgenciaForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -33,11 +33,7 @@
             DatosEncomiendaLabel = new Label();
             FechaLlegadaAgenciaLabel = new Label();
             FechaLlegadaAgenciaDateTimePicker = new DateTimePicker();
-            EstadoActLabel = new Label();
-            EstadoActualCombobox = new ComboBox();
             DatosRetiranteLabel = new Label();
-            RazonSocialLabel = new Label();
-            RazonSocialTextbox = new TextBox();
             NomApRetiranteLabel = new Label();
             TelefonoRetiranteLabel = new Label();
             MailRetiranteLabel = new Label();
@@ -48,11 +44,10 @@
             CancelarButton = new Button();
             FechaRetiroLabel = new Label();
             FechaRetiroDateTimePicker = new DateTimePicker();
-            DatosClienteLabel = new Label();
-            MailClienteLabel = new Label();
-            MailClienteTextBox = new TextBox();
-            TelefonoClienteLabel = new Label();
-            TelefonoClienteTextBox = new TextBox();
+            EstadoActualLabel = new Label();
+            EstEnCaminoLabel = new Label();
+            EstEnAgenciaLabel = new Label();
+            EstEntregadoLabel = new Label();
             SuspendLayout();
             // 
             // NumeroGuiaLabel
@@ -79,7 +74,7 @@
             // 
             DatosEncomiendaLabel.AutoSize = true;
             DatosEncomiendaLabel.Font = new Font("Segoe UI", 12F);
-            DatosEncomiendaLabel.Location = new Point(25, 294);
+            DatosEncomiendaLabel.Location = new Point(25, 195);
             DatosEncomiendaLabel.Name = "DatosEncomiendaLabel";
             DatosEncomiendaLabel.Size = new Size(222, 28);
             DatosEncomiendaLabel.TabIndex = 2;
@@ -89,7 +84,7 @@
             // 
             FechaLlegadaAgenciaLabel.AutoSize = true;
             FechaLlegadaAgenciaLabel.Font = new Font("Segoe UI", 8F);
-            FechaLlegadaAgenciaLabel.Location = new Point(25, 341);
+            FechaLlegadaAgenciaLabel.Location = new Point(33, 240);
             FechaLlegadaAgenciaLabel.Name = "FechaLlegadaAgenciaLabel";
             FechaLlegadaAgenciaLabel.Size = new Size(171, 19);
             FechaLlegadaAgenciaLabel.TabIndex = 3;
@@ -98,65 +93,26 @@
             // FechaLlegadaAgenciaDateTimePicker
             // 
             FechaLlegadaAgenciaDateTimePicker.Font = new Font("Segoe UI", 8F);
-            FechaLlegadaAgenciaDateTimePicker.Location = new Point(219, 341);
+            FechaLlegadaAgenciaDateTimePicker.Location = new Point(219, 240);
             FechaLlegadaAgenciaDateTimePicker.Name = "FechaLlegadaAgenciaDateTimePicker";
             FechaLlegadaAgenciaDateTimePicker.Size = new Size(292, 25);
             FechaLlegadaAgenciaDateTimePicker.TabIndex = 4;
-            // 
-            // EstadoActLabel
-            // 
-            EstadoActLabel.AutoSize = true;
-            EstadoActLabel.Font = new Font("Segoe UI", 8F);
-            EstadoActLabel.Location = new Point(506, 42);
-            EstadoActLabel.Name = "EstadoActLabel";
-            EstadoActLabel.Size = new Size(90, 19);
-            EstadoActLabel.TabIndex = 5;
-            EstadoActLabel.Text = "Estado actual";
-            // 
-            // EstadoActualCombobox
-            // 
-            EstadoActualCombobox.Font = new Font("Segoe UI", 8F);
-            EstadoActualCombobox.FormattingEnabled = true;
-            EstadoActualCombobox.Items.AddRange(new object[] { "En camino a la agencia", "En agencia", "Entregado a cliente" });
-            EstadoActualCombobox.Location = new Point(517, 64);
-            EstadoActualCombobox.Name = "EstadoActualCombobox";
-            EstadoActualCombobox.Size = new Size(262, 25);
-            EstadoActualCombobox.TabIndex = 6;
-            EstadoActualCombobox.SelectedIndexChanged += EstadoActualCombobox_SelectedIndexChanged;
             // 
             // DatosRetiranteLabel
             // 
             DatosRetiranteLabel.AutoSize = true;
             DatosRetiranteLabel.Font = new Font("Segoe UI", 12F);
-            DatosRetiranteLabel.Location = new Point(25, 425);
+            DatosRetiranteLabel.Location = new Point(25, 332);
             DatosRetiranteLabel.Name = "DatosRetiranteLabel";
             DatosRetiranteLabel.Size = new Size(174, 28);
             DatosRetiranteLabel.TabIndex = 7;
             DatosRetiranteLabel.Text = "Datos del retirante";
             // 
-            // RazonSocialLabel
-            // 
-            RazonSocialLabel.AutoSize = true;
-            RazonSocialLabel.Font = new Font("Segoe UI", 8F);
-            RazonSocialLabel.Location = new Point(25, 165);
-            RazonSocialLabel.Name = "RazonSocialLabel";
-            RazonSocialLabel.Size = new Size(83, 19);
-            RazonSocialLabel.TabIndex = 8;
-            RazonSocialLabel.Text = "Razón social";
-            // 
-            // RazonSocialTextbox
-            // 
-            RazonSocialTextbox.Font = new Font("Segoe UI", 8F);
-            RazonSocialTextbox.Location = new Point(219, 165);
-            RazonSocialTextbox.Name = "RazonSocialTextbox";
-            RazonSocialTextbox.Size = new Size(292, 25);
-            RazonSocialTextbox.TabIndex = 9;
-            // 
             // NomApRetiranteLabel
             // 
             NomApRetiranteLabel.AutoSize = true;
             NomApRetiranteLabel.Font = new Font("Segoe UI", 8F);
-            NomApRetiranteLabel.Location = new Point(25, 468);
+            NomApRetiranteLabel.Location = new Point(33, 380);
             NomApRetiranteLabel.Name = "NomApRetiranteLabel";
             NomApRetiranteLabel.Size = new Size(123, 19);
             NomApRetiranteLabel.TabIndex = 10;
@@ -166,7 +122,7 @@
             // 
             TelefonoRetiranteLabel.AutoSize = true;
             TelefonoRetiranteLabel.Font = new Font("Segoe UI", 8F);
-            TelefonoRetiranteLabel.Location = new Point(25, 510);
+            TelefonoRetiranteLabel.Location = new Point(33, 422);
             TelefonoRetiranteLabel.Name = "TelefonoRetiranteLabel";
             TelefonoRetiranteLabel.Size = new Size(60, 19);
             TelefonoRetiranteLabel.TabIndex = 11;
@@ -176,7 +132,7 @@
             // 
             MailRetiranteLabel.AutoSize = true;
             MailRetiranteLabel.Font = new Font("Segoe UI", 8F);
-            MailRetiranteLabel.Location = new Point(25, 556);
+            MailRetiranteLabel.Location = new Point(33, 461);
             MailRetiranteLabel.Name = "MailRetiranteLabel";
             MailRetiranteLabel.Size = new Size(35, 19);
             MailRetiranteLabel.TabIndex = 12;
@@ -185,7 +141,7 @@
             // NomApRetiranteTextbox
             // 
             NomApRetiranteTextbox.Font = new Font("Segoe UI", 8F);
-            NomApRetiranteTextbox.Location = new Point(219, 465);
+            NomApRetiranteTextbox.Location = new Point(219, 380);
             NomApRetiranteTextbox.Name = "NomApRetiranteTextbox";
             NomApRetiranteTextbox.Size = new Size(292, 25);
             NomApRetiranteTextbox.TabIndex = 13;
@@ -193,7 +149,7 @@
             // TelefonoRetiranteTextbox
             // 
             TelefonoRetiranteTextbox.Font = new Font("Segoe UI", 8F);
-            TelefonoRetiranteTextbox.Location = new Point(219, 510);
+            TelefonoRetiranteTextbox.Location = new Point(219, 422);
             TelefonoRetiranteTextbox.Name = "TelefonoRetiranteTextbox";
             TelefonoRetiranteTextbox.Size = new Size(292, 25);
             TelefonoRetiranteTextbox.TabIndex = 14;
@@ -201,14 +157,14 @@
             // MailRetiranteTextbox
             // 
             MailRetiranteTextbox.Font = new Font("Segoe UI", 8F);
-            MailRetiranteTextbox.Location = new Point(219, 556);
+            MailRetiranteTextbox.Location = new Point(219, 461);
             MailRetiranteTextbox.Name = "MailRetiranteTextbox";
             MailRetiranteTextbox.Size = new Size(292, 25);
             MailRetiranteTextbox.TabIndex = 15;
             // 
             // RegistarEntregaButton
             // 
-            RegistarEntregaButton.Location = new Point(517, 636);
+            RegistarEntregaButton.Location = new Point(514, 533);
             RegistarEntregaButton.Name = "RegistarEntregaButton";
             RegistarEntregaButton.Size = new Size(134, 30);
             RegistarEntregaButton.TabIndex = 18;
@@ -217,7 +173,7 @@
             // 
             // CancelarButton
             // 
-            CancelarButton.Location = new Point(657, 636);
+            CancelarButton.Location = new Point(654, 533);
             CancelarButton.Name = "CancelarButton";
             CancelarButton.Size = new Size(134, 30);
             CancelarButton.TabIndex = 19;
@@ -228,7 +184,7 @@
             // 
             FechaRetiroLabel.AutoSize = true;
             FechaRetiroLabel.Font = new Font("Segoe UI", 8F);
-            FechaRetiroLabel.Location = new Point(25, 388);
+            FechaRetiroLabel.Location = new Point(33, 284);
             FechaRetiroLabel.Name = "FechaRetiroLabel";
             FechaRetiroLabel.Size = new Size(100, 19);
             FechaRetiroLabel.TabIndex = 20;
@@ -238,67 +194,60 @@
             // FechaRetiroDateTimePicker
             // 
             FechaRetiroDateTimePicker.Font = new Font("Segoe UI", 8F);
-            FechaRetiroDateTimePicker.Location = new Point(219, 388);
+            FechaRetiroDateTimePicker.Location = new Point(219, 284);
             FechaRetiroDateTimePicker.Name = "FechaRetiroDateTimePicker";
             FechaRetiroDateTimePicker.Size = new Size(292, 25);
             FechaRetiroDateTimePicker.TabIndex = 21;
             // 
-            // DatosClienteLabel
-            // 
-            DatosClienteLabel.AutoSize = true;
-            DatosClienteLabel.Font = new Font("Segoe UI", 12F);
-            DatosClienteLabel.Location = new Point(25, 114);
-            DatosClienteLabel.Name = "DatosClienteLabel";
-            DatosClienteLabel.Size = new Size(157, 28);
-            DatosClienteLabel.TabIndex = 22;
-            DatosClienteLabel.Text = "Datos del cliente";
-            // 
-            // MailClienteLabel
-            // 
-            MailClienteLabel.AutoSize = true;
-            MailClienteLabel.Font = new Font("Segoe UI", 8F);
-            MailClienteLabel.Location = new Point(25, 255);
-            MailClienteLabel.Name = "MailClienteLabel";
-            MailClienteLabel.Size = new Size(35, 19);
-            MailClienteLabel.TabIndex = 23;
-            MailClienteLabel.Text = "Mail";
-            // 
-            // MailClienteTextBox
-            // 
-            MailClienteTextBox.Font = new Font("Segoe UI", 8F);
-            MailClienteTextBox.Location = new Point(219, 255);
-            MailClienteTextBox.Name = "MailClienteTextBox";
-            MailClienteTextBox.Size = new Size(292, 25);
-            MailClienteTextBox.TabIndex = 24;
-            // 
-            // TelefonoClienteLabel
-            // 
-            TelefonoClienteLabel.AutoSize = true;
-            TelefonoClienteLabel.Font = new Font("Segoe UI", 8F);
-            TelefonoClienteLabel.Location = new Point(25, 208);
-            TelefonoClienteLabel.Name = "TelefonoClienteLabel";
-            TelefonoClienteLabel.Size = new Size(60, 19);
-            TelefonoClienteLabel.TabIndex = 25;
-            TelefonoClienteLabel.Text = "Teléfono";
-            // 
-            // TelefonoClienteTextBox
-            // 
-            TelefonoClienteTextBox.Font = new Font("Segoe UI", 8F);
-            TelefonoClienteTextBox.Location = new Point(219, 208);
-            TelefonoClienteTextBox.Name = "TelefonoClienteTextBox";
-            TelefonoClienteTextBox.Size = new Size(292, 25);
-            TelefonoClienteTextBox.TabIndex = 26;
-            // 
             // EstadoActualLabel
+            // 
+            EstadoActualLabel.AutoSize = true;
+            EstadoActualLabel.Font = new Font("Segoe UI", 12F);
+            EstadoActualLabel.Location = new Point(25, 113);
+            EstadoActualLabel.Name = "EstadoActualLabel";
+            EstadoActualLabel.Size = new Size(128, 28);
+            EstadoActualLabel.TabIndex = 22;
+            EstadoActualLabel.Text = "Estado actual";
+            // 
+            // EstEnCaminoLabel
+            // 
+            EstEnCaminoLabel.AutoSize = true;
+            EstEnCaminoLabel.Font = new Font("Segoe UI", 8F);
+            EstEnCaminoLabel.Location = new Point(33, 158);
+            EstEnCaminoLabel.Name = "EstEnCaminoLabel";
+            EstEnCaminoLabel.Size = new Size(147, 19);
+            EstEnCaminoLabel.TabIndex = 23;
+            EstEnCaminoLabel.Text = "En camino a la agencia";
+            // 
+            // EstEnAgenciaLabel
+            // 
+            EstEnAgenciaLabel.AutoSize = true;
+            EstEnAgenciaLabel.Font = new Font("Segoe UI", 8F);
+            EstEnAgenciaLabel.Location = new Point(219, 158);
+            EstEnAgenciaLabel.Name = "EstEnAgenciaLabel";
+            EstEnAgenciaLabel.Size = new Size(74, 19);
+            EstEnAgenciaLabel.TabIndex = 24;
+            EstEnAgenciaLabel.Text = "En agencia";
+            // 
+            // EstEntregadoLabel
+            // 
+            EstEntregadoLabel.AutoSize = true;
+            EstEntregadoLabel.Font = new Font("Segoe UI", 8F);
+            EstEntregadoLabel.Location = new Point(341, 158);
+            EstEntregadoLabel.Name = "EstEntregadoLabel";
+            EstEntregadoLabel.Size = new Size(72, 19);
+            EstEntregadoLabel.TabIndex = 25;
+            EstEntregadoLabel.Text = "Entregado";
+            // 
+            // RegEntregaAgenciaForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(791, 668);
-            Controls.Add(TelefonoClienteTextBox);
-            Controls.Add(TelefonoClienteLabel);
-            Controls.Add(MailClienteTextBox);
-            Controls.Add(MailClienteLabel);
-            Controls.Add(DatosClienteLabel);
+            ClientSize = new Size(788, 564);
+            Controls.Add(EstEntregadoLabel);
+            Controls.Add(EstEnAgenciaLabel);
+            Controls.Add(EstEnCaminoLabel);
+            Controls.Add(EstadoActualLabel);
             Controls.Add(FechaRetiroDateTimePicker);
             Controls.Add(FechaRetiroLabel);
             Controls.Add(CancelarButton);
@@ -309,17 +258,13 @@
             Controls.Add(MailRetiranteLabel);
             Controls.Add(TelefonoRetiranteLabel);
             Controls.Add(NomApRetiranteLabel);
-            Controls.Add(RazonSocialTextbox);
-            Controls.Add(RazonSocialLabel);
             Controls.Add(DatosRetiranteLabel);
-            Controls.Add(EstadoActualCombobox);
-            Controls.Add(EstadoActLabel);
             Controls.Add(FechaLlegadaAgenciaDateTimePicker);
             Controls.Add(FechaLlegadaAgenciaLabel);
             Controls.Add(DatosEncomiendaLabel);
             Controls.Add(NumeroGuiaTextbox);
             Controls.Add(NumeroGuiaLabel);
-            Name = "EstadoActualLabel";
+            Name = "RegEntregaAgenciaForm";
             Text = "Registrar entrega en agencia";
             ResumeLayout(false);
             PerformLayout();
@@ -332,11 +277,7 @@
         private Label DatosEncomiendaLabel;
         private Label FechaLlegadaAgenciaLabel;
         private DateTimePicker FechaLlegadaAgenciaDateTimePicker;
-        private Label EstadoActLabel;
-        private ComboBox EstadoActualCombobox;
         private Label DatosRetiranteLabel;
-        private Label RazonSocialLabel;
-        private TextBox RazonSocialTextbox;
         private Label NomApRetiranteLabel;
         private Label TelefonoRetiranteLabel;
         private Label MailRetiranteLabel;
@@ -347,10 +288,9 @@
         private Button CancelarButton;
         private Label FechaRetiroLabel;
         private DateTimePicker FechaRetiroDateTimePicker;
-        private Label DatosClienteLabel;
-        private Label MailClienteLabel;
-        private TextBox MailClienteTextBox;
-        private Label TelefonoClienteLabel;
-        private TextBox TelefonoClienteTextBox;
+        private Label EstadoActualLabel;
+        private Label EstEnCaminoLabel;
+        private Label EstEnAgenciaLabel;
+        private Label EstEntregadoLabel;
     }
 }

@@ -1,8 +1,8 @@
 namespace GrupoD.Tutasa.RegEntregaAgencia
 {
-    public partial class EstadoActualLabel : Form
+    public partial class RegEntregaAgenciaForm : Form
     {
-        public EstadoActualLabel()
+        public RegEntregaAgenciaForm()
         {
             InitializeComponent();
         }
@@ -23,6 +23,11 @@ namespace GrupoD.Tutasa.RegEntregaAgencia
         }
 
         private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EstadoActLabel_Click(object sender, EventArgs e)
         {
 
         }
