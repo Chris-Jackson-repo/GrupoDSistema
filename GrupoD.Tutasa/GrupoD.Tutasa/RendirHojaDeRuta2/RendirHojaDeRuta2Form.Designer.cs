@@ -28,217 +28,168 @@
         /// </summary>
         private void InitializeComponent()
         {
-            comboBox1 = new ComboBox();
-            groupBox1 = new GroupBox();
-            label4 = new Label();
-            dataGridView1 = new DataGridView();
-            SeleccionarC = new DataGridViewCheckBoxColumn();
-            GuíaC = new DataGridViewTextBoxColumn();
-            OrigenC = new DataGridViewTextBoxColumn();
-            DestinoC = new DataGridViewTextBoxColumn();
-            PesoC = new DataGridViewTextBoxColumn();
-            BultosC = new DataGridViewTextBoxColumn();
-            FechaAdC = new DataGridViewTextBoxColumn();
-            comboBox3 = new ComboBox();
-            comboBox2 = new ComboBox();
+            DNIFLeterolabel = new Label();
             button1 = new Button();
-            label3 = new Label();
-            label2 = new Label();
-            label1 = new Label();
-            label5 = new Label();
+            ListaGuiaslabel = new Label();
             button2 = new Button();
-            groupBox1.SuspendLayout();
+            textBox1 = new TextBox();
+            ListaGuiasADespacharlabel = new Label();
+            dataGridView1 = new DataGridView();
+            CargarColumn1 = new DataGridViewCheckBoxColumn();
+            GuiaColumn1 = new DataGridViewTextBoxColumn();
+            DevueltoColumn1 = new DataGridViewCheckBoxColumn();
+            dataGridView2 = new DataGridView();
+            CargarColumn2 = new DataGridViewCheckBoxColumn();
+            GuiaADespacharColumn = new DataGridViewCheckBoxColumn();
+            TipoADespacharColumn = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             SuspendLayout();
             // 
-            // comboBox1
+            // DNIFLeterolabel
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(161, 51);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(227, 23);
-            comboBox1.TabIndex = 0;
-            // 
-            // groupBox1
-            // 
-            groupBox1.Controls.Add(button2);
-            groupBox1.Controls.Add(label5);
-            groupBox1.Controls.Add(label4);
-            groupBox1.Controls.Add(dataGridView1);
-            groupBox1.Controls.Add(comboBox3);
-            groupBox1.Controls.Add(comboBox2);
-            groupBox1.Controls.Add(button1);
-            groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(label1);
-            groupBox1.Controls.Add(comboBox1);
-            groupBox1.Location = new Point(12, 12);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(803, 701);
-            groupBox1.TabIndex = 1;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Programación del despacho";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 14F);
-            label4.Location = new Point(26, 244);
-            label4.Name = "label4";
-            label4.Size = new Size(291, 25);
-            label4.TabIndex = 8;
-            label4.Text = "Asignar encomiendas pendientes";
-            label4.Click += label4_Click;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { SeleccionarC, GuíaC, OrigenC, DestinoC, PesoC, BultosC, FechaAdC });
-            dataGridView1.Location = new Point(26, 281);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(744, 284);
-            dataGridView1.TabIndex = 7;
-            // 
-            // SeleccionarC
-            // 
-            SeleccionarC.HeaderText = "Seleccionar";
-            SeleccionarC.Name = "SeleccionarC";
-            // 
-            // GuíaC
-            // 
-            GuíaC.HeaderText = "Guía";
-            GuíaC.Name = "GuíaC";
-            // 
-            // OrigenC
-            // 
-            OrigenC.HeaderText = "Origen";
-            OrigenC.Name = "OrigenC";
-            // 
-            // DestinoC
-            // 
-            DestinoC.HeaderText = "Destino";
-            DestinoC.Name = "DestinoC";
-            // 
-            // PesoC
-            // 
-            PesoC.HeaderText = "Peso (Kg)";
-            PesoC.Name = "PesoC";
-            // 
-            // BultosC
-            // 
-            BultosC.HeaderText = "Bultos";
-            BultosC.Name = "BultosC";
-            // 
-            // FechaAdC
-            // 
-            FechaAdC.HeaderText = "Fecha Admisión";
-            FechaAdC.Name = "FechaAdC";
-            // 
-            // comboBox3
-            // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(161, 144);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(227, 23);
-            comboBox3.TabIndex = 6;
-            // 
-            // comboBox2
-            // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(161, 94);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(227, 23);
-            comboBox2.TabIndex = 5;
+            DNIFLeterolabel.AutoSize = true;
+            DNIFLeterolabel.Location = new Point(48, 52);
+            DNIFLeterolabel.Name = "DNIFLeterolabel";
+            DNIFLeterolabel.Size = new Size(64, 15);
+            DNIFLeterolabel.TabIndex = 1;
+            DNIFLeterolabel.Text = "DNI fletero";
             // 
             // button1
             // 
-            button1.Location = new Point(208, 197);
+            button1.Location = new Point(432, 47);
             button1.Name = "button1";
             button1.Size = new Size(120, 25);
             button1.TabIndex = 4;
             button1.Text = "FILTRAR";
             button1.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // ListaGuiaslabel
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(26, 152);
-            label3.Name = "label3";
-            label3.Size = new Size(74, 15);
-            label3.TabIndex = 3;
-            label3.Text = "Transportista";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(26, 102);
-            label2.Name = "label2";
-            label2.Size = new Size(87, 15);
-            label2.TabIndex = 2;
-            label2.Text = "Destino de ruta";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(26, 59);
-            label1.Name = "label1";
-            label1.Size = new Size(70, 15);
-            label1.TabIndex = 1;
-            label1.Text = "Tipo de ruta";
-            // 
-            // label5
-            // 
-            label5.Font = new Font("Segoe UI", 16F);
-            label5.Location = new Point(108, 594);
-            label5.Name = "label5";
-            label5.Size = new Size(451, 63);
-            label5.TabIndex = 9;
-            label5.Text = "PESO TOTAL ASIGNADO (Kg) = XXXXX";
-            label5.Click += label5_Click;
+            ListaGuiaslabel.AutoSize = true;
+            ListaGuiaslabel.Font = new Font("Segoe UI", 12F);
+            ListaGuiaslabel.Location = new Point(29, 127);
+            ListaGuiaslabel.Name = "ListaGuiaslabel";
+            ListaGuiaslabel.Size = new Size(104, 21);
+            ListaGuiaslabel.TabIndex = 8;
+            ListaGuiaslabel.Text = "Lista de guías";
+            ListaGuiaslabel.Click += label4_Click;
             // 
             // button2
             // 
-            button2.Location = new Point(612, 614);
+            button2.Location = new Point(328, 522);
             button2.Name = "button2";
             button2.Size = new Size(158, 65);
             button2.TabIndex = 10;
-            button2.Text = "GENERAR MANIFIESTO";
+            button2.Text = "ACEPTAR";
             button2.UseVisualStyleBackColor = true;
             // 
-            // GenerarHojaRutaForm
+            // textBox1
+            // 
+            textBox1.Location = new Point(163, 47);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(232, 23);
+            textBox1.TabIndex = 11;
+            // 
+            // ListaGuiasADespacharlabel
+            // 
+            ListaGuiasADespacharlabel.AutoSize = true;
+            ListaGuiasADespacharlabel.Font = new Font("Segoe UI", 12F);
+            ListaGuiasADespacharlabel.Location = new Point(481, 127);
+            ListaGuiasADespacharlabel.Name = "ListaGuiasADespacharlabel";
+            ListaGuiasADespacharlabel.Size = new Size(271, 21);
+            ListaGuiasADespacharlabel.TabIndex = 15;
+            ListaGuiasADespacharlabel.Text = "Lista de guías pendientes a despachar";
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { CargarColumn1, GuiaColumn1, DevueltoColumn1 });
+            dataGridView1.Location = new Point(30, 169);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(309, 289);
+            dataGridView1.TabIndex = 16;
+            // 
+            // CargarColumn1
+            // 
+            CargarColumn1.HeaderText = "Cargar";
+            CargarColumn1.Name = "CargarColumn1";
+            CargarColumn1.Width = 50;
+            // 
+            // GuiaColumn1
+            // 
+            GuiaColumn1.HeaderText = "Guía";
+            GuiaColumn1.Name = "GuiaColumn1";
+            GuiaColumn1.Resizable = DataGridViewTriState.True;
+            GuiaColumn1.SortMode = DataGridViewColumnSortMode.NotSortable;
+            GuiaColumn1.Width = 150;
+            // 
+            // DevueltoColumn1
+            // 
+            DevueltoColumn1.HeaderText = "Devuelto";
+            DevueltoColumn1.Name = "DevueltoColumn1";
+            DevueltoColumn1.Width = 65;
+            // 
+            // dataGridView2
+            // 
+            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView2.Columns.AddRange(new DataGridViewColumn[] { CargarColumn2, GuiaADespacharColumn, TipoADespacharColumn });
+            dataGridView2.Location = new Point(441, 169);
+            dataGridView2.Name = "dataGridView2";
+            dataGridView2.Size = new Size(331, 289);
+            dataGridView2.TabIndex = 17;
+            // 
+            // CargarColumn2
+            // 
+            CargarColumn2.HeaderText = "Cargar";
+            CargarColumn2.Name = "CargarColumn2";
+            // 
+            // GuiaADespacharColumn
+            // 
+            GuiaADespacharColumn.HeaderText = "Guía";
+            GuiaADespacharColumn.Name = "GuiaADespacharColumn";
+            // 
+            // TipoADespacharColumn
+            // 
+            TipoADespacharColumn.HeaderText = "Tipo";
+            TipoADespacharColumn.Name = "TipoADespacharColumn";
+            // 
+            // RendirHojaDeRuta2Form
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(841, 724);
-            Controls.Add(groupBox1);
-            Name = "GenerarHojaRutaForm";
-            Text = "Generación de hoja de ruta";
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
+            ClientSize = new Size(826, 598);
+            Controls.Add(dataGridView2);
+            Controls.Add(dataGridView1);
+            Controls.Add(ListaGuiasADespacharlabel);
+            Controls.Add(textBox1);
+            Controls.Add(button2);
+            Controls.Add(DNIFLeterolabel);
+            Controls.Add(ListaGuiaslabel);
+            Controls.Add(button1);
+            Name = "RendirHojaDeRuta2Form";
+            Text = "Rendición hojas de ruta";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private ComboBox comboBox1;
-        private GroupBox groupBox1;
-        private Label label4;
-        private DataGridView dataGridView1;
-        private DataGridViewCheckBoxColumn SeleccionarC;
-        private DataGridViewTextBoxColumn GuíaC;
-        private DataGridViewTextBoxColumn OrigenC;
-        private DataGridViewTextBoxColumn DestinoC;
-        private DataGridViewTextBoxColumn PesoC;
-        private DataGridViewTextBoxColumn BultosC;
-        private DataGridViewTextBoxColumn FechaAdC;
-        private ComboBox comboBox3;
-        private ComboBox comboBox2;
+        private Label DNIFLeterolabel;
         private Button button1;
-        private Label label3;
-        private Label label2;
-        private Label label1;
-        private Label label5;
+        private Label ListaGuiaslabel;
         private Button button2;
+        private TextBox textBox1;
+        private Label ListaGuiasADespacharlabel;
+        private DataGridView dataGridView1;
+        private DataGridViewCheckBoxColumn CargarColumn1;
+        private DataGridViewTextBoxColumn GuiaColumn1;
+        private DataGridViewCheckBoxColumn DevueltoColumn1;
+        private DataGridView dataGridView2;
+        private DataGridViewCheckBoxColumn CargarColumn2;
+        private DataGridViewCheckBoxColumn GuiaADespacharColumn;
+        private DataGridViewTextBoxColumn TipoADespacharColumn;
     }
 }

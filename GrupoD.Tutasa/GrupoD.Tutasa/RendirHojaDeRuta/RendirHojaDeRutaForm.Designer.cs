@@ -59,10 +59,9 @@
             // 
             groupBox2.Controls.Add(ListaGuiasDespacholabel);
             groupBox2.Controls.Add(dataGridView2);
-            groupBox2.Controls.Add(button2);
             groupBox2.Location = new Point(13, 444);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(820, 333);
+            groupBox2.Size = new Size(820, 352);
             groupBox2.TabIndex = 1;
             groupBox2.TabStop = false;
             groupBox2.Text = "Guías a despachar para fletero";
@@ -71,7 +70,7 @@
             // 
             ListaGuiasDespacholabel.AutoSize = true;
             ListaGuiasDespacholabel.Font = new Font("Segoe UI", 14F);
-            ListaGuiasDespacholabel.Location = new Point(21, 41);
+            ListaGuiasDespacholabel.Location = new Point(6, 40);
             ListaGuiasDespacholabel.Name = "ListaGuiasDespacholabel";
             ListaGuiasDespacholabel.Size = new Size(233, 25);
             ListaGuiasDespacholabel.TabIndex = 6;
@@ -81,16 +80,16 @@
             // 
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView2.Columns.AddRange(new DataGridViewColumn[] { GuíaColumn2, EstadoColumn2, TipoPaqueteColumn, DestinoColumn2, DestinatarioColumn2 });
-            dataGridView2.Location = new Point(21, 83);
+            dataGridView2.Location = new Point(6, 79);
             dataGridView2.Name = "dataGridView2";
-            dataGridView2.Size = new Size(776, 180);
+            dataGridView2.Size = new Size(796, 235);
             dataGridView2.TabIndex = 5;
             // 
             // button2
             // 
-            button2.Location = new Point(690, 278);
+            button2.Location = new Point(726, 815);
             button2.Name = "button2";
-            button2.Size = new Size(107, 38);
+            button2.Size = new Size(116, 47);
             button2.TabIndex = 4;
             button2.Text = "Confirmar ";
             button2.UseVisualStyleBackColor = true;
@@ -114,7 +113,7 @@
             // DatagridRendicion
             // 
             DatagridRendicion.Font = new Font("Segoe UI", 14F);
-            DatagridRendicion.Location = new Point(21, 38);
+            DatagridRendicion.Location = new Point(8, 38);
             DatagridRendicion.Name = "DatagridRendicion";
             DatagridRendicion.Size = new Size(259, 33);
             DatagridRendicion.TabIndex = 6;
@@ -224,9 +223,10 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(854, 789);
+            ClientSize = new Size(854, 874);
             Controls.Add(CargarGuiasbutton);
             Controls.Add(groupBox2);
+            Controls.Add(button2);
             Controls.Add(textBox1);
             Controls.Add(DNI_Fleterolabel);
             Controls.Add(groupBox);
