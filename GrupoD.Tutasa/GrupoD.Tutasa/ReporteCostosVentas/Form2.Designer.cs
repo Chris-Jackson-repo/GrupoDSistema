@@ -30,7 +30,6 @@
         {
             FiltrosDelReporte = new Label();
             SeleccioneNúmeroDeEmpresa = new ComboBox();
-            NúmeroDeEmpresaDeServicio = new TextBox();
             PeríodoDesde = new Label();
             dateTimePicker1 = new DateTimePicker();
             PeríodoHasta = new Label();
@@ -48,10 +47,12 @@
             Egresos = new TextBox();
             textBox8 = new TextBox();
             TotalNeto = new TextBox();
-            DetalleOpcional = new TextBox();
+            Detalle = new TextBox();
             textBox11 = new TextBox();
             PorMes = new TextBox();
             textBox14 = new TextBox();
+            EmpresaTransporte = new Label();
+            Cancelar = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -72,14 +73,6 @@
             SeleccioneNúmeroDeEmpresa.Size = new Size(295, 28);
             SeleccioneNúmeroDeEmpresa.TabIndex = 2;
             SeleccioneNúmeroDeEmpresa.Text = "Seleccione Número Empresa";
-            // 
-            // NúmeroDeEmpresaDeServicio
-            // 
-            NúmeroDeEmpresaDeServicio.Location = new Point(53, 77);
-            NúmeroDeEmpresaDeServicio.Name = "NúmeroDeEmpresaDeServicio";
-            NúmeroDeEmpresaDeServicio.Size = new Size(234, 27);
-            NúmeroDeEmpresaDeServicio.TabIndex = 3;
-            NúmeroDeEmpresaDeServicio.Text = "N° De Empresa de Servicio";
             // 
             // PeríodoDesde
             // 
@@ -124,7 +117,7 @@
             // 
             // ExportarAExcel
             // 
-            ExportarAExcel.Location = new Point(505, 235);
+            ExportarAExcel.Location = new Point(469, 235);
             ExportarAExcel.Name = "ExportarAExcel";
             ExportarAExcel.Size = new Size(140, 29);
             ExportarAExcel.TabIndex = 9;
@@ -219,13 +212,14 @@
             TotalNeto.TabIndex = 20;
             TotalNeto.Text = "Total Neto";
             // 
-            // DetalleOpcional
+            // Detalle
             // 
-            DetalleOpcional.Location = new Point(43, 350);
-            DetalleOpcional.Name = "DetalleOpcional";
-            DetalleOpcional.Size = new Size(125, 27);
-            DetalleOpcional.TabIndex = 21;
-            DetalleOpcional.Text = "Detalle Opcional mes/año";
+            Detalle.Location = new Point(43, 350);
+            Detalle.Name = "Detalle";
+            Detalle.Size = new Size(125, 27);
+            Detalle.TabIndex = 21;
+            Detalle.Text = "Detalle ";
+            Detalle.TextChanged += DetalleOpcional_TextChanged;
             // 
             // textBox11
             // 
@@ -240,7 +234,7 @@
             PorMes.Name = "PorMes";
             PorMes.Size = new Size(364, 27);
             PorMes.TabIndex = 23;
-            PorMes.Text = "Por Mes /sem/ rubro";
+            PorMes.Text = "Por Mes / rubro";
             // 
             // textBox14
             // 
@@ -249,15 +243,35 @@
             textBox14.Size = new Size(8, 27);
             textBox14.TabIndex = 25;
             // 
+            // EmpresaTransporte
+            // 
+            EmpresaTransporte.AutoSize = true;
+            EmpresaTransporte.Location = new Point(162, 80);
+            EmpresaTransporte.Name = "EmpresaTransporte";
+            EmpresaTransporte.Size = new Size(163, 20);
+            EmpresaTransporte.TabIndex = 26;
+            EmpresaTransporte.Text = "Empresa De Transporte";
+            // 
+            // Cancelar
+            // 
+            Cancelar.Location = new Point(673, 235);
+            Cancelar.Name = "Cancelar";
+            Cancelar.Size = new Size(94, 29);
+            Cancelar.TabIndex = 27;
+            Cancelar.Text = "Cancelar";
+            Cancelar.UseVisualStyleBackColor = true;
+            // 
             // ReporteDeCostosvsVenta
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(Cancelar);
+            Controls.Add(EmpresaTransporte);
             Controls.Add(textBox14);
             Controls.Add(PorMes);
             Controls.Add(textBox11);
-            Controls.Add(DetalleOpcional);
+            Controls.Add(Detalle);
             Controls.Add(TotalNeto);
             Controls.Add(textBox8);
             Controls.Add(Egresos);
@@ -275,7 +289,6 @@
             Controls.Add(PeríodoHasta);
             Controls.Add(dateTimePicker1);
             Controls.Add(PeríodoDesde);
-            Controls.Add(NúmeroDeEmpresaDeServicio);
             Controls.Add(SeleccioneNúmeroDeEmpresa);
             Controls.Add(FiltrosDelReporte);
             Name = "ReporteDeCostosvsVenta";
@@ -290,7 +303,6 @@
 
         private Label FiltrosDelReporte;
         private ComboBox SeleccioneNúmeroDeEmpresa;
-        private TextBox NúmeroDeEmpresaDeServicio;
         private Label PeríodoDesde;
         private DateTimePicker dateTimePicker1;
         private Label PeríodoHasta;
@@ -308,9 +320,11 @@
         private TextBox Egresos;
         private TextBox textBox8;
         private TextBox TotalNeto;
-        private TextBox DetalleOpcional;
+        private TextBox Detalle;
         private TextBox textBox11;
         private TextBox PorMes;
         private TextBox textBox14;
+        private Label EmpresaTransporte;
+        private Button Cancelar;
     }
 }

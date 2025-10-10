@@ -21,5 +21,10 @@ namespace GrupoD.Tutasa.ReporteCostosVentas
         {
 
         }
+
+        private void DetalleOpcional_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
