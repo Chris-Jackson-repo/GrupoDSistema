@@ -16,5 +16,10 @@ namespace GrupoD.Tutasa.RegEntregaCD
         {
             InitializeComponent();
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
