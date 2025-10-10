@@ -47,19 +47,22 @@
             TotalVentas = new Label();
             TotalCostos = new Label();
             ResultadoNeto = new Label();
-            TotalRango = new Label();
             Ingresos = new Label();
             Egresos = new Label();
             Monto = new Label();
             Mensual = new Label();
             PorRubro = new Label();
+            TipoDeServicio = new Label();
+            LargaDistancia = new RadioButton();
+            MediaDistancia = new RadioButton();
+            Ambos = new RadioButton();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // FiltrosDelReporte
             // 
             FiltrosDelReporte.AutoSize = true;
-            FiltrosDelReporte.Location = new Point(88, 25);
+            FiltrosDelReporte.Location = new Point(27, 26);
             FiltrosDelReporte.Name = "FiltrosDelReporte";
             FiltrosDelReporte.Size = new Size(133, 20);
             FiltrosDelReporte.TabIndex = 0;
@@ -68,9 +71,9 @@
             // SeleccioneNúmeroCuit
             // 
             SeleccioneNúmeroCuit.FormattingEnabled = true;
-            SeleccioneNúmeroCuit.Location = new Point(283, 77);
+            SeleccioneNúmeroCuit.Location = new Point(211, 77);
             SeleccioneNúmeroCuit.Name = "SeleccioneNúmeroCuit";
-            SeleccioneNúmeroCuit.Size = new Size(295, 28);
+            SeleccioneNúmeroCuit.Size = new Size(190, 28);
             SeleccioneNúmeroCuit.TabIndex = 2;
             SeleccioneNúmeroCuit.Text = "Seleccione Número  Cuit";
             // 
@@ -148,7 +151,7 @@
             // EmpresaTransporte
             // 
             EmpresaTransporte.AutoSize = true;
-            EmpresaTransporte.Location = new Point(58, 80);
+            EmpresaTransporte.Location = new Point(27, 80);
             EmpresaTransporte.Name = "EmpresaTransporte";
             EmpresaTransporte.Size = new Size(163, 20);
             EmpresaTransporte.TabIndex = 26;
@@ -217,15 +220,6 @@
             ResultadoNeto.TabIndex = 33;
             ResultadoNeto.Text = "Resultado Neto";
             // 
-            // TotalRango
-            // 
-            TotalRango.AutoSize = true;
-            TotalRango.Location = new Point(21, 379);
-            TotalRango.Name = "TotalRango";
-            TotalRango.Size = new Size(89, 20);
-            TotalRango.TabIndex = 34;
-            TotalRango.Text = "Total Rango";
-            // 
             // Ingresos
             // 
             Ingresos.AutoSize = true;
@@ -256,7 +250,7 @@
             // Mensual
             // 
             Mensual.AutoSize = true;
-            Mensual.Location = new Point(42, 416);
+            Mensual.Location = new Point(46, 379);
             Mensual.Name = "Mensual";
             Mensual.Size = new Size(64, 20);
             Mensual.TabIndex = 38;
@@ -265,23 +259,68 @@
             // PorRubro
             // 
             PorRubro.AutoSize = true;
-            PorRubro.Location = new Point(116, 416);
+            PorRubro.Location = new Point(46, 403);
             PorRubro.Name = "PorRubro";
             PorRubro.Size = new Size(74, 20);
             PorRubro.TabIndex = 39;
             PorRubro.Text = "Por Rubro";
+            // 
+            // TipoDeServicio
+            // 
+            TipoDeServicio.AutoSize = true;
+            TipoDeServicio.Location = new Point(458, 77);
+            TipoDeServicio.Name = "TipoDeServicio";
+            TipoDeServicio.Size = new Size(118, 20);
+            TipoDeServicio.TabIndex = 40;
+            TipoDeServicio.Text = "Tipo De Servicio";
+            // 
+            // LargaDistancia
+            // 
+            LargaDistancia.AutoSize = true;
+            LargaDistancia.Location = new Point(601, 57);
+            LargaDistancia.Name = "LargaDistancia";
+            LargaDistancia.Size = new Size(132, 24);
+            LargaDistancia.TabIndex = 41;
+            LargaDistancia.TabStop = true;
+            LargaDistancia.Text = "Larga Distancia";
+            LargaDistancia.UseVisualStyleBackColor = true;
+            // 
+            // MediaDistancia
+            // 
+            MediaDistancia.AutoSize = true;
+            MediaDistancia.Location = new Point(601, 87);
+            MediaDistancia.Name = "MediaDistancia";
+            MediaDistancia.Size = new Size(137, 24);
+            MediaDistancia.TabIndex = 42;
+            MediaDistancia.TabStop = true;
+            MediaDistancia.Text = "Media Distancia";
+            MediaDistancia.UseVisualStyleBackColor = true;
+            // 
+            // Ambos
+            // 
+            Ambos.AutoSize = true;
+            Ambos.Location = new Point(601, 117);
+            Ambos.Name = "Ambos";
+            Ambos.Size = new Size(77, 24);
+            Ambos.TabIndex = 43;
+            Ambos.TabStop = true;
+            Ambos.Text = "Ambos";
+            Ambos.UseVisualStyleBackColor = true;
             // 
             // ReporteDeCostosvsVenta
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(Ambos);
+            Controls.Add(MediaDistancia);
+            Controls.Add(LargaDistancia);
+            Controls.Add(TipoDeServicio);
             Controls.Add(PorRubro);
             Controls.Add(Mensual);
             Controls.Add(Monto);
             Controls.Add(Egresos);
             Controls.Add(Ingresos);
-            Controls.Add(TotalRango);
             Controls.Add(ResultadoNeto);
             Controls.Add(TotalCostos);
             Controls.Add(TotalVentas);
@@ -330,11 +369,14 @@
         private Label TotalVentas;
         private Label TotalCostos;
         private Label ResultadoNeto;
-        private Label TotalRango;
         private Label Ingresos;
         private Label Egresos;
         private Label Monto;
         private Label Mensual;
         private Label PorRubro;
+        private Label TipoDeServicio;
+        private RadioButton LargaDistancia;
+        private RadioButton MediaDistancia;
+        private RadioButton Ambos;
     }
 }
