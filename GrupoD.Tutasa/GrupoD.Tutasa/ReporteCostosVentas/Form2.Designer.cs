@@ -29,50 +29,50 @@
         private void InitializeComponent()
         {
             FiltrosDelReporte = new Label();
-            SeleccioneNúmeroDeEmpresa = new ComboBox();
+            SeleccioneNúmeroCuit = new ComboBox();
             PeríodoDesde = new Label();
             dateTimePicker1 = new DateTimePicker();
             PeríodoHasta = new Label();
             dateTimePicker2 = new DateTimePicker();
             GenerarReporte = new Button();
             ExportarAExcel = new Button();
-            dataGridView1 = new DataGridView();
-            Resultados = new TextBox();
-            Período = new TextBox();
-            TotalVentas = new TextBox();
-            TotalCostos = new TextBox();
-            ResultadoNeto = new TextBox();
-            TotalDelRango = new TextBox();
-            Ingresos = new TextBox();
-            Egresos = new TextBox();
             textBox8 = new TextBox();
-            TotalNeto = new TextBox();
-            Detalle = new TextBox();
             textBox11 = new TextBox();
-            PorMes = new TextBox();
             textBox14 = new TextBox();
             EmpresaTransporte = new Label();
             Cancelar = new Button();
+            dataGridView1 = new DataGridView();
+            Resultados = new Label();
+            Período = new Label();
+            TotalVentas = new Label();
+            TotalCostos = new Label();
+            ResultadoNeto = new Label();
+            TotalRango = new Label();
+            Ingresos = new Label();
+            Egresos = new Label();
+            Monto = new Label();
+            Mensual = new Label();
+            PorRubro = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // FiltrosDelReporte
             // 
             FiltrosDelReporte.AutoSize = true;
-            FiltrosDelReporte.Location = new Point(43, 25);
+            FiltrosDelReporte.Location = new Point(88, 25);
             FiltrosDelReporte.Name = "FiltrosDelReporte";
             FiltrosDelReporte.Size = new Size(133, 20);
             FiltrosDelReporte.TabIndex = 0;
             FiltrosDelReporte.Text = "Filtros Del Reporte";
             // 
-            // SeleccioneNúmeroDeEmpresa
+            // SeleccioneNúmeroCuit
             // 
-            SeleccioneNúmeroDeEmpresa.FormattingEnabled = true;
-            SeleccioneNúmeroDeEmpresa.Location = new Point(362, 77);
-            SeleccioneNúmeroDeEmpresa.Name = "SeleccioneNúmeroDeEmpresa";
-            SeleccioneNúmeroDeEmpresa.Size = new Size(295, 28);
-            SeleccioneNúmeroDeEmpresa.TabIndex = 2;
-            SeleccioneNúmeroDeEmpresa.Text = "Seleccione Número Empresa";
+            SeleccioneNúmeroCuit.FormattingEnabled = true;
+            SeleccioneNúmeroCuit.Location = new Point(283, 77);
+            SeleccioneNúmeroCuit.Name = "SeleccioneNúmeroCuit";
+            SeleccioneNúmeroCuit.Size = new Size(295, 28);
+            SeleccioneNúmeroCuit.TabIndex = 2;
+            SeleccioneNúmeroCuit.Text = "Seleccione Número  Cuit";
             // 
             // PeríodoDesde
             // 
@@ -108,7 +108,7 @@
             // 
             // GenerarReporte
             // 
-            GenerarReporte.Location = new Point(234, 235);
+            GenerarReporte.Location = new Point(137, 235);
             GenerarReporte.Name = "GenerarReporte";
             GenerarReporte.Size = new Size(161, 29);
             GenerarReporte.TabIndex = 8;
@@ -117,85 +117,12 @@
             // 
             // ExportarAExcel
             // 
-            ExportarAExcel.Location = new Point(469, 235);
+            ExportarAExcel.Location = new Point(336, 235);
             ExportarAExcel.Name = "ExportarAExcel";
             ExportarAExcel.Size = new Size(140, 29);
             ExportarAExcel.TabIndex = 9;
             ExportarAExcel.Text = "Exportar a Excel";
             ExportarAExcel.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(43, 279);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(483, 98);
-            dataGridView1.TabIndex = 10;
-            // 
-            // Resultados
-            // 
-            Resultados.Location = new Point(43, 279);
-            Resultados.Name = "Resultados";
-            Resultados.Size = new Size(483, 27);
-            Resultados.TabIndex = 11;
-            Resultados.Text = "Resultados";
-            // 
-            // Período
-            // 
-            Período.Location = new Point(43, 303);
-            Período.Name = "Período";
-            Período.Size = new Size(125, 27);
-            Período.TabIndex = 12;
-            Período.Text = "Período";
-            // 
-            // TotalVentas
-            // 
-            TotalVentas.Location = new Point(162, 303);
-            TotalVentas.Name = "TotalVentas";
-            TotalVentas.Size = new Size(125, 27);
-            TotalVentas.TabIndex = 13;
-            TotalVentas.Text = "Total Ventas";
-            // 
-            // TotalCostos
-            // 
-            TotalCostos.Location = new Point(283, 303);
-            TotalCostos.Name = "TotalCostos";
-            TotalCostos.Size = new Size(125, 27);
-            TotalCostos.TabIndex = 14;
-            TotalCostos.Text = "Total Costos";
-            // 
-            // ResultadoNeto
-            // 
-            ResultadoNeto.Location = new Point(401, 303);
-            ResultadoNeto.Name = "ResultadoNeto";
-            ResultadoNeto.Size = new Size(125, 27);
-            ResultadoNeto.TabIndex = 15;
-            ResultadoNeto.Text = "Resultado Neto";
-            // 
-            // TotalDelRango
-            // 
-            TotalDelRango.Location = new Point(43, 325);
-            TotalDelRango.Name = "TotalDelRango";
-            TotalDelRango.Size = new Size(125, 27);
-            TotalDelRango.TabIndex = 16;
-            TotalDelRango.Text = "Total Del Rango";
-            // 
-            // Ingresos
-            // 
-            Ingresos.Location = new Point(162, 325);
-            Ingresos.Name = "Ingresos";
-            Ingresos.Size = new Size(125, 27);
-            Ingresos.TabIndex = 17;
-            Ingresos.Text = "Ingresos";
-            // 
-            // Egresos
-            // 
-            Egresos.Location = new Point(283, 325);
-            Egresos.Name = "Egresos";
-            Egresos.Size = new Size(125, 27);
-            Egresos.TabIndex = 18;
-            Egresos.Text = "Egresos";
             // 
             // textBox8
             // 
@@ -204,37 +131,12 @@
             textBox8.Size = new Size(8, 27);
             textBox8.TabIndex = 19;
             // 
-            // TotalNeto
-            // 
-            TotalNeto.Location = new Point(401, 325);
-            TotalNeto.Name = "TotalNeto";
-            TotalNeto.Size = new Size(125, 27);
-            TotalNeto.TabIndex = 20;
-            TotalNeto.Text = "Total Neto";
-            // 
-            // Detalle
-            // 
-            Detalle.Location = new Point(43, 350);
-            Detalle.Name = "Detalle";
-            Detalle.Size = new Size(125, 27);
-            Detalle.TabIndex = 21;
-            Detalle.Text = "Detalle ";
-            Detalle.TextChanged += DetalleOpcional_TextChanged;
-            // 
             // textBox11
             // 
             textBox11.Location = new Point(634, 361);
             textBox11.Name = "textBox11";
             textBox11.Size = new Size(8, 27);
             textBox11.TabIndex = 22;
-            // 
-            // PorMes
-            // 
-            PorMes.Location = new Point(162, 350);
-            PorMes.Name = "PorMes";
-            PorMes.Size = new Size(364, 27);
-            PorMes.TabIndex = 23;
-            PorMes.Text = "Por Mes / rubro";
             // 
             // textBox14
             // 
@@ -246,7 +148,7 @@
             // EmpresaTransporte
             // 
             EmpresaTransporte.AutoSize = true;
-            EmpresaTransporte.Location = new Point(162, 80);
+            EmpresaTransporte.Location = new Point(58, 80);
             EmpresaTransporte.Name = "EmpresaTransporte";
             EmpresaTransporte.Size = new Size(163, 20);
             EmpresaTransporte.TabIndex = 26;
@@ -254,42 +156,150 @@
             // 
             // Cancelar
             // 
-            Cancelar.Location = new Point(673, 235);
+            Cancelar.Location = new Point(530, 235);
             Cancelar.Name = "Cancelar";
-            Cancelar.Size = new Size(94, 29);
+            Cancelar.Size = new Size(112, 29);
             Cancelar.TabIndex = 27;
             Cancelar.Text = "Cancelar";
             Cancelar.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(443, 295);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(322, 128);
+            dataGridView1.TabIndex = 28;
+            // 
+            // Resultados
+            // 
+            Resultados.AutoSize = true;
+            Resultados.Location = new Point(50, 286);
+            Resultados.Name = "Resultados";
+            Resultados.Size = new Size(81, 20);
+            Resultados.TabIndex = 29;
+            Resultados.Text = "Resultados";
+            // 
+            // Período
+            // 
+            Período.AutoSize = true;
+            Período.Location = new Point(50, 325);
+            Período.Name = "Período";
+            Período.Size = new Size(60, 20);
+            Período.TabIndex = 30;
+            Período.Text = "Período";
+            // 
+            // TotalVentas
+            // 
+            TotalVentas.AutoSize = true;
+            TotalVentas.Location = new Point(116, 325);
+            TotalVentas.Name = "TotalVentas";
+            TotalVentas.Size = new Size(89, 20);
+            TotalVentas.TabIndex = 31;
+            TotalVentas.Text = "Total Ventas";
+            // 
+            // TotalCostos
+            // 
+            TotalCostos.AutoSize = true;
+            TotalCostos.Location = new Point(211, 325);
+            TotalCostos.Name = "TotalCostos";
+            TotalCostos.Size = new Size(90, 20);
+            TotalCostos.TabIndex = 32;
+            TotalCostos.Text = "Total Costos";
+            // 
+            // ResultadoNeto
+            // 
+            ResultadoNeto.AutoSize = true;
+            ResultadoNeto.Location = new Point(307, 325);
+            ResultadoNeto.Name = "ResultadoNeto";
+            ResultadoNeto.Size = new Size(112, 20);
+            ResultadoNeto.TabIndex = 33;
+            ResultadoNeto.Text = "Resultado Neto";
+            // 
+            // TotalRango
+            // 
+            TotalRango.AutoSize = true;
+            TotalRango.Location = new Point(21, 379);
+            TotalRango.Name = "TotalRango";
+            TotalRango.Size = new Size(89, 20);
+            TotalRango.TabIndex = 34;
+            TotalRango.Text = "Total Rango";
+            // 
+            // Ingresos
+            // 
+            Ingresos.AutoSize = true;
+            Ingresos.Location = new Point(116, 379);
+            Ingresos.Name = "Ingresos";
+            Ingresos.Size = new Size(64, 20);
+            Ingresos.TabIndex = 35;
+            Ingresos.Text = "Ingresos";
+            // 
+            // Egresos
+            // 
+            Egresos.AutoSize = true;
+            Egresos.Location = new Point(211, 379);
+            Egresos.Name = "Egresos";
+            Egresos.Size = new Size(60, 20);
+            Egresos.TabIndex = 36;
+            Egresos.Text = "Egresos";
+            // 
+            // Monto
+            // 
+            Monto.AutoSize = true;
+            Monto.Location = new Point(318, 379);
+            Monto.Name = "Monto";
+            Monto.Size = new Size(53, 20);
+            Monto.TabIndex = 37;
+            Monto.Text = "Monto";
+            // 
+            // Mensual
+            // 
+            Mensual.AutoSize = true;
+            Mensual.Location = new Point(42, 416);
+            Mensual.Name = "Mensual";
+            Mensual.Size = new Size(64, 20);
+            Mensual.TabIndex = 38;
+            Mensual.Text = "Mensual";
+            // 
+            // PorRubro
+            // 
+            PorRubro.AutoSize = true;
+            PorRubro.Location = new Point(116, 416);
+            PorRubro.Name = "PorRubro";
+            PorRubro.Size = new Size(74, 20);
+            PorRubro.TabIndex = 39;
+            PorRubro.Text = "Por Rubro";
             // 
             // ReporteDeCostosvsVenta
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(Cancelar);
-            Controls.Add(EmpresaTransporte);
-            Controls.Add(textBox14);
-            Controls.Add(PorMes);
-            Controls.Add(textBox11);
-            Controls.Add(Detalle);
-            Controls.Add(TotalNeto);
-            Controls.Add(textBox8);
+            Controls.Add(PorRubro);
+            Controls.Add(Mensual);
+            Controls.Add(Monto);
             Controls.Add(Egresos);
             Controls.Add(Ingresos);
-            Controls.Add(TotalDelRango);
+            Controls.Add(TotalRango);
             Controls.Add(ResultadoNeto);
             Controls.Add(TotalCostos);
             Controls.Add(TotalVentas);
             Controls.Add(Período);
             Controls.Add(Resultados);
             Controls.Add(dataGridView1);
+            Controls.Add(Cancelar);
+            Controls.Add(EmpresaTransporte);
+            Controls.Add(textBox14);
+            Controls.Add(textBox11);
+            Controls.Add(textBox8);
             Controls.Add(ExportarAExcel);
             Controls.Add(GenerarReporte);
             Controls.Add(dateTimePicker2);
             Controls.Add(PeríodoHasta);
             Controls.Add(dateTimePicker1);
             Controls.Add(PeríodoDesde);
-            Controls.Add(SeleccioneNúmeroDeEmpresa);
+            Controls.Add(SeleccioneNúmeroCuit);
             Controls.Add(FiltrosDelReporte);
             Name = "ReporteDeCostosvsVenta";
             Text = "Reporte de Costo VS Ventas";
@@ -302,29 +312,29 @@
         #endregion
 
         private Label FiltrosDelReporte;
-        private ComboBox SeleccioneNúmeroDeEmpresa;
+        private ComboBox SeleccioneNúmeroCuit;
         private Label PeríodoDesde;
         private DateTimePicker dateTimePicker1;
         private Label PeríodoHasta;
         private DateTimePicker dateTimePicker2;
         private Button GenerarReporte;
         private Button ExportarAExcel;
-        private DataGridView dataGridView1;
-        private TextBox Resultados;
-        private TextBox Período;
-        private TextBox TotalVentas;
-        private TextBox TotalCostos;
-        private TextBox ResultadoNeto;
-        private TextBox TotalDelRango;
-        private TextBox Ingresos;
-        private TextBox Egresos;
         private TextBox textBox8;
-        private TextBox TotalNeto;
-        private TextBox Detalle;
         private TextBox textBox11;
-        private TextBox PorMes;
         private TextBox textBox14;
         private Label EmpresaTransporte;
         private Button Cancelar;
+        private DataGridView dataGridView1;
+        private Label Resultados;
+        private Label Período;
+        private Label TotalVentas;
+        private Label TotalCostos;
+        private Label ResultadoNeto;
+        private Label TotalRango;
+        private Label Ingresos;
+        private Label Egresos;
+        private Label Monto;
+        private Label Mensual;
+        private Label PorRubro;
     }
 }
