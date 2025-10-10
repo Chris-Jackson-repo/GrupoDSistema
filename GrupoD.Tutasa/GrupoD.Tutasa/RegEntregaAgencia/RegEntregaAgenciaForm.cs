@@ -31,5 +31,10 @@ namespace GrupoD.Tutasa.RegEntregaAgencia
         {
 
         }
+
+        private void MailRetiranteLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

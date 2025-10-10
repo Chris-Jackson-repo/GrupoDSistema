@@ -48,6 +48,8 @@
             EstEnCaminoLabel = new Label();
             EstEnAgenciaLabel = new Label();
             EstEntregadoLabel = new Label();
+            DniLabel = new Label();
+            DniTextBox = new TextBox();
             SuspendLayout();
             // 
             // NumeroGuiaLabel
@@ -112,7 +114,7 @@
             // 
             NomApRetiranteLabel.AutoSize = true;
             NomApRetiranteLabel.Font = new Font("Segoe UI", 8F);
-            NomApRetiranteLabel.Location = new Point(33, 380);
+            NomApRetiranteLabel.Location = new Point(33, 417);
             NomApRetiranteLabel.Name = "NomApRetiranteLabel";
             NomApRetiranteLabel.Size = new Size(123, 19);
             NomApRetiranteLabel.TabIndex = 10;
@@ -122,7 +124,7 @@
             // 
             TelefonoRetiranteLabel.AutoSize = true;
             TelefonoRetiranteLabel.Font = new Font("Segoe UI", 8F);
-            TelefonoRetiranteLabel.Location = new Point(33, 422);
+            TelefonoRetiranteLabel.Location = new Point(33, 455);
             TelefonoRetiranteLabel.Name = "TelefonoRetiranteLabel";
             TelefonoRetiranteLabel.Size = new Size(60, 19);
             TelefonoRetiranteLabel.TabIndex = 11;
@@ -132,16 +134,17 @@
             // 
             MailRetiranteLabel.AutoSize = true;
             MailRetiranteLabel.Font = new Font("Segoe UI", 8F);
-            MailRetiranteLabel.Location = new Point(33, 461);
+            MailRetiranteLabel.Location = new Point(33, 495);
             MailRetiranteLabel.Name = "MailRetiranteLabel";
             MailRetiranteLabel.Size = new Size(35, 19);
             MailRetiranteLabel.TabIndex = 12;
             MailRetiranteLabel.Text = "Mail";
+            MailRetiranteLabel.Click += MailRetiranteLabel_Click;
             // 
             // NomApRetiranteTextbox
             // 
             NomApRetiranteTextbox.Font = new Font("Segoe UI", 8F);
-            NomApRetiranteTextbox.Location = new Point(219, 380);
+            NomApRetiranteTextbox.Location = new Point(219, 417);
             NomApRetiranteTextbox.Name = "NomApRetiranteTextbox";
             NomApRetiranteTextbox.Size = new Size(292, 25);
             NomApRetiranteTextbox.TabIndex = 13;
@@ -149,7 +152,7 @@
             // TelefonoRetiranteTextbox
             // 
             TelefonoRetiranteTextbox.Font = new Font("Segoe UI", 8F);
-            TelefonoRetiranteTextbox.Location = new Point(219, 422);
+            TelefonoRetiranteTextbox.Location = new Point(219, 455);
             TelefonoRetiranteTextbox.Name = "TelefonoRetiranteTextbox";
             TelefonoRetiranteTextbox.Size = new Size(292, 25);
             TelefonoRetiranteTextbox.TabIndex = 14;
@@ -157,14 +160,14 @@
             // MailRetiranteTextbox
             // 
             MailRetiranteTextbox.Font = new Font("Segoe UI", 8F);
-            MailRetiranteTextbox.Location = new Point(219, 461);
+            MailRetiranteTextbox.Location = new Point(219, 495);
             MailRetiranteTextbox.Name = "MailRetiranteTextbox";
             MailRetiranteTextbox.Size = new Size(292, 25);
             MailRetiranteTextbox.TabIndex = 15;
             // 
             // RegistarEntregaButton
             // 
-            RegistarEntregaButton.Location = new Point(514, 533);
+            RegistarEntregaButton.Location = new Point(511, 556);
             RegistarEntregaButton.Name = "RegistarEntregaButton";
             RegistarEntregaButton.Size = new Size(134, 30);
             RegistarEntregaButton.TabIndex = 18;
@@ -173,7 +176,7 @@
             // 
             // CancelarButton
             // 
-            CancelarButton.Location = new Point(654, 533);
+            CancelarButton.Location = new Point(651, 556);
             CancelarButton.Name = "CancelarButton";
             CancelarButton.Size = new Size(134, 30);
             CancelarButton.TabIndex = 19;
@@ -239,11 +242,31 @@
             EstEntregadoLabel.TabIndex = 25;
             EstEntregadoLabel.Text = "Entregado";
             // 
+            // DniLabel
+            // 
+            DniLabel.AutoSize = true;
+            DniLabel.Font = new Font("Segoe UI", 8F);
+            DniLabel.Location = new Point(33, 378);
+            DniLabel.Name = "DniLabel";
+            DniLabel.Size = new Size(33, 19);
+            DniLabel.TabIndex = 26;
+            DniLabel.Text = "DNI";
+            // 
+            // DniTextBox
+            // 
+            DniTextBox.Font = new Font("Segoe UI", 8F);
+            DniTextBox.Location = new Point(219, 378);
+            DniTextBox.Name = "DniTextBox";
+            DniTextBox.Size = new Size(292, 25);
+            DniTextBox.TabIndex = 27;
+            // 
             // RegEntregaAgenciaForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(788, 564);
+            ClientSize = new Size(786, 589);
+            Controls.Add(DniTextBox);
+            Controls.Add(DniLabel);
             Controls.Add(EstEntregadoLabel);
             Controls.Add(EstEnAgenciaLabel);
             Controls.Add(EstEnCaminoLabel);
@@ -292,5 +315,7 @@
         private Label EstEnCaminoLabel;
         private Label EstEnAgenciaLabel;
         private Label EstEntregadoLabel;
+        private Label DniLabel;
+        private TextBox DniTextBox;
     }
 }
