@@ -32,8 +32,7 @@
             FechaRetiroLabel = new Label();
             CancelarButton = new Button();
             RegistarEntregaButton = new Button();
-            this.ApellidoRetiranteTextbox = new TextBox();
-            this.NombreRetiranteTextbox = new TextBox();
+            
             ApellidoRetiranteLabel = new Label();
             NomApRetiranteLabel = new Label();
             FechaLlegadaAgenciaDateTimePicker = new DateTimePicker();
@@ -88,19 +87,11 @@
             // 
             // ApellidoRetiranteTextbox
             // 
-            this.ApellidoRetiranteTextbox.Font = new Font("Segoe UI", 8F);
-            this.ApellidoRetiranteTextbox.Location = new Point(192, 120);
-            this.ApellidoRetiranteTextbox.Name = "ApellidoRetiranteTextbox";
-            this.ApellidoRetiranteTextbox.Size = new Size(292, 25);
-            this.ApellidoRetiranteTextbox.TabIndex = 36;
+           
             // 
             // NombreRetiranteTextbox
             // 
-            this.NombreRetiranteTextbox.Font = new Font("Segoe UI", 8F);
-            this.NombreRetiranteTextbox.Location = new Point(192, 74);
-            this.NombreRetiranteTextbox.Name = "NombreRetiranteTextbox";
-            this.NombreRetiranteTextbox.Size = new Size(292, 25);
-            this.NombreRetiranteTextbox.TabIndex = 35;
+           
             // 
             // ApellidoRetiranteLabel
             // 
@@ -195,8 +186,7 @@
             // 
             DatosRetiranteGroupBox.Controls.Add(DniTextBox);
             DatosRetiranteGroupBox.Controls.Add(DniLabel);
-            DatosRetiranteGroupBox.Controls.Add(this.ApellidoRetiranteTextbox);
-            DatosRetiranteGroupBox.Controls.Add(this.NombreRetiranteTextbox);
+            
             DatosRetiranteGroupBox.Controls.Add(ApellidoRetiranteLabel);
             DatosRetiranteGroupBox.Controls.Add(NomApRetiranteLabel);
             DatosRetiranteGroupBox.Font = new Font("Segoe UI", 10F);

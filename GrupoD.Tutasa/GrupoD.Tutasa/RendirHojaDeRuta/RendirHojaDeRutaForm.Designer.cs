@@ -38,7 +38,7 @@
             groupBox = new GroupBox();
             Buscarbutton = new Button();
             listView1 = new ListView();
-            this.EspacioVaciocolumnHeader1 = new ColumnHeader();
+            
             GuiacolumnHeader1 = new ColumnHeader();
             DireccioncolumnHeader1 = new ColumnHeader();
             DNIDestinatariocolumnHeader1 = new ColumnHeader();
@@ -131,7 +131,7 @@
             // listView1
             // 
             listView1.CheckBoxes = true;
-            listView1.Columns.AddRange(new ColumnHeader[] { this.EspacioVaciocolumnHeader1, GuiacolumnHeader1, DireccioncolumnHeader1, DNIDestinatariocolumnHeader1, TipoPaquetecolumnHeader1 });
+            listView1.Columns.AddRange(new ColumnHeader[] { this.GuiacolumnHeader1, DireccioncolumnHeader1, DNIDestinatariocolumnHeader1, TipoPaquetecolumnHeader1 });
             listViewItem2.StateImageIndex = 0;
             listView1.Items.AddRange(new ListViewItem[] { listViewItem2 });
             listView1.Location = new Point(8, 74);
@@ -143,8 +143,7 @@
             // 
             // EspacioVaciocolumnHeader1
             // 
-            this.EspacioVaciocolumnHeader1.Text = "";
-            this.EspacioVaciocolumnHeader1.Width = 100;
+           
             // 
             // GuiacolumnHeader1
             // 
@@ -240,7 +239,7 @@
         private DataGridViewCheckBoxColumn DevueltoHR;
         private ListView listView1;
         private ColumnHeader GuiacolumnHeader1;
-        private ColumnHeader GuiacolumnHeader1;
+       
         private ColumnHeader DireccioncolumnHeader1;
         private ColumnHeader DNIDestinatariocolumnHeader1;
         private ColumnHeader TipoPaquetecolumnHeader1;
