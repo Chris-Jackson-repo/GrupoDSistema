@@ -1,6 +1,6 @@
 ﻿namespace GrupoD.Tutasa.GenerarHojaDeRuta
 {
-    partial class GenerarHojaRutaForm
+    partial class RendirHojaDeRuta2Form
     {
         /// <summary>
         ///  Required designer variable.

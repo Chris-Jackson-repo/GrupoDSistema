@@ -1,8 +1,8 @@
 namespace GrupoD.Tutasa.GenerarHojaDeRuta
 {
-    public partial class GenerarHojaRutaForm : Form
+    public partial class RendirHojaDeRuta2Form : Form
     {
-        public GenerarHojaRutaForm()
+        public RendirHojaDeRuta2Form()
         {
             InitializeComponent();
         }
