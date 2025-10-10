@@ -28,104 +28,163 @@
         /// </summary>
         private void InitializeComponent()
         {
-            groupBox1 = new GroupBox();
-            label1 = new Label();
-            textBox1 = new TextBox();
-            dateTimePicker1 = new DateTimePicker();
-            label2 = new Label();
-            dataGridView1 = new DataGridView();
-            GuíaHR = new DataGridViewTextBoxColumn();
-            DestinoHR = new DataGridViewTextBoxColumn();
-            EstadoHR = new DataGridViewTextBoxColumn();
-            DevueltoHR = new DataGridViewCheckBoxColumn();
-            button1 = new Button();
-            DatagridRendicion = new Label();
             groupBox2 = new GroupBox();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
             button2 = new Button();
-            groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            DNI_Fleterolabel = new Label();
+            textBox1 = new TextBox();
+            DatagridRendicion = new Label();
+            groupBox = new GroupBox();
+            dataGridView1 = new DataGridView();
+            CargarGuiasbutton = new Button();
+            dataGridView2 = new DataGridView();
+            AsignarColumn = new DataGridViewCheckBoxColumn();
+            GuíaColumn2 = new DataGridViewTextBoxColumn();
+            EstadoColumn2 = new DataGridViewTextBoxColumn();
+            TipoPaqueteColumn = new DataGridViewTextBoxColumn();
+            DestinoColumn2 = new DataGridViewTextBoxColumn();
+            DestinatarioColumn2 = new DataGridViewTextBoxColumn();
+            ListaGuiasDespacholabel = new Label();
+            DevueltoHR = new DataGridViewCheckBoxColumn();
+            DestinatarioColumn1 = new DataGridViewTextBoxColumn();
+            DestinoColumn1 = new DataGridViewTextBoxColumn();
+            EstadoColumn1 = new DataGridViewTextBoxColumn();
+            GuíaColumn1 = new DataGridViewTextBoxColumn();
+            CargarCheckBox = new DataGridViewCheckBoxColumn();
             groupBox2.SuspendLayout();
+            groupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             SuspendLayout();
             // 
-            // groupBox1
+            // groupBox2
             // 
-            groupBox1.Controls.Add(DatagridRendicion);
-            groupBox1.Controls.Add(button1);
-            groupBox1.Controls.Add(dataGridView1);
-            groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(dateTimePicker1);
-            groupBox1.Controls.Add(textBox1);
-            groupBox1.Controls.Add(label1);
-            groupBox1.Location = new Point(12, 5);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(680, 422);
-            groupBox1.TabIndex = 0;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Identificación de viaje";
+            groupBox2.Controls.Add(ListaGuiasDespacholabel);
+            groupBox2.Controls.Add(dataGridView2);
+            groupBox2.Controls.Add(button2);
+            groupBox2.Location = new Point(13, 444);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(820, 333);
+            groupBox2.TabIndex = 1;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Guías a despachar para fletero";
             // 
-            // label1
+            // button2
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(6, 37);
-            label1.Name = "label1";
-            label1.Size = new Size(84, 15);
-            label1.TabIndex = 0;
-            label1.Text = "ID hoja de ruta";
+            button2.Location = new Point(690, 278);
+            button2.Name = "button2";
+            button2.Size = new Size(107, 38);
+            button2.TabIndex = 4;
+            button2.Text = "Confirmar ";
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // DNI_Fleterolabel
+            // 
+            DNI_Fleterolabel.AutoSize = true;
+            DNI_Fleterolabel.Location = new Point(21, 36);
+            DNI_Fleterolabel.Name = "DNI_Fleterolabel";
+            DNI_Fleterolabel.Size = new Size(83, 15);
+            DNI_Fleterolabel.TabIndex = 0;
+            DNI_Fleterolabel.Text = "DNI del fletero";
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(122, 34);
+            textBox1.Location = new Point(140, 32);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(223, 23);
             textBox1.TabIndex = 1;
             // 
-            // dateTimePicker1
+            // DatagridRendicion
             // 
-            dateTimePicker1.Location = new Point(122, 78);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(223, 23);
-            dateTimePicker1.TabIndex = 2;
+            DatagridRendicion.Font = new Font("Segoe UI", 14F);
+            DatagridRendicion.Location = new Point(21, 38);
+            DatagridRendicion.Name = "DatagridRendicion";
+            DatagridRendicion.Size = new Size(259, 33);
+            DatagridRendicion.TabIndex = 6;
+            DatagridRendicion.Text = "Lista de guías asociadas";
             // 
-            // label2
+            // groupBox
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(6, 86);
-            label2.Name = "label2";
-            label2.Size = new Size(107, 15);
-            label2.TabIndex = 3;
-            label2.Text = "Fecha de rendición";
+            groupBox.Controls.Add(DatagridRendicion);
+            groupBox.Controls.Add(dataGridView1);
+            groupBox.Location = new Point(13, 73);
+            groupBox.Name = "groupBox";
+            groupBox.Size = new Size(820, 356);
+            groupBox.TabIndex = 7;
+            groupBox.TabStop = false;
+            groupBox.Text = "Guías a cargo del fletero";
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { GuíaHR, DestinoHR, EstadoHR, DevueltoHR });
-            dataGridView1.Location = new Point(100, 169);
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { CargarCheckBox, GuíaColumn1, EstadoColumn1, DestinoColumn1, DestinatarioColumn1, DevueltoHR });
+            dataGridView1.Location = new Point(8, 74);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
-            dataGridView1.Size = new Size(443, 235);
+            dataGridView1.Size = new Size(794, 235);
             dataGridView1.TabIndex = 4;
             // 
-            // GuíaHR
+            // CargarGuiasbutton
             // 
-            GuíaHR.HeaderText = "Guía";
-            GuíaHR.Name = "GuíaHR";
-            GuíaHR.ReadOnly = true;
+            CargarGuiasbutton.Location = new Point(402, 32);
+            CargarGuiasbutton.Name = "CargarGuiasbutton";
+            CargarGuiasbutton.Size = new Size(168, 23);
+            CargarGuiasbutton.TabIndex = 8;
+            CargarGuiasbutton.Text = "Cargar guías asignadas";
+            CargarGuiasbutton.UseVisualStyleBackColor = true;
             // 
-            // DestinoHR
+            // dataGridView2
             // 
-            DestinoHR.HeaderText = "Destino";
-            DestinoHR.Name = "DestinoHR";
-            DestinoHR.ReadOnly = true;
+            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView2.Columns.AddRange(new DataGridViewColumn[] { AsignarColumn, GuíaColumn2, EstadoColumn2, TipoPaqueteColumn, DestinoColumn2, DestinatarioColumn2 });
+            dataGridView2.Location = new Point(21, 83);
+            dataGridView2.Name = "dataGridView2";
+            dataGridView2.Size = new Size(776, 180);
+            dataGridView2.TabIndex = 5;
             // 
-            // EstadoHR
+            // AsignarColumn
             // 
-            EstadoHR.HeaderText = "Estado";
-            EstadoHR.Name = "EstadoHR";
-            EstadoHR.ReadOnly = true;
+            AsignarColumn.HeaderText = "Asignar";
+            AsignarColumn.Name = "AsignarColumn";
+            AsignarColumn.Width = 60;
+            // 
+            // GuíaColumn2
+            // 
+            GuíaColumn2.HeaderText = "Guía";
+            GuíaColumn2.Name = "GuíaColumn2";
+            // 
+            // EstadoColumn2
+            // 
+            EstadoColumn2.HeaderText = "Estado";
+            EstadoColumn2.Name = "EstadoColumn2";
+            EstadoColumn2.Width = 175;
+            // 
+            // TipoPaqueteColumn
+            // 
+            TipoPaqueteColumn.HeaderText = "Tipo";
+            TipoPaqueteColumn.Name = "TipoPaqueteColumn";
+            TipoPaqueteColumn.Width = 97;
+            // 
+            // DestinoColumn2
+            // 
+            DestinoColumn2.HeaderText = "Destino";
+            DestinoColumn2.Name = "DestinoColumn2";
+            DestinoColumn2.Width = 150;
+            // 
+            // DestinatarioColumn2
+            // 
+            DestinatarioColumn2.HeaderText = "Destinatario";
+            DestinatarioColumn2.Name = "DestinatarioColumn2";
+            DestinatarioColumn2.Width = 150;
+            // 
+            // ListaGuiasDespacholabel
+            // 
+            ListaGuiasDespacholabel.AutoSize = true;
+            ListaGuiasDespacholabel.Font = new Font("Segoe UI", 14F);
+            ListaGuiasDespacholabel.Location = new Point(21, 41);
+            ListaGuiasDespacholabel.Name = "ListaGuiasDespacholabel";
+            ListaGuiasDespacholabel.Size = new Size(233, 25);
+            ListaGuiasDespacholabel.TabIndex = 6;
+            ListaGuiasDespacholabel.Text = "Lista de guías a despachar";
             // 
             // DevueltoHR
             // 
@@ -133,124 +192,84 @@
             DevueltoHR.Name = "DevueltoHR";
             DevueltoHR.ReadOnly = true;
             // 
-            // button1
+            // DestinatarioColumn1
             // 
-            button1.Location = new Point(403, 37);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 64);
-            button1.TabIndex = 5;
-            button1.Text = "Cargar ruta";
-            button1.UseVisualStyleBackColor = true;
+            DestinatarioColumn1.HeaderText = "Destinatario";
+            DestinatarioColumn1.Name = "DestinatarioColumn1";
+            DestinatarioColumn1.ReadOnly = true;
             // 
-            // DatagridRendicion
+            // DestinoColumn1
             // 
-            DatagridRendicion.Font = new Font("Segoe UI", 14F);
-            DatagridRendicion.Location = new Point(6, 133);
-            DatagridRendicion.Name = "DatagridRendicion";
-            DatagridRendicion.Size = new Size(186, 33);
-            DatagridRendicion.TabIndex = 6;
-            DatagridRendicion.Text = "Lista de guías";
+            DestinoColumn1.HeaderText = "Dirección de destino";
+            DestinoColumn1.Name = "DestinoColumn1";
+            DestinoColumn1.ReadOnly = true;
+            DestinoColumn1.Width = 150;
             // 
-            // groupBox2
+            // EstadoColumn1
             // 
-            groupBox2.Controls.Add(button2);
-            groupBox2.Controls.Add(label6);
-            groupBox2.Controls.Add(label5);
-            groupBox2.Controls.Add(label4);
-            groupBox2.Controls.Add(label3);
-            groupBox2.Location = new Point(12, 437);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(680, 351);
-            groupBox2.TabIndex = 1;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "Cierre y liquidación";
+            EstadoColumn1.HeaderText = "Estado";
+            EstadoColumn1.Name = "EstadoColumn1";
+            EstadoColumn1.ReadOnly = true;
+            EstadoColumn1.Width = 200;
             // 
-            // label3
+            // GuíaColumn1
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 14F);
-            label3.Location = new Point(9, 43);
-            label3.Name = "label3";
-            label3.Size = new Size(222, 25);
-            label3.TabIndex = 0;
-            label3.Text = "Total Guías en ruta: XXXX";
-            label3.Click += label3_Click;
+            GuíaColumn1.FillWeight = 150F;
+            GuíaColumn1.HeaderText = "Guía";
+            GuíaColumn1.Name = "GuíaColumn1";
+            GuíaColumn1.ReadOnly = true;
+            GuíaColumn1.Width = 150;
             // 
-            // label4
+            // CargarCheckBox
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 14F);
-            label4.Location = new Point(9, 90);
-            label4.Name = "label4";
-            label4.Size = new Size(265, 25);
-            label4.TabIndex = 1;
-            label4.Text = "Total guías entregadas: XXXXX";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 14F);
-            label5.Location = new Point(9, 138);
-            label5.Name = "label5";
-            label5.Size = new Size(224, 25);
-            label5.TabIndex = 2;
-            label5.Text = "Total excepciones: XXXXX";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 14F);
-            label6.Location = new Point(9, 185);
-            label6.Name = "label6";
-            label6.Size = new Size(256, 25);
-            label6.TabIndex = 3;
-            label6.Text = "Pendientres a conciliar: XXXX";
-            // 
-            // button2
-            // 
-            button2.Location = new Point(195, 245);
-            button2.Name = "button2";
-            button2.Size = new Size(203, 78);
-            button2.TabIndex = 4;
-            button2.Text = "Cerrar rendición";
-            button2.UseVisualStyleBackColor = true;
+            CargarCheckBox.HeaderText = "Cargar";
+            CargarCheckBox.Name = "CargarCheckBox";
+            CargarCheckBox.ReadOnly = true;
+            CargarCheckBox.Width = 50;
             // 
             // RendirHojaDeRutaForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(703, 796);
+            ClientSize = new Size(854, 789);
+            Controls.Add(CargarGuiasbutton);
             Controls.Add(groupBox2);
-            Controls.Add(groupBox1);
+            Controls.Add(textBox1);
+            Controls.Add(DNI_Fleterolabel);
+            Controls.Add(groupBox);
             Name = "RendirHojaDeRutaForm";
             Text = "Rendición de hojas de ruta";
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
+            groupBox.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
-
-        private GroupBox groupBox1;
-        private Label label2;
-        private DateTimePicker dateTimePicker1;
-        private TextBox textBox1;
-        private Label label1;
-        private Button button1;
-        private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn GuíaHR;
-        private DataGridViewTextBoxColumn DestinoHR;
-        private DataGridViewTextBoxColumn EstadoHR;
-        private DataGridViewCheckBoxColumn DevueltoHR;
-        private Label DatagridRendicion;
         private GroupBox groupBox2;
-        private Label label3;
         private Button button2;
-        private Label label6;
-        private Label label5;
-        private Label label4;
+        private Label DNI_Fleterolabel;
+        private TextBox textBox1;
+        private Label DatagridRendicion;
+        private GroupBox groupBox;
+        private Button CargarGuiasbutton;
+        private DataGridView dataGridView1;
+        private DataGridView dataGridView2;
+        private Label ListaGuiasDespacholabel;
+        private DataGridViewCheckBoxColumn AsignarColumn;
+        private DataGridViewTextBoxColumn GuíaColumn2;
+        private DataGridViewTextBoxColumn EstadoColumn2;
+        private DataGridViewTextBoxColumn TipoPaqueteColumn;
+        private DataGridViewTextBoxColumn DestinoColumn2;
+        private DataGridViewTextBoxColumn DestinatarioColumn2;
+        private DataGridViewCheckBoxColumn CargarCheckBox;
+        private DataGridViewTextBoxColumn GuíaColumn1;
+        private DataGridViewTextBoxColumn EstadoColumn1;
+        private DataGridViewTextBoxColumn DestinoColumn1;
+        private DataGridViewTextBoxColumn DestinatarioColumn1;
+        private DataGridViewCheckBoxColumn DevueltoHR;
     }
 }
