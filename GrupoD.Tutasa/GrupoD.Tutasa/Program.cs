@@ -1,4 +1,4 @@
-using GrupoD.Tutasa.GenerarHojaDeRuta;
+using GrupoD.Tutasa.RendirHojaDeRuta;
 
 namespace GrupoD.Tutasa
 {
@@ -13,7 +13,7 @@ namespace GrupoD.Tutasa
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new RendirHojaDeRuta2Form());
+            Application.Run(new RendirHojaDeRutaForm());
         }
     }
 }
