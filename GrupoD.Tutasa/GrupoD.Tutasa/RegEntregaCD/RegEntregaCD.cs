@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace GrupoD.Tutasa.RegEntregaCD
 {
-    public partial class RegEntregaCD : Form
+    public partial class RegEntregaCDForm : Form
     {
-        public RegEntregaCD()
+        public RegEntregaCDForm()
         {
             InitializeComponent();
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RegEntregaCD_Load(object sender, EventArgs e)
         {
 
         }

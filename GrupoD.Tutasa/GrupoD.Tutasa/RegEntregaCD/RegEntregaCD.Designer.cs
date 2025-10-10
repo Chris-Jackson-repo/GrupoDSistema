@@ -1,6 +1,6 @@
 ﻿namespace GrupoD.Tutasa.RegEntregaCD
 {
-    partial class RegEntregaCD
+    partial class RegEntregaCDForm
     {
         /// <summary>
         /// Required designer variable.
@@ -271,7 +271,7 @@
             EstadoActualLabel.TabIndex = 42;
             EstadoActualLabel.Text = "Estado actual";
             // 
-            // RegEntregaCD
+            // RegEntregaCDForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -286,8 +286,9 @@
             Controls.Add(RegistarEntregaButton);
             Controls.Add(NumeroGuiaTextbox);
             Controls.Add(NumeroGuiaLabel);
-            Name = "RegEntregaCD";
-            Text = "RegEntregaCD";
+            Name = "RegEntregaCDForm";
+            Text = "Registrar entrega en CD";
+            Load += RegEntregaCD_Load;
             DatosEncomiendaGroupBox.ResumeLayout(false);
             DatosEncomiendaGroupBox.PerformLayout();
             DatosRetiranteGroupBox.ResumeLayout(false);
