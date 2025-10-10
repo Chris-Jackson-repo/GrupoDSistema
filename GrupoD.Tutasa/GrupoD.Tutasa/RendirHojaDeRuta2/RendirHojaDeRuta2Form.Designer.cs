@@ -35,13 +35,16 @@
             textBox1 = new TextBox();
             ListaGuiasADespacharlabel = new Label();
             dataGridView1 = new DataGridView();
-            CargarColumn1 = new DataGridViewCheckBoxColumn();
-            GuiaColumn1 = new DataGridViewTextBoxColumn();
-            DevueltoColumn1 = new DataGridViewCheckBoxColumn();
             dataGridView2 = new DataGridView();
-            CargarColumn2 = new DataGridViewCheckBoxColumn();
-            GuiaADespacharColumn = new DataGridViewCheckBoxColumn();
+            GuiaADespacharColumn = new DataGridViewTextBoxColumn();
             TipoADespacharColumn = new DataGridViewTextBoxColumn();
+            EstadoGuiaADespacharColumn = new DataGridViewTextBoxColumn();
+            DestinoADespacharColumn = new DataGridViewTextBoxColumn();
+            CargarGuiasFleteColumn = new DataGridViewCheckBoxColumn();
+            GuiaFleteColumn = new DataGridViewTextBoxColumn();
+            EstadoGuiasFleteColumn = new DataGridViewTextBoxColumn();
+            DestinoGuiasFleteColumn = new DataGridViewTextBoxColumn();
+            DevueltosFleteColumn = new DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             SuspendLayout();
@@ -68,16 +71,16 @@
             // 
             ListaGuiaslabel.AutoSize = true;
             ListaGuiaslabel.Font = new Font("Segoe UI", 12F);
-            ListaGuiaslabel.Location = new Point(29, 127);
+            ListaGuiaslabel.Location = new Point(30, 137);
             ListaGuiaslabel.Name = "ListaGuiaslabel";
-            ListaGuiaslabel.Size = new Size(104, 21);
+            ListaGuiaslabel.Size = new Size(245, 21);
             ListaGuiaslabel.TabIndex = 8;
-            ListaGuiaslabel.Text = "Lista de guías";
+            ListaGuiaslabel.Text = "Lista de guías a confirmar entrega";
             ListaGuiaslabel.Click += label4_Click;
             // 
             // button2
             // 
-            button2.Location = new Point(328, 522);
+            button2.Location = new Point(1017, 499);
             button2.Name = "button2";
             button2.Size = new Size(158, 65);
             button2.TabIndex = 10;
@@ -95,7 +98,7 @@
             // 
             ListaGuiasADespacharlabel.AutoSize = true;
             ListaGuiasADespacharlabel.Font = new Font("Segoe UI", 12F);
-            ListaGuiasADespacharlabel.Location = new Point(481, 127);
+            ListaGuiasADespacharlabel.Location = new Point(631, 137);
             ListaGuiasADespacharlabel.Name = "ListaGuiasADespacharlabel";
             ListaGuiasADespacharlabel.Size = new Size(271, 21);
             ListaGuiasADespacharlabel.TabIndex = 15;
@@ -104,61 +107,82 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { CargarColumn1, GuiaColumn1, DevueltoColumn1 });
-            dataGridView1.Location = new Point(30, 169);
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { CargarGuiasFleteColumn, GuiaFleteColumn, EstadoGuiasFleteColumn, DestinoGuiasFleteColumn, DevueltosFleteColumn });
+            dataGridView1.Location = new Point(30, 171);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(309, 289);
+            dataGridView1.Size = new Size(544, 299);
             dataGridView1.TabIndex = 16;
-            // 
-            // CargarColumn1
-            // 
-            CargarColumn1.HeaderText = "Cargar";
-            CargarColumn1.Name = "CargarColumn1";
-            CargarColumn1.Width = 50;
-            // 
-            // GuiaColumn1
-            // 
-            GuiaColumn1.HeaderText = "Guía";
-            GuiaColumn1.Name = "GuiaColumn1";
-            GuiaColumn1.Resizable = DataGridViewTriState.True;
-            GuiaColumn1.SortMode = DataGridViewColumnSortMode.NotSortable;
-            GuiaColumn1.Width = 150;
-            // 
-            // DevueltoColumn1
-            // 
-            DevueltoColumn1.HeaderText = "Devuelto";
-            DevueltoColumn1.Name = "DevueltoColumn1";
-            DevueltoColumn1.Width = 65;
             // 
             // dataGridView2
             // 
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Columns.AddRange(new DataGridViewColumn[] { CargarColumn2, GuiaADespacharColumn, TipoADespacharColumn });
-            dataGridView2.Location = new Point(441, 169);
+            dataGridView2.Columns.AddRange(new DataGridViewColumn[] { GuiaADespacharColumn, TipoADespacharColumn, EstadoGuiaADespacharColumn, DestinoADespacharColumn });
+            dataGridView2.Location = new Point(631, 171);
             dataGridView2.Name = "dataGridView2";
-            dataGridView2.Size = new Size(331, 289);
+            dataGridView2.Size = new Size(544, 299);
             dataGridView2.TabIndex = 17;
-            // 
-            // CargarColumn2
-            // 
-            CargarColumn2.HeaderText = "Cargar";
-            CargarColumn2.Name = "CargarColumn2";
             // 
             // GuiaADespacharColumn
             // 
             GuiaADespacharColumn.HeaderText = "Guía";
             GuiaADespacharColumn.Name = "GuiaADespacharColumn";
+            GuiaADespacharColumn.Resizable = DataGridViewTriState.True;
+            GuiaADespacharColumn.SortMode = DataGridViewColumnSortMode.NotSortable;
+            GuiaADespacharColumn.Width = 150;
             // 
             // TipoADespacharColumn
             // 
             TipoADespacharColumn.HeaderText = "Tipo";
             TipoADespacharColumn.Name = "TipoADespacharColumn";
+            TipoADespacharColumn.Width = 50;
+            // 
+            // EstadoGuiaADespacharColumn
+            // 
+            EstadoGuiaADespacharColumn.HeaderText = "Estado";
+            EstadoGuiaADespacharColumn.Name = "EstadoGuiaADespacharColumn";
+            EstadoGuiaADespacharColumn.Width = 150;
+            // 
+            // DestinoADespacharColumn
+            // 
+            DestinoADespacharColumn.HeaderText = "Destino";
+            DestinoADespacharColumn.Name = "DestinoADespacharColumn";
+            DestinoADespacharColumn.Width = 150;
+            // 
+            // CargarGuiasFleteColumn
+            // 
+            CargarGuiasFleteColumn.HeaderText = "Cargar";
+            CargarGuiasFleteColumn.Name = "CargarGuiasFleteColumn";
+            CargarGuiasFleteColumn.Width = 50;
+            // 
+            // GuiaFleteColumn
+            // 
+            GuiaFleteColumn.HeaderText = "Guía";
+            GuiaFleteColumn.Name = "GuiaFleteColumn";
+            GuiaFleteColumn.Resizable = DataGridViewTriState.True;
+            GuiaFleteColumn.SortMode = DataGridViewColumnSortMode.NotSortable;
+            GuiaFleteColumn.Width = 150;
+            // 
+            // EstadoGuiasFleteColumn
+            // 
+            EstadoGuiasFleteColumn.HeaderText = "Estado";
+            EstadoGuiasFleteColumn.Name = "EstadoGuiasFleteColumn";
+            // 
+            // DestinoGuiasFleteColumn
+            // 
+            DestinoGuiasFleteColumn.HeaderText = "Destino";
+            DestinoGuiasFleteColumn.Name = "DestinoGuiasFleteColumn";
+            // 
+            // DevueltosFleteColumn
+            // 
+            DevueltosFleteColumn.HeaderText = "Devuelto";
+            DevueltosFleteColumn.Name = "DevueltosFleteColumn";
+            DevueltosFleteColumn.Width = 65;
             // 
             // RendirHojaDeRuta2Form
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(826, 598);
+            ClientSize = new Size(1252, 589);
             Controls.Add(dataGridView2);
             Controls.Add(dataGridView1);
             Controls.Add(ListaGuiasADespacharlabel);
@@ -184,12 +208,15 @@
         private TextBox textBox1;
         private Label ListaGuiasADespacharlabel;
         private DataGridView dataGridView1;
-        private DataGridViewCheckBoxColumn CargarColumn1;
-        private DataGridViewTextBoxColumn GuiaColumn1;
-        private DataGridViewCheckBoxColumn DevueltoColumn1;
         private DataGridView dataGridView2;
-        private DataGridViewCheckBoxColumn CargarColumn2;
-        private DataGridViewCheckBoxColumn GuiaADespacharColumn;
+        private DataGridViewCheckBoxColumn CargarGuiasFleteColumn;
+        private DataGridViewTextBoxColumn GuiaFleteColumn;
+        private DataGridViewTextBoxColumn EstadoGuiasFleteColumn;
+        private DataGridViewTextBoxColumn DestinoGuiasFleteColumn;
+        private DataGridViewCheckBoxColumn DevueltosFleteColumn;
+        private DataGridViewTextBoxColumn GuiaADespacharColumn;
         private DataGridViewTextBoxColumn TipoADespacharColumn;
+        private DataGridViewTextBoxColumn EstadoGuiaADespacharColumn;
+        private DataGridViewTextBoxColumn DestinoADespacharColumn;
     }
 }
