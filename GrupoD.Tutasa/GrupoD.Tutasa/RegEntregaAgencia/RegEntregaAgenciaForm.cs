@@ -36,5 +36,10 @@ namespace GrupoD.Tutasa.RegEntregaAgencia
         {
 
         }
+
+        private void TelefonoRetiranteLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
