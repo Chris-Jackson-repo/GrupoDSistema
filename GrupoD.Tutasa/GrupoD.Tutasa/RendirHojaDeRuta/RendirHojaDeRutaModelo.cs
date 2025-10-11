@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,7 +26,7 @@ namespace GrupoD.Tutasa.RendirHojaDeRuta
             {
                 new GuiasPendientesRendicion
                 {
-                    Guia = "PRUEBA3412A",
+                    Guia = "574013982645",
                     Estado = "Pendiente",
                     DireccionDeDestino = "Calle Prueba 1",
                     Autorizado = "Fletero Uno",
@@ -34,7 +35,7 @@ namespace GrupoD.Tutasa.RendirHojaDeRuta
                 },
                 new GuiasPendientesRendicion
                 {
-                    Guia = "PRUEBA3412B",
+                    Guia = "821190547306",
                     Estado = "Pendiente",
                     DireccionDeDestino = "Calle Prueba 2",
                     Autorizado = "Fletero Uno",
@@ -47,7 +48,7 @@ namespace GrupoD.Tutasa.RendirHojaDeRuta
             {
                 new GuiasPendientesRendicion
                 {
-                    Guia = "PRUEBA3812A",
+                    Guia = "490517336288",
                     Estado = "Pendiente",
                     DireccionDeDestino = "Avenida Test 1",
                     Autorizado = "Fletero Dos",
@@ -56,7 +57,7 @@ namespace GrupoD.Tutasa.RendirHojaDeRuta
                 },
                 new GuiasPendientesRendicion
                 {
-                    Guia = "PRUEBA3812B",
+                    Guia = "107624953150",
                     Estado = "Pendiente",
                     DireccionDeDestino = "Avenida Test 2",
                     Autorizado = "Fletero Dos",
@@ -168,9 +169,26 @@ namespace GrupoD.Tutasa.RendirHojaDeRuta
 
         public string AceptarYCambiarEstado(List<string> guiasSeleccionadas)
         {
+            var lista = guiasARendirPorFletero[ultimoDniIngresado];
             
+            foreach (var guia in lista.Where(g => guiasSeleccionadas.Contains(g.Guia)))
+            {
+                guia.Estado = "Rendida";
+            }
+
+            lista.RemoveAll(g => guiasSeleccionadas.Contains(g.Guia));
+
+
+
             return null;
+
+
         }
+
+
+
+
+
 
     }
 }
