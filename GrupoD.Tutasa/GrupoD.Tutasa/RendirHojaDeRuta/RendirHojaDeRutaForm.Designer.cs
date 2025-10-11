@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             ColumnHeader EstadocolumnHeader1;
-            ListViewItem listViewItem2 = new ListViewItem("");
             GuiasDespachogroupBox = new GroupBox();
             GuiasARealizarListView = new ListView();
             GuiacolumnHeader2 = new ColumnHeader();
@@ -41,7 +40,7 @@
             ListaGuiasDespacholabel = new Label();
             Confirmarbutton = new Button();
             DNI_Fleterolabel = new Label();
-            DNIFleterotextBox = new TextBox();
+            DNIFleteroTextBox = new TextBox();
             GuiasPendientesRendicionLabel = new Label();
             GuiasPendientesRendiciongroupBox = new GroupBox();
             GuiasARendirListView = new ListView();
@@ -133,6 +132,7 @@
             Confirmarbutton.TabIndex = 4;
             Confirmarbutton.Text = "Confirmar ";
             Confirmarbutton.UseVisualStyleBackColor = true;
+            Confirmarbutton.Click += Confirmarbutton_Click;
             // 
             // DNI_Fleterolabel
             // 
@@ -143,12 +143,12 @@
             DNI_Fleterolabel.TabIndex = 0;
             DNI_Fleterolabel.Text = "DNI del fletero";
             // 
-            // DNIFleterotextBox
+            // DNIFleteroTextBox
             // 
-            DNIFleterotextBox.Location = new Point(140, 32);
-            DNIFleterotextBox.Name = "DNIFleterotextBox";
-            DNIFleterotextBox.Size = new Size(223, 23);
-            DNIFleterotextBox.TabIndex = 1;
+            DNIFleteroTextBox.Location = new Point(140, 32);
+            DNIFleteroTextBox.Name = "DNIFleteroTextBox";
+            DNIFleteroTextBox.Size = new Size(223, 23);
+            DNIFleteroTextBox.TabIndex = 1;
             // 
             // GuiasPendientesRendicionLabel
             // 
@@ -174,8 +174,7 @@
             // 
             GuiasARendirListView.CheckBoxes = true;
             GuiasARendirListView.Columns.AddRange(new ColumnHeader[] { GuiacolumnHeader1, EstadocolumnHeader1, DireccionDestinocolumnHeader1, DNIAutorizadocolumnHeader1, CUITcolumnHeader, TipoPaquetecolumnHeader });
-            listViewItem2.StateImageIndex = 0;
-            GuiasARendirListView.Items.AddRange(new ListViewItem[] { listViewItem2 });
+            GuiasARendirListView.FullRowSelect = true;
             GuiasARendirListView.Location = new Point(8, 69);
             GuiasARendirListView.Name = "GuiasARendirListView";
             GuiasARendirListView.Size = new Size(957, 290);
@@ -230,7 +229,7 @@
             Controls.Add(Buscarbutton);
             Controls.Add(GuiasDespachogroupBox);
             Controls.Add(Confirmarbutton);
-            Controls.Add(DNIFleterotextBox);
+            Controls.Add(DNIFleteroTextBox);
             Controls.Add(DNI_Fleterolabel);
             Controls.Add(GuiasPendientesRendiciongroupBox);
             Name = "RendirHojaDeRutaForm";
@@ -246,7 +245,7 @@
         private GroupBox GuiasDespachogroupBox;
         private Button Confirmarbutton;
         private Label DNI_Fleterolabel;
-        private TextBox DNIFleterotextBox;
+        private TextBox DNIFleteroTextBox;
         private Label GuiasPendientesRendicionLabel;
         private GroupBox GuiasPendientesRendiciongroupBox;
         private Button Buscarbutton;

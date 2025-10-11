@@ -22,7 +22,7 @@ namespace GrupoD.Tutasa.RendirHojaDeRuta
 
         private void Buscarbutton_Click(object sender, EventArgs e)
         {
-            if (!int.TryParse(DNIFleterotextBox.Text, out var dni))
+            if (!int.TryParse(DNIFleteroTextBox.Text, out var dni))
             {
                 MessageBox.Show("El DNI debe ser un número válido.", "Error");
                 return;
@@ -30,12 +30,14 @@ namespace GrupoD.Tutasa.RendirHojaDeRuta
 
             // Le pido al modelo las guias a rendir (DNI)
             var guiasRendicion = modelo.ObtenerGuiasARendir(dni);
-            
+
             //Ya se mostró el error y se cancela
-            if (guiasRendicion == null)                
+            if (guiasRendicion == null)
             {
                 return;
             }
+
+            GuiasARendirListView.Items.Clear();
 
             //Simulación de la obtención de datos desde una base de datos o servicio
 
@@ -54,10 +56,12 @@ namespace GrupoD.Tutasa.RendirHojaDeRuta
             // Ahora le pido al modelo las guias a realizar (DNI)
 
             var guiasARealizar = modelo.ObtenerGuiasARealizar(dni);
-            
+
+            GuiasARealizarListView.Items.Clear();
+
             //if (guiasARealizar == null)
             //{
-              // return;
+            // return;
             //}
 
             foreach (var guiaRealizar in guiasARealizar)
@@ -72,7 +76,45 @@ namespace GrupoD.Tutasa.RendirHojaDeRuta
                 GuiasARealizarListView.Items.Add(listItem);
             }
 
+
+
+
+        }
+
+        //Paso los cambios hechos en el formulario
+        private void Confirmarbutton_Click(object sender, EventArgs e)
+        {
+            List<string> guiasCompletadas = new();
             
+            foreach (ListViewItem item in GuiasARendirListView.CheckedItems)
+            {
+                if (item.Checked)
+                {
+                    guiasCompletadas.Add(item.Text); 
+                }
+            }
+
+
+
+
+            modelo.AceptarYCambiarEstado(guiasCompletadas);
+
+            //Si está mal...
+            string error = modelo.AceptarYCambiarEstado(guiasCompletadas);
+
+            if (error != null)
+            {
+                MessageBox.Show(error, "Error");
+                return;
+            }
+
+            //Si está bien
+
+            GuiasARendirListView.Items.Clear();
+            GuiasARealizarListView.Items.Clear();
+            DNIFleteroTextBox.Text = "";
+            MessageBox.Show("Rendición realizada con éxito", "Éxito");
+
 
 
         }
