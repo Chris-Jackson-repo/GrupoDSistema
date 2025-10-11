@@ -29,28 +29,31 @@
         private void InitializeComponent()
         {
             ColumnHeader EstadocolumnHeader1;
-            ListViewItem listViewItem1 = new ListViewItem("");
-            groupBox2 = new GroupBox();
-            listView1 = new ListView();
+            ListViewItem listViewItem2 = new ListViewItem("");
+            GuiasDespachogroupBox = new GroupBox();
+            GuiasARealizarListView = new ListView();
             GuiacolumnHeader2 = new ColumnHeader();
             EstadocolumnHeader2 = new ColumnHeader();
             TipoPaquetecolumnHeader2 = new ColumnHeader();
             DireccionDestinocolumnHeader2 = new ColumnHeader();
             DNIAutorizadocolumnHeader2 = new ColumnHeader();
+            CUITcolumnHeader2 = new ColumnHeader();
             ListaGuiasDespacholabel = new Label();
-            button2 = new Button();
+            Confirmarbutton = new Button();
             DNI_Fleterolabel = new Label();
-            textBox1 = new TextBox();
-            DatagridRendicion = new Label();
-            groupBox = new GroupBox();
-            GuiasPendientesRendicionlistView1 = new ListView();
+            DNIFleterotextBox = new TextBox();
+            GuiasPendientesRendicionLabel = new Label();
+            GuiasPendientesRendiciongroupBox = new GroupBox();
+            GuiasARendirListView = new ListView();
             GuiacolumnHeader1 = new ColumnHeader();
             DireccionDestinocolumnHeader1 = new ColumnHeader();
             DNIAutorizadocolumnHeader1 = new ColumnHeader();
+            CUITcolumnHeader = new ColumnHeader();
+            TipoPaquetecolumnHeader = new ColumnHeader();
             Buscarbutton = new Button();
             EstadocolumnHeader1 = new ColumnHeader();
-            groupBox2.SuspendLayout();
-            groupBox.SuspendLayout();
+            GuiasDespachogroupBox.SuspendLayout();
+            GuiasPendientesRendiciongroupBox.SuspendLayout();
             SuspendLayout();
             // 
             // EstadocolumnHeader1
@@ -58,26 +61,26 @@
             EstadocolumnHeader1.Text = "Estado";
             EstadocolumnHeader1.Width = 200;
             // 
-            // groupBox2
+            // GuiasDespachogroupBox
             // 
-            groupBox2.Controls.Add(listView1);
-            groupBox2.Controls.Add(ListaGuiasDespacholabel);
-            groupBox2.Location = new Point(13, 444);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(820, 352);
-            groupBox2.TabIndex = 1;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "Guías a despachar para fletero";
+            GuiasDespachogroupBox.Controls.Add(GuiasARealizarListView);
+            GuiasDespachogroupBox.Controls.Add(ListaGuiasDespacholabel);
+            GuiasDespachogroupBox.Location = new Point(13, 467);
+            GuiasDespachogroupBox.Name = "GuiasDespachogroupBox";
+            GuiasDespachogroupBox.Size = new Size(977, 395);
+            GuiasDespachogroupBox.TabIndex = 1;
+            GuiasDespachogroupBox.TabStop = false;
+            GuiasDespachogroupBox.Text = "Guías a despachar para fletero";
             // 
-            // listView1
+            // GuiasARealizarListView
             // 
-            listView1.Columns.AddRange(new ColumnHeader[] { GuiacolumnHeader2, EstadocolumnHeader2, TipoPaquetecolumnHeader2, DireccionDestinocolumnHeader2, DNIAutorizadocolumnHeader2 });
-            listView1.Location = new Point(8, 86);
-            listView1.Name = "listView1";
-            listView1.Size = new Size(794, 242);
-            listView1.TabIndex = 7;
-            listView1.UseCompatibleStateImageBehavior = false;
-            listView1.View = View.Details;
+            GuiasARealizarListView.Columns.AddRange(new ColumnHeader[] { GuiacolumnHeader2, EstadocolumnHeader2, TipoPaquetecolumnHeader2, DireccionDestinocolumnHeader2, DNIAutorizadocolumnHeader2, CUITcolumnHeader2 });
+            GuiasARealizarListView.Location = new Point(8, 87);
+            GuiasARealizarListView.Name = "GuiasARealizarListView";
+            GuiasARealizarListView.Size = new Size(957, 290);
+            GuiasARealizarListView.TabIndex = 7;
+            GuiasARealizarListView.UseCompatibleStateImageBehavior = false;
+            GuiasARealizarListView.View = View.Details;
             // 
             // GuiacolumnHeader2
             // 
@@ -91,18 +94,26 @@
             // 
             // TipoPaquetecolumnHeader2
             // 
-            TipoPaquetecolumnHeader2.Text = "Tipo";
+            TipoPaquetecolumnHeader2.Text = "Tipo de paquete";
             TipoPaquetecolumnHeader2.Width = 100;
             // 
             // DireccionDestinocolumnHeader2
             // 
+            DireccionDestinocolumnHeader2.DisplayIndex = 4;
             DireccionDestinocolumnHeader2.Text = "Dirección de destino";
             DireccionDestinocolumnHeader2.Width = 180;
             // 
             // DNIAutorizadocolumnHeader2
             // 
+            DNIAutorizadocolumnHeader2.DisplayIndex = 5;
             DNIAutorizadocolumnHeader2.Text = "DNI del autorizado";
             DNIAutorizadocolumnHeader2.Width = 150;
+            // 
+            // CUITcolumnHeader2
+            // 
+            CUITcolumnHeader2.DisplayIndex = 3;
+            CUITcolumnHeader2.Text = "CUIT";
+            CUITcolumnHeader2.Width = 160;
             // 
             // ListaGuiasDespacholabel
             // 
@@ -114,14 +125,14 @@
             ListaGuiasDespacholabel.TabIndex = 6;
             ListaGuiasDespacholabel.Text = "Lista de guías a realizar";
             // 
-            // button2
+            // Confirmarbutton
             // 
-            button2.Location = new Point(699, 815);
-            button2.Name = "button2";
-            button2.Size = new Size(116, 47);
-            button2.TabIndex = 4;
-            button2.Text = "Confirmar ";
-            button2.UseVisualStyleBackColor = true;
+            Confirmarbutton.Location = new Point(874, 874);
+            Confirmarbutton.Name = "Confirmarbutton";
+            Confirmarbutton.Size = new Size(116, 47);
+            Confirmarbutton.TabIndex = 4;
+            Confirmarbutton.Text = "Confirmar ";
+            Confirmarbutton.UseVisualStyleBackColor = true;
             // 
             // DNI_Fleterolabel
             // 
@@ -132,60 +143,74 @@
             DNI_Fleterolabel.TabIndex = 0;
             DNI_Fleterolabel.Text = "DNI del fletero";
             // 
-            // textBox1
+            // DNIFleterotextBox
             // 
-            textBox1.Location = new Point(140, 32);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(223, 23);
-            textBox1.TabIndex = 1;
+            DNIFleterotextBox.Location = new Point(140, 32);
+            DNIFleterotextBox.Name = "DNIFleterotextBox";
+            DNIFleterotextBox.Size = new Size(223, 23);
+            DNIFleterotextBox.TabIndex = 1;
             // 
-            // DatagridRendicion
+            // GuiasPendientesRendicionLabel
             // 
-            DatagridRendicion.Font = new Font("Segoe UI", 14F);
-            DatagridRendicion.Location = new Point(6, 33);
-            DatagridRendicion.Name = "DatagridRendicion";
-            DatagridRendicion.Size = new Size(316, 33);
-            DatagridRendicion.TabIndex = 6;
-            DatagridRendicion.Text = "Guías pendientes de rendición";
+            GuiasPendientesRendicionLabel.Font = new Font("Segoe UI", 14F);
+            GuiasPendientesRendicionLabel.Location = new Point(6, 33);
+            GuiasPendientesRendicionLabel.Name = "GuiasPendientesRendicionLabel";
+            GuiasPendientesRendicionLabel.Size = new Size(316, 33);
+            GuiasPendientesRendicionLabel.TabIndex = 6;
+            GuiasPendientesRendicionLabel.Text = "Guías pendientes de rendición";
             // 
-            // groupBox
+            // GuiasPendientesRendiciongroupBox
             // 
-            groupBox.Controls.Add(GuiasPendientesRendicionlistView1);
-            groupBox.Controls.Add(DatagridRendicion);
-            groupBox.Location = new Point(13, 73);
-            groupBox.Name = "groupBox";
-            groupBox.Size = new Size(820, 365);
-            groupBox.TabIndex = 7;
-            groupBox.TabStop = false;
-            groupBox.Text = "Información de guías pendientes de rendición";
+            GuiasPendientesRendiciongroupBox.Controls.Add(GuiasARendirListView);
+            GuiasPendientesRendiciongroupBox.Controls.Add(GuiasPendientesRendicionLabel);
+            GuiasPendientesRendiciongroupBox.Location = new Point(13, 73);
+            GuiasPendientesRendiciongroupBox.Name = "GuiasPendientesRendiciongroupBox";
+            GuiasPendientesRendiciongroupBox.Size = new Size(977, 375);
+            GuiasPendientesRendiciongroupBox.TabIndex = 7;
+            GuiasPendientesRendiciongroupBox.TabStop = false;
+            GuiasPendientesRendiciongroupBox.Text = "Información de guías pendientes de rendición";
             // 
-            // GuiasPendientesRendicionlistView1
+            // GuiasARendirListView
             // 
-            GuiasPendientesRendicionlistView1.CheckBoxes = true;
-            GuiasPendientesRendicionlistView1.Columns.AddRange(new ColumnHeader[] { GuiacolumnHeader1, EstadocolumnHeader1, DireccionDestinocolumnHeader1, DNIAutorizadocolumnHeader1 });
-            listViewItem1.StateImageIndex = 0;
-            GuiasPendientesRendicionlistView1.Items.AddRange(new ListViewItem[] { listViewItem1 });
-            GuiasPendientesRendicionlistView1.Location = new Point(8, 69);
-            GuiasPendientesRendicionlistView1.Name = "GuiasPendientesRendicionlistView1";
-            GuiasPendientesRendicionlistView1.Size = new Size(794, 290);
-            GuiasPendientesRendicionlistView1.TabIndex = 7;
-            GuiasPendientesRendicionlistView1.UseCompatibleStateImageBehavior = false;
-            GuiasPendientesRendicionlistView1.View = View.Details;
+            GuiasARendirListView.CheckBoxes = true;
+            GuiasARendirListView.Columns.AddRange(new ColumnHeader[] { GuiacolumnHeader1, EstadocolumnHeader1, DireccionDestinocolumnHeader1, DNIAutorizadocolumnHeader1, CUITcolumnHeader, TipoPaquetecolumnHeader });
+            listViewItem2.StateImageIndex = 0;
+            GuiasARendirListView.Items.AddRange(new ListViewItem[] { listViewItem2 });
+            GuiasARendirListView.Location = new Point(8, 69);
+            GuiasARendirListView.Name = "GuiasARendirListView";
+            GuiasARendirListView.Size = new Size(957, 290);
+            GuiasARendirListView.TabIndex = 7;
+            GuiasARendirListView.UseCompatibleStateImageBehavior = false;
+            GuiasARendirListView.View = View.Details;
             // 
             // GuiacolumnHeader1
             // 
             GuiacolumnHeader1.Text = "Guía";
-            GuiacolumnHeader1.Width = 170;
+            GuiacolumnHeader1.Width = 160;
             // 
             // DireccionDestinocolumnHeader1
             // 
+            DireccionDestinocolumnHeader1.DisplayIndex = 4;
             DireccionDestinocolumnHeader1.Text = "Dirección de destino";
             DireccionDestinocolumnHeader1.Width = 220;
             // 
             // DNIAutorizadocolumnHeader1
             // 
+            DNIAutorizadocolumnHeader1.DisplayIndex = 5;
             DNIAutorizadocolumnHeader1.Text = "DNI del autorizado";
-            DNIAutorizadocolumnHeader1.Width = 200;
+            DNIAutorizadocolumnHeader1.Width = 150;
+            // 
+            // CUITcolumnHeader
+            // 
+            CUITcolumnHeader.DisplayIndex = 3;
+            CUITcolumnHeader.Text = "CUIT";
+            CUITcolumnHeader.Width = 160;
+            // 
+            // TipoPaquetecolumnHeader
+            // 
+            TipoPaquetecolumnHeader.DisplayIndex = 2;
+            TipoPaquetecolumnHeader.Text = "Tipo de paquete";
+            TipoPaquetecolumnHeader.Width = 100;
             // 
             // Buscarbutton
             // 
@@ -195,34 +220,35 @@
             Buscarbutton.TabIndex = 8;
             Buscarbutton.Text = "Buscar";
             Buscarbutton.UseVisualStyleBackColor = true;
+            Buscarbutton.Click += Buscarbutton_Click;
             // 
             // RendirHojaDeRutaForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(854, 874);
+            ClientSize = new Size(1015, 933);
             Controls.Add(Buscarbutton);
-            Controls.Add(groupBox2);
-            Controls.Add(button2);
-            Controls.Add(textBox1);
+            Controls.Add(GuiasDespachogroupBox);
+            Controls.Add(Confirmarbutton);
+            Controls.Add(DNIFleterotextBox);
             Controls.Add(DNI_Fleterolabel);
-            Controls.Add(groupBox);
+            Controls.Add(GuiasPendientesRendiciongroupBox);
             Name = "RendirHojaDeRutaForm";
             Text = "Rendición de hojas de ruta";
-            groupBox2.ResumeLayout(false);
-            groupBox2.PerformLayout();
-            groupBox.ResumeLayout(false);
+            GuiasDespachogroupBox.ResumeLayout(false);
+            GuiasDespachogroupBox.PerformLayout();
+            GuiasPendientesRendiciongroupBox.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private GroupBox groupBox2;
-        private Button button2;
+        private GroupBox GuiasDespachogroupBox;
+        private Button Confirmarbutton;
         private Label DNI_Fleterolabel;
-        private TextBox textBox1;
-        private Label DatagridRendicion;
-        private GroupBox groupBox;
+        private TextBox DNIFleterotextBox;
+        private Label GuiasPendientesRendicionLabel;
+        private GroupBox GuiasPendientesRendiciongroupBox;
         private Button Buscarbutton;
         private DataGridView dataGridView1;
         private Label ListaGuiasDespacholabel;
@@ -232,15 +258,18 @@
         private DataGridViewTextBoxColumn DestinoColumn1;
         private DataGridViewTextBoxColumn DestinatarioColumn1;
         private DataGridViewCheckBoxColumn DevueltoHR;
-        private ListView GuiasPendientesRendicionlistView1;
+        private ListView GuiasARendirListView;
         private ColumnHeader GuiacolumnHeader1;
         private ColumnHeader DireccionDestinocolumnHeader1;
         private ColumnHeader DNIAutorizadocolumnHeader1;
-        private ListView listView1;
+        private ListView GuiasARealizarListView;
         private ColumnHeader GuiacolumnHeader2;
         private ColumnHeader EstadocolumnHeader2;
         private ColumnHeader TipoPaquetecolumnHeader2;
         private ColumnHeader DireccionDestinocolumnHeader2;
         private ColumnHeader DNIAutorizadocolumnHeader2;
+        private ColumnHeader CUITcolumnHeader2;
+        private ColumnHeader CUITcolumnHeader;
+        private ColumnHeader TipoPaquetecolumnHeader;
     }
 }
