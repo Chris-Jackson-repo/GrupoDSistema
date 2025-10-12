@@ -358,7 +358,7 @@
             BuscarButton.TabIndex = 21;
             BuscarButton.Text = "Buscar";
             BuscarButton.UseVisualStyleBackColor = true;
-            BuscarButton.Click += this.button6_Click;
+            //BuscarButton.Click += this.button6_Click;
             // 
             // DirecRemitenteTextBox
             // 
@@ -439,7 +439,7 @@
             CuitTextBox.Name = "CuitTextBox";
             CuitTextBox.Size = new Size(287, 31);
             CuitTextBox.TabIndex = 9;
-            CuitTextBox.TextChanged += this.textBox11_TextChanged;
+            //CuitTextBox.TextChanged += this.textBox11_TextChanged;
             // 
             // label15
             // 
@@ -458,7 +458,7 @@
             label16.Size = new Size(130, 30);
             label16.TabIndex = 10;
             label16.Text = "Razon Social";
-            label16.Click += this.label16_Click;
+            //label16.Click += this.label16_Click;
             // 
             // label17
             // 
