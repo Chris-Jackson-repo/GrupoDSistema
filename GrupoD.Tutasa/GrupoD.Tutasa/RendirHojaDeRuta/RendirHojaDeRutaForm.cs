@@ -84,6 +84,13 @@ namespace GrupoD.Tutasa.RendirHojaDeRuta
         //Paso los cambios hechos en el formulario
         private void Confirmarbutton_Click(object sender, EventArgs e)
         {
+            if (!int.TryParse(DNIFleteroTextBox.Text, out var dni) || dni < 1_000_000 || dni > 99_999_999)
+            {
+                MessageBox.Show("Debe ingresar un DNI válido antes de confirmar.", "Error");
+                return;
+            }
+
+
             List<string> guiasCompletadas = new();
             
             foreach (ListViewItem item in GuiasARendirListView.CheckedItems)
