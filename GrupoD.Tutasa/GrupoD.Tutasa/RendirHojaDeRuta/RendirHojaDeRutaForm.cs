@@ -90,6 +90,8 @@ namespace GrupoD.Tutasa.RendirHojaDeRuta
                 return;
             }
 
+            
+
 
             List<string> guiasCompletadas = new();
             
@@ -101,7 +103,11 @@ namespace GrupoD.Tutasa.RendirHojaDeRuta
                 }
             }
 
-
+            if (guiasCompletadas.Count == 0)
+            {
+                MessageBox.Show("Debe seleccionar al menos una guía para rendir.", "Error");
+                return;
+            }
 
 
             modelo.AceptarYCambiarEstado(guiasCompletadas);
