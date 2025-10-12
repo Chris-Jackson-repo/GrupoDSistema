@@ -47,6 +47,7 @@
             comboBox1 = new ComboBox();
             label13 = new Label();
             groupBox2 = new GroupBox();
+            comboBox5 = new ComboBox();
             textBox1 = new TextBox();
             textBox5 = new TextBox();
             label3 = new Label();
@@ -68,7 +69,6 @@
             label8 = new Label();
             label1 = new Label();
             label2 = new Label();
-            comboBox5 = new ComboBox();
             groupBox4.SuspendLayout();
             groupBox3.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -216,7 +216,7 @@
             // comboBox2
             // 
             comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(546, 27);
+            comboBox2.Location = new Point(547, 29);
             comboBox2.Margin = new Padding(3, 2, 3, 2);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(169, 23);
@@ -265,6 +265,15 @@
             groupBox2.TabIndex = 29;
             groupBox2.TabStop = false;
             groupBox2.Text = "Destinatario";
+            // 
+            // comboBox5
+            // 
+            comboBox5.FormattingEnabled = true;
+            comboBox5.Location = new Point(69, 27);
+            comboBox5.Margin = new Padding(3, 2, 3, 2);
+            comboBox5.Name = "comboBox5";
+            comboBox5.Size = new Size(204, 23);
+            comboBox5.TabIndex = 23;
             // 
             // textBox1
             // 
@@ -456,15 +465,6 @@
             label2.Size = new Size(45, 18);
             label2.TabIndex = 8;
             label2.Text = "CUIT";
-            // 
-            // comboBox5
-            // 
-            comboBox5.FormattingEnabled = true;
-            comboBox5.Location = new Point(69, 27);
-            comboBox5.Margin = new Padding(3, 2, 3, 2);
-            comboBox5.Name = "comboBox5";
-            comboBox5.Size = new Size(204, 23);
-            comboBox5.TabIndex = 23;
             // 
             // GenerarGuiaAgenciaForm
             // 
