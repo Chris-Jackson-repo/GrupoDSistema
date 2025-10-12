@@ -35,7 +35,6 @@
             dateTimePicker2 = new DateTimePicker();
             BuscarButton = new Button();
             EmpresaTransporte = new Label();
-            CancelarButton = new Button();
             button1 = new Button();
             listView1 = new ListView();
             columnHeader1 = new ColumnHeader();
@@ -90,7 +89,7 @@
             // 
             // BuscarButton
             // 
-            BuscarButton.Location = new Point(356, 147);
+            BuscarButton.Location = new Point(451, 149);
             BuscarButton.Margin = new Padding(3, 2, 3, 2);
             BuscarButton.Name = "BuscarButton";
             BuscarButton.Size = new Size(122, 22);
@@ -107,16 +106,6 @@
             EmpresaTransporte.TabIndex = 26;
             EmpresaTransporte.Text = "Empresa De Transporte";
             EmpresaTransporte.Click += EmpresaTransporte_Click;
-            // 
-            // CancelarButton
-            // 
-            CancelarButton.Location = new Point(516, 147);
-            CancelarButton.Margin = new Padding(3, 2, 3, 2);
-            CancelarButton.Name = "CancelarButton";
-            CancelarButton.Size = new Size(108, 22);
-            CancelarButton.TabIndex = 27;
-            CancelarButton.Text = "Cancelar";
-            CancelarButton.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -160,7 +149,6 @@
             ClientSize = new Size(1050, 616);
             Controls.Add(listView1);
             Controls.Add(button1);
-            Controls.Add(CancelarButton);
             Controls.Add(EmpresaTransporte);
             Controls.Add(BuscarButton);
             Controls.Add(dateTimePicker2);
@@ -184,7 +172,6 @@
         private DateTimePicker dateTimePicker2;
         private Button BuscarButton;
         private Label EmpresaTransporte;
-        private Button CancelarButton;
         private Button button1;
         private ListView listView1;
         private ColumnHeader columnHeader1;
