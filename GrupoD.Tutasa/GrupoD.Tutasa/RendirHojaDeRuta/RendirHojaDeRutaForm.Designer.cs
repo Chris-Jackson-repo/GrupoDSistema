@@ -50,6 +50,7 @@
             CUITcolumnHeader = new ColumnHeader();
             TipoPaquetecolumnHeader = new ColumnHeader();
             Buscarbutton = new Button();
+            button1 = new Button();
             EstadocolumnHeader1 = new ColumnHeader();
             GuiasDespachogroupBox.SuspendLayout();
             GuiasPendientesRendiciongroupBox.SuspendLayout();
@@ -126,7 +127,7 @@
             // 
             // Confirmarbutton
             // 
-            Confirmarbutton.Location = new Point(874, 874);
+            Confirmarbutton.Location = new Point(454, 859);
             Confirmarbutton.Name = "Confirmarbutton";
             Confirmarbutton.Size = new Size(116, 47);
             Confirmarbutton.TabIndex = 4;
@@ -221,11 +222,21 @@
             Buscarbutton.UseVisualStyleBackColor = true;
             Buscarbutton.Click += Buscarbutton_Click;
             // 
+            // button1
+            // 
+            button1.Location = new Point(862, 908);
+            button1.Name = "button1";
+            button1.Size = new Size(116, 47);
+            button1.TabIndex = 9;
+            button1.Text = "VOLVER";
+            button1.UseVisualStyleBackColor = true;
+            // 
             // RendirHojaDeRutaForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1015, 933);
+            ClientSize = new Size(1023, 967);
+            Controls.Add(button1);
             Controls.Add(Buscarbutton);
             Controls.Add(GuiasDespachogroupBox);
             Controls.Add(Confirmarbutton);
@@ -270,5 +281,6 @@
         private ColumnHeader CUITcolumnHeader2;
         private ColumnHeader CUITcolumnHeader;
         private ColumnHeader TipoPaquetecolumnHeader;
+        private Button button1;
     }
 }

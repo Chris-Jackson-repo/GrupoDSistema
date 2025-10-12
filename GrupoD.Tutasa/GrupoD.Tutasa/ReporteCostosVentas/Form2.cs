@@ -31,5 +31,10 @@ namespace GrupoD.Tutasa.ReporteCostosVentas
         {
 
         }
+
+        private void EmpresaTransporte_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

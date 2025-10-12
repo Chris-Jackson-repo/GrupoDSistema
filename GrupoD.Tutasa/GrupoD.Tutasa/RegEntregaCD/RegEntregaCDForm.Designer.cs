@@ -42,18 +42,20 @@
             // 
             // CancelarButton
             // 
-            CancelarButton.Location = new Point(218, 290);
+            CancelarButton.Location = new Point(238, 282);
+            CancelarButton.Margin = new Padding(3, 2, 3, 2);
             CancelarButton.Name = "CancelarButton";
-            CancelarButton.Size = new Size(134, 30);
+            CancelarButton.Size = new Size(117, 22);
             CancelarButton.TabIndex = 39;
-            CancelarButton.Text = "Cancelar";
+            CancelarButton.Text = "VOLVER";
             CancelarButton.UseVisualStyleBackColor = true;
             // 
             // RegistarEntregaButton
             // 
-            RegistarEntregaButton.Location = new Point(78, 290);
+            RegistarEntregaButton.Location = new Point(144, 219);
+            RegistarEntregaButton.Margin = new Padding(3, 2, 3, 2);
             RegistarEntregaButton.Name = "RegistarEntregaButton";
-            RegistarEntregaButton.Size = new Size(134, 30);
+            RegistarEntregaButton.Size = new Size(117, 22);
             RegistarEntregaButton.TabIndex = 38;
             RegistarEntregaButton.Text = "Registar Entrega";
             RegistarEntregaButton.UseVisualStyleBackColor = true;
@@ -61,18 +63,19 @@
             // NumeroGuiaTextbox
             // 
             NumeroGuiaTextbox.Font = new Font("Segoe UI", 8F);
-            NumeroGuiaTextbox.Location = new Point(26, 50);
+            NumeroGuiaTextbox.Location = new Point(34, 40);
+            NumeroGuiaTextbox.Margin = new Padding(3, 2, 3, 2);
             NumeroGuiaTextbox.Name = "NumeroGuiaTextbox";
-            NumeroGuiaTextbox.Size = new Size(309, 25);
+            NumeroGuiaTextbox.Size = new Size(271, 22);
             NumeroGuiaTextbox.TabIndex = 27;
             // 
             // NumeroGuiaLabel
             // 
             NumeroGuiaLabel.AutoSize = true;
             NumeroGuiaLabel.Font = new Font("Segoe UI", 12F);
-            NumeroGuiaLabel.Location = new Point(26, 19);
+            NumeroGuiaLabel.Location = new Point(34, 16);
             NumeroGuiaLabel.Name = "NumeroGuiaLabel";
-            NumeroGuiaLabel.Size = new Size(154, 28);
+            NumeroGuiaLabel.Size = new Size(123, 21);
             NumeroGuiaLabel.TabIndex = 26;
             NumeroGuiaLabel.Text = "Número de guía";
             // 
@@ -80,19 +83,20 @@
             // 
             DniLabel.AutoSize = true;
             DniLabel.Font = new Font("Segoe UI", 8F);
-            DniLabel.Location = new Point(8, 32);
+            DniLabel.Location = new Point(7, 24);
             DniLabel.Name = "DniLabel";
-            DniLabel.Size = new Size(33, 19);
+            DniLabel.Size = new Size(26, 13);
             DniLabel.TabIndex = 46;
             DniLabel.Text = "DNI";
             // 
             // DniTextBox
             // 
             DniTextBox.Font = new Font("Segoe UI", 8F);
-            DniTextBox.Location = new Point(114, 32);
+            DniTextBox.Location = new Point(100, 24);
+            DniTextBox.Margin = new Padding(3, 2, 3, 2);
             DniTextBox.Name = "DniTextBox";
             DniTextBox.ReadOnly = true;
-            DniTextBox.Size = new Size(197, 25);
+            DniTextBox.Size = new Size(173, 22);
             DniTextBox.TabIndex = 47;
             // 
             // DatosRetiranteGroupBox
@@ -100,9 +104,11 @@
             DatosRetiranteGroupBox.Controls.Add(DniTextBox);
             DatosRetiranteGroupBox.Controls.Add(DniLabel);
             DatosRetiranteGroupBox.Font = new Font("Segoe UI", 10F);
-            DatosRetiranteGroupBox.Location = new Point(26, 183);
+            DatosRetiranteGroupBox.Location = new Point(34, 139);
+            DatosRetiranteGroupBox.Margin = new Padding(3, 2, 3, 2);
             DatosRetiranteGroupBox.Name = "DatosRetiranteGroupBox";
-            DatosRetiranteGroupBox.Size = new Size(326, 65);
+            DatosRetiranteGroupBox.Padding = new Padding(3, 2, 3, 2);
+            DatosRetiranteGroupBox.Size = new Size(285, 49);
             DatosRetiranteGroupBox.TabIndex = 49;
             DatosRetiranteGroupBox.TabStop = false;
             DatosRetiranteGroupBox.Text = "Datos del retirante";
@@ -111,26 +117,27 @@
             // 
             EstadoActualLabel.AutoSize = true;
             EstadoActualLabel.Font = new Font("Segoe UI", 12F);
-            EstadoActualLabel.Location = new Point(26, 98);
+            EstadoActualLabel.Location = new Point(34, 76);
             EstadoActualLabel.Name = "EstadoActualLabel";
-            EstadoActualLabel.Size = new Size(128, 28);
+            EstadoActualLabel.Size = new Size(101, 21);
             EstadoActualLabel.TabIndex = 42;
             EstadoActualLabel.Text = "Estado actual";
             // 
             // EstadoActualTextBox
             // 
             EstadoActualTextBox.Font = new Font("Segoe UI", 8F);
-            EstadoActualTextBox.Location = new Point(26, 129);
+            EstadoActualTextBox.Location = new Point(34, 99);
+            EstadoActualTextBox.Margin = new Padding(3, 2, 3, 2);
             EstadoActualTextBox.Name = "EstadoActualTextBox";
             EstadoActualTextBox.ReadOnly = true;
-            EstadoActualTextBox.Size = new Size(309, 25);
+            EstadoActualTextBox.Size = new Size(271, 22);
             EstadoActualTextBox.TabIndex = 50;
             // 
             // RegEntregaCDForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(354, 322);
+            ClientSize = new Size(383, 328);
             Controls.Add(EstadoActualTextBox);
             Controls.Add(DatosRetiranteGroupBox);
             Controls.Add(EstadoActualLabel);
@@ -138,6 +145,7 @@
             Controls.Add(RegistarEntregaButton);
             Controls.Add(NumeroGuiaTextbox);
             Controls.Add(NumeroGuiaLabel);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "RegEntregaCDForm";
             Text = "Registrar entrega en CD";
             Load += RegEntregaCD_Load;
