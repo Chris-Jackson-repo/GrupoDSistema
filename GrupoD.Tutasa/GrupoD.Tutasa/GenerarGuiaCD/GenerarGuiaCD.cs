@@ -1,8 +1,8 @@
 namespace GrupoD.Tutasa.ImposicionCD
 {
-    public partial class ImposicionForm : Form
+    public partial class GenerarGuiaCDForm : Form
     {
-        public ImposicionForm()
+        public GenerarGuiaCDForm()
         {
             InitializeComponent();
         }
@@ -93,6 +93,16 @@ namespace GrupoD.Tutasa.ImposicionCD
         }
 
         private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label38_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click_1(object sender, EventArgs e)
         {
 
         }
