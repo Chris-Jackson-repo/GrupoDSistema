@@ -6,5 +6,10 @@ namespace GrupoD.Tutasa.GenerarGuiaCallCenter
         {
             InitializeComponent();
         }
+
+        private void GenerarGuiaCallCenterForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
