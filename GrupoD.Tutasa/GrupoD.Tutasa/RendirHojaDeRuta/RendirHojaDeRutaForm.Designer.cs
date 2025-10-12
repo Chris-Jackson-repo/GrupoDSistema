@@ -156,9 +156,9 @@
             GuiasPendientesRendicionLabel.Font = new Font("Segoe UI", 14F);
             GuiasPendientesRendicionLabel.Location = new Point(6, 33);
             GuiasPendientesRendicionLabel.Name = "GuiasPendientesRendicionLabel";
-            GuiasPendientesRendicionLabel.Size = new Size(316, 33);
+            GuiasPendientesRendicionLabel.Size = new Size(344, 33);
             GuiasPendientesRendicionLabel.TabIndex = 6;
-            GuiasPendientesRendicionLabel.Text = "Guías pendientes de rendición";
+            GuiasPendientesRendicionLabel.Text = "Lista de guías pendientes de rendición";
             // 
             // GuiasPendientesRendiciongroupBox
             // 
