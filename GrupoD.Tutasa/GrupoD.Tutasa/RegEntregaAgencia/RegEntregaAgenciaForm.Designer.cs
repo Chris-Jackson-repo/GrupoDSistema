@@ -66,19 +66,19 @@
             RegistarEntregaButton.Location = new Point(87, 221);
             RegistarEntregaButton.Margin = new Padding(3, 2, 3, 2);
             RegistarEntregaButton.Name = "RegistarEntregaButton";
-            RegistarEntregaButton.Size = new Size(117, 22);
+            RegistarEntregaButton.Size = new Size(117, 30);
             RegistarEntregaButton.TabIndex = 18;
             RegistarEntregaButton.Text = "Registar Entrega";
             RegistarEntregaButton.UseVisualStyleBackColor = true;
             // 
             // CancelarButton
             // 
-            CancelarButton.Location = new Point(220, 279);
+            CancelarButton.Location = new Point(188, 278);
             CancelarButton.Margin = new Padding(3, 2, 3, 2);
             CancelarButton.Name = "CancelarButton";
             CancelarButton.Size = new Size(117, 22);
             CancelarButton.TabIndex = 19;
-            CancelarButton.Text = "VOLVER";
+            CancelarButton.Text = "CANCELAR";
             CancelarButton.UseVisualStyleBackColor = true;
             // 
             // EstadoActualLabel
@@ -116,11 +116,11 @@
             DatosRetiranteGroupBox.Controls.Add(DniTextBox);
             DatosRetiranteGroupBox.Controls.Add(DniLabel);
             DatosRetiranteGroupBox.Font = new Font("Segoe UI", 10F);
-            DatosRetiranteGroupBox.Location = new Point(30, 136);
+            DatosRetiranteGroupBox.Location = new Point(12, 136);
             DatosRetiranteGroupBox.Margin = new Padding(3, 2, 3, 2);
             DatosRetiranteGroupBox.Name = "DatosRetiranteGroupBox";
             DatosRetiranteGroupBox.Padding = new Padding(3, 2, 3, 2);
-            DatosRetiranteGroupBox.Size = new Size(275, 57);
+            DatosRetiranteGroupBox.Size = new Size(307, 57);
             DatosRetiranteGroupBox.TabIndex = 28;
             DatosRetiranteGroupBox.TabStop = false;
             DatosRetiranteGroupBox.Text = "Datos del retirante";

@@ -82,7 +82,7 @@
             button3.Name = "button3";
             button3.Size = new Size(122, 42);
             button3.TabIndex = 34;
-            button3.Text = "VOLVER";
+            button3.Text = "CANCELAR";
             button3.UseVisualStyleBackColor = true;
             // 
             // button1

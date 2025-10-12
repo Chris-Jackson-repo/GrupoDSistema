@@ -30,6 +30,11 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
+            listView1 = new ListView();
+            Cantidad = new ColumnHeader();
+            columnHeader1 = new ColumnHeader();
+            columnHeader2 = new ColumnHeader();
+            columnHeader3 = new ColumnHeader();
             textBox7 = new TextBox();
             label11 = new Label();
             label7 = new Label();
@@ -44,11 +49,6 @@
             textBox1 = new TextBox();
             comboBox1 = new ComboBox();
             label1 = new Label();
-            listView1 = new ListView();
-            Cantidad = new ColumnHeader();
-            columnHeader1 = new ColumnHeader();
-            columnHeader2 = new ColumnHeader();
-            columnHeader3 = new ColumnHeader();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -75,6 +75,32 @@
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "DATOS FACTURA";
+            // 
+            // listView1
+            // 
+            listView1.Columns.AddRange(new ColumnHeader[] { Cantidad, columnHeader1, columnHeader2, columnHeader3 });
+            listView1.Location = new Point(123, 250);
+            listView1.Name = "listView1";
+            listView1.Size = new Size(818, 164);
+            listView1.TabIndex = 27;
+            listView1.UseCompatibleStateImageBehavior = false;
+            listView1.View = View.Details;
+            // 
+            // Cantidad
+            // 
+            Cantidad.Text = "Cantidad";
+            // 
+            // columnHeader1
+            // 
+            columnHeader1.Text = "Descripcion";
+            // 
+            // columnHeader2
+            // 
+            columnHeader2.Text = "Precio";
+            // 
+            // columnHeader3
+            // 
+            columnHeader3.Text = "Precio con IVA";
             // 
             // textBox7
             // 
@@ -112,11 +138,11 @@
             // 
             // button3
             // 
-            button3.Location = new Point(847, 600);
+            button3.Location = new Point(806, 584);
             button3.Name = "button3";
             button3.Size = new Size(183, 51);
             button3.TabIndex = 22;
-            button3.Text = "VOLVER";
+            button3.Text = "CANCELAR";
             button3.UseVisualStyleBackColor = true;
             // 
             // button2
@@ -193,32 +219,6 @@
             label1.Size = new Size(52, 15);
             label1.TabIndex = 0;
             label1.Text = "Empresa";
-            // 
-            // listView1
-            // 
-            listView1.Columns.AddRange(new ColumnHeader[] { Cantidad, columnHeader1, columnHeader2, columnHeader3 });
-            listView1.Location = new Point(123, 250);
-            listView1.Name = "listView1";
-            listView1.Size = new Size(818, 164);
-            listView1.TabIndex = 27;
-            listView1.UseCompatibleStateImageBehavior = false;
-            listView1.View = View.Details;
-            // 
-            // Cantidad
-            // 
-            Cantidad.Text = "Cantidad";
-            // 
-            // columnHeader1
-            // 
-            columnHeader1.Text = "Descripcion";
-            // 
-            // columnHeader2
-            // 
-            columnHeader2.Text = "Precio";
-            // 
-            // columnHeader3
-            // 
-            columnHeader3.Text = "Precio con IVA";
             // 
             // CargarFactura
             // 

@@ -29,6 +29,13 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
+            listView1 = new ListView();
+            columnHeader1 = new ColumnHeader();
+            columnHeader2 = new ColumnHeader();
+            columnHeader3 = new ColumnHeader();
+            columnHeader4 = new ColumnHeader();
+            columnHeader5 = new ColumnHeader();
+            columnHeader6 = new ColumnHeader();
             button2 = new Button();
             textBox5 = new TextBox();
             label5 = new Label();
@@ -41,13 +48,6 @@
             button1 = new Button();
             textBox1 = new TextBox();
             label1 = new Label();
-            listView1 = new ListView();
-            columnHeader1 = new ColumnHeader();
-            columnHeader2 = new ColumnHeader();
-            columnHeader3 = new ColumnHeader();
-            columnHeader4 = new ColumnHeader();
-            columnHeader5 = new ColumnHeader();
-            columnHeader6 = new ColumnHeader();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -73,13 +73,47 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Cuenta Corriente";
             // 
+            // listView1
+            // 
+            listView1.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4, columnHeader5, columnHeader6 });
+            listView1.Location = new Point(40, 196);
+            listView1.Name = "listView1";
+            listView1.Size = new Size(874, 209);
+            listView1.TabIndex = 21;
+            listView1.UseCompatibleStateImageBehavior = false;
+            listView1.View = View.Details;
+            // 
+            // columnHeader1
+            // 
+            columnHeader1.Text = "Fecha";
+            // 
+            // columnHeader2
+            // 
+            columnHeader2.Text = "Comprobante";
+            // 
+            // columnHeader3
+            // 
+            columnHeader3.Text = "Importe";
+            // 
+            // columnHeader4
+            // 
+            columnHeader4.Text = "Saldo";
+            // 
+            // columnHeader5
+            // 
+            columnHeader5.Text = "Total";
+            // 
+            // columnHeader6
+            // 
+            columnHeader6.Text = "Vencimiento";
+            // 
             // button2
             // 
             button2.Location = new Point(762, 518);
             button2.Name = "button2";
             button2.Size = new Size(172, 54);
             button2.TabIndex = 19;
-            button2.Text = "VOLVER";
+            button2.Text = "CANCELAR";
             button2.UseVisualStyleBackColor = true;
             // 
             // textBox5
@@ -175,40 +209,6 @@
             label1.Size = new Size(29, 15);
             label1.TabIndex = 7;
             label1.Text = "Cuit";
-            // 
-            // listView1
-            // 
-            listView1.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4, columnHeader5, columnHeader6 });
-            listView1.Location = new Point(40, 196);
-            listView1.Name = "listView1";
-            listView1.Size = new Size(874, 209);
-            listView1.TabIndex = 21;
-            listView1.UseCompatibleStateImageBehavior = false;
-            listView1.View = View.Details;
-            // 
-            // columnHeader1
-            // 
-            columnHeader1.Text = "Fecha";
-            // 
-            // columnHeader2
-            // 
-            columnHeader2.Text = "Comprobante";
-            // 
-            // columnHeader3
-            // 
-            columnHeader3.Text = "Importe";
-            // 
-            // columnHeader4
-            // 
-            columnHeader4.Text = "Saldo";
-            // 
-            // columnHeader5
-            // 
-            columnHeader5.Text = "Total";
-            // 
-            // columnHeader6
-            // 
-            columnHeader6.Text = "Vencimiento";
             // 
             // ConsultaCCT
             // 

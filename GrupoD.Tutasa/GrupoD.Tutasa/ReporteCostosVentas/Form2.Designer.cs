@@ -113,7 +113,7 @@
             button1.Name = "button1";
             button1.Size = new Size(150, 45);
             button1.TabIndex = 77;
-            button1.Text = "VOLVER";
+            button1.Text = "CANCELAR";
             button1.UseVisualStyleBackColor = true;
             // 
             // listView1

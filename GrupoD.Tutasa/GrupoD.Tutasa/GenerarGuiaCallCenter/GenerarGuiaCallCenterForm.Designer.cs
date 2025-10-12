@@ -463,7 +463,7 @@
             VolverButton.Name = "VolverButton";
             VolverButton.Size = new Size(96, 30);
             VolverButton.TabIndex = 43;
-            VolverButton.Text = "VOLVER";
+            VolverButton.Text = "CANCELAR";
             VolverButton.UseVisualStyleBackColor = true;
             // 
             // GenerarGuiaCallCenterForm

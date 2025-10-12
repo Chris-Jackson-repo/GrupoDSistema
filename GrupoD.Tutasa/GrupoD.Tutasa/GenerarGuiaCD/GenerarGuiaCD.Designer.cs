@@ -298,7 +298,7 @@
             // 
             ProvinciaComboBox.FormattingEnabled = true;
             ProvinciaComboBox.Location = new Point(72, 30);
-            ProvinciaComboBox.Margin = new Padding(2, 2, 2, 2);
+            ProvinciaComboBox.Margin = new Padding(2);
             ProvinciaComboBox.Name = "ProvinciaComboBox";
             ProvinciaComboBox.Size = new Size(203, 23);
             ProvinciaComboBox.TabIndex = 21;
@@ -367,7 +367,7 @@
             VolverButton.Name = "VolverButton";
             VolverButton.Size = new Size(96, 30);
             VolverButton.TabIndex = 42;
-            VolverButton.Text = "VOLVER";
+            VolverButton.Text = "CANCELAR";
             VolverButton.UseVisualStyleBackColor = true;
             // 
             // GenerarButton
@@ -479,7 +479,7 @@
             Controls.Add(groupBox2);
             Controls.Add(groupBox5);
             Controls.Add(groupBox7);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "GenerarGuiaCDForm";
             Text = "Generar Guía - Centro de Distribución";
             Load += ImposicionForm_Load;

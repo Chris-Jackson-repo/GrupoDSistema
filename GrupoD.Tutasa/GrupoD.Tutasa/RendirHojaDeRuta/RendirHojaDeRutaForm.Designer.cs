@@ -228,7 +228,7 @@
             button1.Name = "button1";
             button1.Size = new Size(116, 47);
             button1.TabIndex = 9;
-            button1.Text = "VOLVER";
+            button1.Text = "CANCELAR";
             button1.UseVisualStyleBackColor = true;
             // 
             // RendirHojaDeRutaForm
