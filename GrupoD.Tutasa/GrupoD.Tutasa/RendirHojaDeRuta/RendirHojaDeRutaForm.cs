@@ -103,11 +103,11 @@ namespace GrupoD.Tutasa.RendirHojaDeRuta
                 }
             }
 
-            if (guiasCompletadas.Count == 0)
-            {
-                MessageBox.Show("Debe seleccionar al menos una guía para rendir.", "Error");
-                return;
-            }
+           // if (guiasCompletadas.Count == 0)   //Claro...puede ser una devolución y no se indica como cumplida
+          //  {
+           //     MessageBox.Show("Debe seleccionar al menos una guía para rendir.", "Error");
+              //  return;
+           // }
 
 
             modelo.AceptarYCambiarEstado(guiasCompletadas);
