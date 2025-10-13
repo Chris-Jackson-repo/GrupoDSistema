@@ -50,7 +50,7 @@
             CUITcolumnHeader = new ColumnHeader();
             TipoPaquetecolumnHeader = new ColumnHeader();
             Buscarbutton = new Button();
-            button1 = new Button();
+            Cancelarbutton = new Button();
             EstadocolumnHeader1 = new ColumnHeader();
             GuiasDespachogroupBox.SuspendLayout();
             GuiasPendientesRendiciongroupBox.SuspendLayout();
@@ -222,21 +222,22 @@
             Buscarbutton.UseVisualStyleBackColor = true;
             Buscarbutton.Click += Buscarbutton_Click;
             // 
-            // button1
+            // Cancelarbutton
             // 
-            button1.Location = new Point(862, 908);
-            button1.Name = "button1";
-            button1.Size = new Size(116, 47);
-            button1.TabIndex = 9;
-            button1.Text = "CANCELAR";
-            button1.UseVisualStyleBackColor = true;
+            Cancelarbutton.Location = new Point(862, 908);
+            Cancelarbutton.Name = "Cancelarbutton";
+            Cancelarbutton.Size = new Size(116, 47);
+            Cancelarbutton.TabIndex = 9;
+            Cancelarbutton.Text = "CANCELAR";
+            Cancelarbutton.UseVisualStyleBackColor = true;
+            Cancelarbutton.Click += Cancelarbutton_Click;
             // 
             // RendirHojaDeRutaForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1023, 967);
-            Controls.Add(button1);
+            Controls.Add(Cancelarbutton);
             Controls.Add(Buscarbutton);
             Controls.Add(GuiasDespachogroupBox);
             Controls.Add(Confirmarbutton);
@@ -281,6 +282,6 @@
         private ColumnHeader CUITcolumnHeader2;
         private ColumnHeader CUITcolumnHeader;
         private ColumnHeader TipoPaquetecolumnHeader;
-        private Button button1;
+        private Button Cancelarbutton;
     }
 }

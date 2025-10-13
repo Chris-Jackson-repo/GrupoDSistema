@@ -90,24 +90,24 @@ namespace GrupoD.Tutasa.RendirHojaDeRuta
                 return;
             }
 
-            
+
 
 
             List<string> guiasCompletadas = new();
-            
+
             foreach (ListViewItem item in GuiasARendirListView.CheckedItems)
             {
                 if (item.Checked)
                 {
-                    guiasCompletadas.Add(item.Text); 
+                    guiasCompletadas.Add(item.Text);
                 }
             }
 
-           // if (guiasCompletadas.Count == 0)   //Claro...puede ser una devolución y no se indica como cumplida
-          //  {
-           //     MessageBox.Show("Debe seleccionar al menos una guía para rendir.", "Error");
-              //  return;
-           // }
+            // if (guiasCompletadas.Count == 0)   //Claro...puede ser una devolución y no se indica como cumplida
+            //  {
+            //     MessageBox.Show("Debe seleccionar al menos una guía para rendir.", "Error");
+            //  return;
+            // }
 
 
             modelo.AceptarYCambiarEstado(guiasCompletadas);
@@ -131,6 +131,13 @@ namespace GrupoD.Tutasa.RendirHojaDeRuta
 
 
         }
+
+        private void Cancelarbutton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+
 
         //private void label3_Click(object sender, EventArgs e)
         //{
