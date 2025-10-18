@@ -37,6 +37,7 @@
             DatosRetiranteGroupBox = new GroupBox();
             EstadoActualLabel = new Label();
             EstadoActualTextBox = new TextBox();
+            BuscarButton = new Button();
             DatosRetiranteGroupBox.SuspendLayout();
             SuspendLayout();
             // 
@@ -63,7 +64,7 @@
             NumeroGuiaTextbox.Font = new Font("Segoe UI", 8F);
             NumeroGuiaTextbox.Location = new Point(39, 53);
             NumeroGuiaTextbox.Name = "NumeroGuiaTextbox";
-            NumeroGuiaTextbox.Size = new Size(309, 25);
+            NumeroGuiaTextbox.Size = new Size(247, 25);
             NumeroGuiaTextbox.TabIndex = 27;
             // 
             // NumeroGuiaLabel
@@ -126,11 +127,21 @@
             EstadoActualTextBox.Size = new Size(309, 25);
             EstadoActualTextBox.TabIndex = 50;
             // 
+            // BuscarButton
+            // 
+            BuscarButton.Location = new Point(292, 53);
+            BuscarButton.Name = "BuscarButton";
+            BuscarButton.Size = new Size(134, 25);
+            BuscarButton.TabIndex = 51;
+            BuscarButton.Text = "Buscar";
+            BuscarButton.UseVisualStyleBackColor = true;
+            // 
             // RegEntregaCDForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(438, 437);
+            Controls.Add(BuscarButton);
             Controls.Add(EstadoActualTextBox);
             Controls.Add(DatosRetiranteGroupBox);
             Controls.Add(EstadoActualLabel);
@@ -165,5 +176,6 @@
         private GroupBox DatosRetiranteGroupBox;
         private Label EstadoActualLabel;
         private TextBox EstadoActualTextBox;
+        private Button BuscarButton;
     }
 }
