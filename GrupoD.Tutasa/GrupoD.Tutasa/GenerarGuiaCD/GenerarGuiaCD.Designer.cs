@@ -1,4 +1,4 @@
-﻿namespace GrupoD.Tutasa.ImposicionCD
+﻿namespace GrupoD.Tutasa.GenerarGuiaCD
 {
     partial class GenerarGuiaCDForm
     {
@@ -90,123 +90,131 @@
             groupBox2.Controls.Add(label15);
             groupBox2.Controls.Add(label16);
             groupBox2.Controls.Add(label17);
-            groupBox2.Location = new Point(29, 19);
-            groupBox2.Margin = new Padding(3, 2, 3, 2);
+            groupBox2.Location = new Point(41, 32);
+            groupBox2.Margin = new Padding(4, 3, 4, 3);
             groupBox2.Name = "groupBox2";
-            groupBox2.Padding = new Padding(3, 2, 3, 2);
-            groupBox2.Size = new Size(729, 160);
+            groupBox2.Padding = new Padding(4, 3, 4, 3);
+            groupBox2.Size = new Size(1041, 267);
             groupBox2.TabIndex = 39;
             groupBox2.TabStop = false;
             groupBox2.Text = "Remitente";
             // 
             // BuscarButton
             // 
-            BuscarButton.Location = new Point(288, 26);
-            BuscarButton.Margin = new Padding(3, 2, 3, 2);
+            BuscarButton.Location = new Point(411, 43);
+            BuscarButton.Margin = new Padding(4, 3, 4, 3);
             BuscarButton.Name = "BuscarButton";
-            BuscarButton.Size = new Size(61, 22);
+            BuscarButton.Size = new Size(87, 37);
             BuscarButton.TabIndex = 21;
             BuscarButton.Text = "Buscar";
             BuscarButton.UseVisualStyleBackColor = true;
+            BuscarButton.Click += BuscarButton_Click;
             // 
             // DirecRemitenteTextBox
             // 
-            DirecRemitenteTextBox.Location = new Point(71, 107);
-            DirecRemitenteTextBox.Margin = new Padding(3, 2, 3, 2);
+            DirecRemitenteTextBox.Location = new Point(101, 178);
+            DirecRemitenteTextBox.Margin = new Padding(4, 3, 4, 3);
             DirecRemitenteTextBox.Name = "DirecRemitenteTextBox";
             DirecRemitenteTextBox.ReadOnly = true;
-            DirecRemitenteTextBox.Size = new Size(203, 23);
+            DirecRemitenteTextBox.Size = new Size(288, 31);
             DirecRemitenteTextBox.TabIndex = 20;
             // 
             // ProvinciaTextBox
             // 
-            ProvinciaTextBox.Location = new Point(71, 68);
-            ProvinciaTextBox.Margin = new Padding(3, 2, 3, 2);
+            ProvinciaTextBox.Location = new Point(101, 113);
+            ProvinciaTextBox.Margin = new Padding(4, 3, 4, 3);
             ProvinciaTextBox.Name = "ProvinciaTextBox";
             ProvinciaTextBox.ReadOnly = true;
-            ProvinciaTextBox.Size = new Size(203, 23);
+            ProvinciaTextBox.Size = new Size(288, 31);
             ProvinciaTextBox.TabIndex = 19;
             // 
             // CPRemitenteTextBox
             // 
-            CPRemitenteTextBox.Location = new Point(486, 107);
-            CPRemitenteTextBox.Margin = new Padding(3, 2, 3, 2);
+            CPRemitenteTextBox.Location = new Point(694, 178);
+            CPRemitenteTextBox.Margin = new Padding(4, 3, 4, 3);
             CPRemitenteTextBox.Name = "CPRemitenteTextBox";
             CPRemitenteTextBox.ReadOnly = true;
-            CPRemitenteTextBox.Size = new Size(117, 23);
+            CPRemitenteTextBox.Size = new Size(165, 31);
             CPRemitenteTextBox.TabIndex = 18;
             // 
             // label12
             // 
-            label12.Location = new Point(4, 109);
+            label12.Location = new Point(6, 182);
+            label12.Margin = new Padding(4, 0, 4, 0);
             label12.Name = "label12";
-            label12.Size = new Size(70, 18);
+            label12.Size = new Size(100, 30);
             label12.TabIndex = 17;
-            label12.Text = "Direccion";
+            label12.Text = "Dirección";
             // 
             // label13
             // 
-            label13.Location = new Point(396, 109);
+            label13.Location = new Point(566, 182);
+            label13.Margin = new Padding(4, 0, 4, 0);
             label13.Name = "label13";
-            label13.Size = new Size(88, 18);
+            label13.Size = new Size(126, 30);
             label13.TabIndex = 16;
-            label13.Text = "Codigo Postal";
+            label13.Text = "Código Postal";
             // 
             // CiudadRemitenteTextBox
             // 
-            CiudadRemitenteTextBox.Location = new Point(486, 67);
-            CiudadRemitenteTextBox.Margin = new Padding(3, 2, 3, 2);
+            CiudadRemitenteTextBox.Location = new Point(694, 112);
+            CiudadRemitenteTextBox.Margin = new Padding(4, 3, 4, 3);
             CiudadRemitenteTextBox.Name = "CiudadRemitenteTextBox";
             CiudadRemitenteTextBox.ReadOnly = true;
-            CiudadRemitenteTextBox.Size = new Size(203, 23);
+            CiudadRemitenteTextBox.Size = new Size(288, 31);
             CiudadRemitenteTextBox.TabIndex = 15;
             // 
             // RazonTextBox
             // 
-            RazonTextBox.Location = new Point(486, 28);
-            RazonTextBox.Margin = new Padding(3, 2, 3, 2);
+            RazonTextBox.Location = new Point(694, 47);
+            RazonTextBox.Margin = new Padding(4, 3, 4, 3);
             RazonTextBox.Name = "RazonTextBox";
             RazonTextBox.ReadOnly = true;
-            RazonTextBox.Size = new Size(203, 23);
+            RazonTextBox.Size = new Size(288, 31);
             RazonTextBox.TabIndex = 11;
             // 
             // label14
             // 
-            label14.Location = new Point(396, 68);
+            label14.Location = new Point(566, 113);
+            label14.Margin = new Padding(4, 0, 4, 0);
             label14.Name = "label14";
-            label14.Size = new Size(91, 18);
+            label14.Size = new Size(130, 30);
             label14.TabIndex = 14;
             label14.Text = "Ciudad";
             // 
             // CuitTextBox
             // 
-            CuitTextBox.Location = new Point(72, 28);
-            CuitTextBox.Margin = new Padding(3, 2, 3, 2);
+            CuitTextBox.Location = new Point(103, 47);
+            CuitTextBox.Margin = new Padding(4, 3, 4, 3);
             CuitTextBox.Name = "CuitTextBox";
-            CuitTextBox.Size = new Size(202, 23);
+            CuitTextBox.Size = new Size(287, 31);
             CuitTextBox.TabIndex = 9;
+            CuitTextBox.TextChanged += CuitTextBox_TextChanged;
             // 
             // label15
             // 
-            label15.Location = new Point(4, 70);
+            label15.Location = new Point(6, 117);
+            label15.Margin = new Padding(4, 0, 4, 0);
             label15.Name = "label15";
-            label15.Size = new Size(61, 18);
+            label15.Size = new Size(87, 30);
             label15.TabIndex = 12;
             label15.Text = "Provincia";
             // 
             // label16
             // 
-            label16.Location = new Point(396, 31);
+            label16.Location = new Point(566, 52);
+            label16.Margin = new Padding(4, 0, 4, 0);
             label16.Name = "label16";
-            label16.Size = new Size(91, 18);
+            label16.Size = new Size(130, 30);
             label16.TabIndex = 10;
-            label16.Text = "Razon Social";
+            label16.Text = "Razón Social";
             // 
             // label17
             // 
-            label17.Location = new Point(5, 31);
+            label17.Location = new Point(7, 52);
+            label17.Margin = new Padding(4, 0, 4, 0);
             label17.Name = "label17";
-            label17.Size = new Size(45, 18);
+            label17.Size = new Size(64, 30);
             label17.TabIndex = 8;
             label17.Text = "CUIT";
             // 
@@ -218,60 +226,64 @@
             groupBox5.Controls.Add(NombreTextBox);
             groupBox5.Controls.Add(label19);
             groupBox5.Controls.Add(label24);
-            groupBox5.Location = new Point(29, 352);
-            groupBox5.Margin = new Padding(3, 2, 3, 2);
+            groupBox5.Location = new Point(41, 587);
+            groupBox5.Margin = new Padding(4, 3, 4, 3);
             groupBox5.Name = "groupBox5";
-            groupBox5.Padding = new Padding(3, 2, 3, 2);
-            groupBox5.Size = new Size(729, 87);
+            groupBox5.Padding = new Padding(4, 3, 4, 3);
+            groupBox5.Size = new Size(1041, 145);
             groupBox5.TabIndex = 37;
             groupBox5.TabStop = false;
-            groupBox5.Text = "Autorizado de recepcion";
+            groupBox5.Text = "Autorizado de recepción";
             // 
             // DniTextBox
             // 
-            DniTextBox.Location = new Point(38, 31);
-            DniTextBox.Margin = new Padding(3, 2, 3, 2);
+            DniTextBox.Location = new Point(54, 52);
+            DniTextBox.Margin = new Padding(4, 3, 4, 3);
             DniTextBox.Name = "DniTextBox";
-            DniTextBox.Size = new Size(147, 23);
+            DniTextBox.Size = new Size(208, 31);
             DniTextBox.TabIndex = 14;
+            DniTextBox.KeyPress += DniTextBox_KeyPress;
             // 
             // ApellidoTextBox
             // 
-            ApellidoTextBox.Location = new Point(526, 31);
-            ApellidoTextBox.Margin = new Padding(3, 2, 3, 2);
+            ApellidoTextBox.Location = new Point(751, 52);
+            ApellidoTextBox.Margin = new Padding(4, 3, 4, 3);
             ApellidoTextBox.Name = "ApellidoTextBox";
-            ApellidoTextBox.Size = new Size(162, 23);
+            ApellidoTextBox.Size = new Size(230, 31);
             ApellidoTextBox.TabIndex = 13;
             // 
             // label18
             // 
-            label18.Location = new Point(456, 32);
+            label18.Location = new Point(651, 53);
+            label18.Margin = new Padding(4, 0, 4, 0);
             label18.Name = "label18";
-            label18.Size = new Size(65, 18);
+            label18.Size = new Size(93, 30);
             label18.TabIndex = 12;
             label18.Text = "Apellido";
             // 
             // NombreTextBox
             // 
-            NombreTextBox.Location = new Point(281, 29);
-            NombreTextBox.Margin = new Padding(3, 2, 3, 2);
+            NombreTextBox.Location = new Point(401, 48);
+            NombreTextBox.Margin = new Padding(4, 3, 4, 3);
             NombreTextBox.Name = "NombreTextBox";
-            NombreTextBox.Size = new Size(147, 23);
+            NombreTextBox.Size = new Size(208, 31);
             NombreTextBox.TabIndex = 11;
             // 
             // label19
             // 
-            label19.Location = new Point(220, 31);
+            label19.Location = new Point(314, 52);
+            label19.Margin = new Padding(4, 0, 4, 0);
             label19.Name = "label19";
-            label19.Size = new Size(68, 18);
+            label19.Size = new Size(97, 30);
             label19.TabIndex = 10;
             label19.Text = "Nombre";
             // 
             // label24
             // 
-            label24.Location = new Point(5, 31);
+            label24.Location = new Point(7, 52);
+            label24.Margin = new Padding(4, 0, 4, 0);
             label24.Name = "label24";
-            label24.Size = new Size(45, 18);
+            label24.Size = new Size(64, 30);
             label24.TabIndex = 8;
             label24.Text = "DNI";
             // 
@@ -285,11 +297,11 @@
             groupBox7.Controls.Add(CiudadDestinatarioTextBox);
             groupBox7.Controls.Add(label37);
             groupBox7.Controls.Add(label38);
-            groupBox7.Location = new Point(29, 205);
-            groupBox7.Margin = new Padding(3, 2, 3, 2);
+            groupBox7.Location = new Point(41, 342);
+            groupBox7.Margin = new Padding(4, 3, 4, 3);
             groupBox7.Name = "groupBox7";
-            groupBox7.Padding = new Padding(3, 2, 3, 2);
-            groupBox7.Size = new Size(729, 119);
+            groupBox7.Padding = new Padding(4, 3, 4, 3);
+            groupBox7.Size = new Size(1041, 198);
             groupBox7.TabIndex = 36;
             groupBox7.TabStop = false;
             groupBox7.Text = "Destinatario";
@@ -297,88 +309,95 @@
             // ProvinciaComboBox
             // 
             ProvinciaComboBox.FormattingEnabled = true;
-            ProvinciaComboBox.Location = new Point(72, 30);
-            ProvinciaComboBox.Margin = new Padding(2);
+            ProvinciaComboBox.Location = new Point(103, 50);
             ProvinciaComboBox.Name = "ProvinciaComboBox";
-            ProvinciaComboBox.Size = new Size(203, 23);
+            ProvinciaComboBox.Size = new Size(288, 33);
             ProvinciaComboBox.TabIndex = 21;
             // 
             // DirecDestinatarioTextBox
             // 
-            DirecDestinatarioTextBox.Location = new Point(72, 70);
-            DirecDestinatarioTextBox.Margin = new Padding(3, 2, 3, 2);
+            DirecDestinatarioTextBox.Location = new Point(103, 117);
+            DirecDestinatarioTextBox.Margin = new Padding(4, 3, 4, 3);
             DirecDestinatarioTextBox.Name = "DirecDestinatarioTextBox";
-            DirecDestinatarioTextBox.Size = new Size(203, 23);
+            DirecDestinatarioTextBox.Size = new Size(288, 31);
             DirecDestinatarioTextBox.TabIndex = 20;
             // 
             // CPDestinatarioTextBox
             // 
-            CPDestinatarioTextBox.Location = new Point(486, 70);
-            CPDestinatarioTextBox.Margin = new Padding(3, 2, 3, 2);
+            CPDestinatarioTextBox.Location = new Point(694, 117);
+            CPDestinatarioTextBox.Margin = new Padding(4, 3, 4, 3);
             CPDestinatarioTextBox.Name = "CPDestinatarioTextBox";
-            CPDestinatarioTextBox.Size = new Size(117, 23);
+            CPDestinatarioTextBox.Size = new Size(165, 31);
             CPDestinatarioTextBox.TabIndex = 18;
+            CPDestinatarioTextBox.TextChanged += CPDestinatarioTextBox_TextChanged;
+            CPDestinatarioTextBox.KeyPress += CPDestinatarioTextBox_KeyPress;
             // 
             // label35
             // 
-            label35.Location = new Point(6, 72);
+            label35.Location = new Point(9, 120);
+            label35.Margin = new Padding(4, 0, 4, 0);
             label35.Name = "label35";
-            label35.Size = new Size(70, 18);
+            label35.Size = new Size(100, 30);
             label35.TabIndex = 17;
-            label35.Text = "Direccion";
+            label35.Text = "Dirección";
             // 
             // label36
             // 
-            label36.Location = new Point(393, 70);
+            label36.Location = new Point(561, 117);
+            label36.Margin = new Padding(4, 0, 4, 0);
             label36.Name = "label36";
-            label36.Size = new Size(88, 18);
+            label36.Size = new Size(126, 30);
             label36.TabIndex = 16;
-            label36.Text = "Codigo Postal";
+            label36.Text = "Código Postal";
             // 
             // CiudadDestinatarioTextBox
             // 
-            CiudadDestinatarioTextBox.Location = new Point(486, 30);
-            CiudadDestinatarioTextBox.Margin = new Padding(3, 2, 3, 2);
+            CiudadDestinatarioTextBox.Location = new Point(694, 50);
+            CiudadDestinatarioTextBox.Margin = new Padding(4, 3, 4, 3);
             CiudadDestinatarioTextBox.Name = "CiudadDestinatarioTextBox";
-            CiudadDestinatarioTextBox.Size = new Size(203, 23);
+            CiudadDestinatarioTextBox.Size = new Size(288, 31);
             CiudadDestinatarioTextBox.TabIndex = 15;
+            CiudadDestinatarioTextBox.TextChanged += CiudadDestinatarioTextBox_TextChanged;
             // 
             // label37
             // 
-            label37.Location = new Point(393, 33);
+            label37.Location = new Point(561, 55);
+            label37.Margin = new Padding(4, 0, 4, 0);
             label37.Name = "label37";
-            label37.Size = new Size(91, 18);
+            label37.Size = new Size(130, 30);
             label37.TabIndex = 14;
             label37.Text = "Ciudad";
             // 
             // label38
             // 
-            label38.Location = new Point(5, 33);
+            label38.Location = new Point(7, 55);
+            label38.Margin = new Padding(4, 0, 4, 0);
             label38.Name = "label38";
-            label38.Size = new Size(61, 18);
+            label38.Size = new Size(87, 30);
             label38.TabIndex = 12;
             label38.Text = "Provincia";
             label38.Click += label38_Click;
             // 
             // VolverButton
             // 
-            VolverButton.Location = new Point(674, 648);
-            VolverButton.Margin = new Padding(3, 2, 3, 2);
+            VolverButton.Location = new Point(963, 1080);
+            VolverButton.Margin = new Padding(4, 3, 4, 3);
             VolverButton.Name = "VolverButton";
-            VolverButton.Size = new Size(96, 30);
+            VolverButton.Size = new Size(137, 50);
             VolverButton.TabIndex = 42;
             VolverButton.Text = "CANCELAR";
             VolverButton.UseVisualStyleBackColor = true;
             // 
             // GenerarButton
             // 
-            GenerarButton.Location = new Point(356, 586);
-            GenerarButton.Margin = new Padding(3, 2, 3, 2);
+            GenerarButton.Location = new Point(509, 977);
+            GenerarButton.Margin = new Padding(4, 3, 4, 3);
             GenerarButton.Name = "GenerarButton";
-            GenerarButton.Size = new Size(154, 46);
+            GenerarButton.Size = new Size(220, 77);
             GenerarButton.TabIndex = 41;
             GenerarButton.Text = "Generar";
             GenerarButton.UseVisualStyleBackColor = true;
+            GenerarButton.Click += GenerarButton_Click;
             // 
             // groupBox1
             // 
@@ -390,11 +409,11 @@
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(TamañoComboBox);
             groupBox1.Controls.Add(label2);
-            groupBox1.Location = new Point(29, 458);
-            groupBox1.Margin = new Padding(3, 2, 3, 2);
+            groupBox1.Location = new Point(41, 763);
+            groupBox1.Margin = new Padding(4, 3, 4, 3);
             groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new Padding(3, 2, 3, 2);
-            groupBox1.Size = new Size(729, 107);
+            groupBox1.Padding = new Padding(4, 3, 4, 3);
+            groupBox1.Size = new Size(1041, 178);
             groupBox1.TabIndex = 40;
             groupBox1.TabStop = false;
             groupBox1.Text = "Servicio";
@@ -402,34 +421,36 @@
             // AgenciaComboBox
             // 
             AgenciaComboBox.FormattingEnabled = true;
-            AgenciaComboBox.Location = new Point(519, 63);
-            AgenciaComboBox.Margin = new Padding(3, 2, 3, 2);
+            AgenciaComboBox.Location = new Point(741, 105);
+            AgenciaComboBox.Margin = new Padding(4, 3, 4, 3);
             AgenciaComboBox.Name = "AgenciaComboBox";
-            AgenciaComboBox.Size = new Size(169, 23);
+            AgenciaComboBox.Size = new Size(240, 33);
             AgenciaComboBox.TabIndex = 28;
             // 
             // label4
             // 
-            label4.Location = new Point(410, 65);
+            label4.Location = new Point(586, 108);
+            label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
-            label4.Size = new Size(111, 18);
+            label4.Size = new Size(159, 30);
             label4.TabIndex = 27;
             label4.Text = "Agencia";
             // 
             // CentroComboBox
             // 
             CentroComboBox.FormattingEnabled = true;
-            CentroComboBox.Location = new Point(140, 61);
-            CentroComboBox.Margin = new Padding(3, 2, 3, 2);
+            CentroComboBox.Location = new Point(200, 102);
+            CentroComboBox.Margin = new Padding(4, 3, 4, 3);
             CentroComboBox.Name = "CentroComboBox";
-            CentroComboBox.Size = new Size(169, 23);
+            CentroComboBox.Size = new Size(240, 33);
             CentroComboBox.TabIndex = 26;
             // 
             // label3
             // 
-            label3.Location = new Point(8, 61);
+            label3.Location = new Point(11, 102);
+            label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(127, 18);
+            label3.Size = new Size(181, 30);
             label3.TabIndex = 25;
             label3.Text = "Centro Distribución";
             label3.Click += label3_Click_1;
@@ -437,49 +458,50 @@
             // TipoEntregaComboBox
             // 
             TipoEntregaComboBox.FormattingEnabled = true;
-            TipoEntregaComboBox.Location = new Point(519, 25);
-            TipoEntregaComboBox.Margin = new Padding(3, 2, 3, 2);
+            TipoEntregaComboBox.Location = new Point(741, 42);
+            TipoEntregaComboBox.Margin = new Padding(4, 3, 4, 3);
             TipoEntregaComboBox.Name = "TipoEntregaComboBox";
-            TipoEntregaComboBox.Size = new Size(169, 23);
+            TipoEntregaComboBox.Size = new Size(240, 33);
             TipoEntregaComboBox.TabIndex = 24;
             // 
             // label1
             // 
-            label1.Location = new Point(410, 27);
+            label1.Location = new Point(586, 45);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(111, 18);
+            label1.Size = new Size(159, 30);
             label1.TabIndex = 23;
             label1.Text = "Tipo de entrega";
             // 
             // TamañoComboBox
             // 
             TamañoComboBox.FormattingEnabled = true;
-            TamañoComboBox.Location = new Point(140, 25);
-            TamañoComboBox.Margin = new Padding(3, 2, 3, 2);
+            TamañoComboBox.Location = new Point(200, 42);
+            TamañoComboBox.Margin = new Padding(4, 3, 4, 3);
             TamañoComboBox.Name = "TamañoComboBox";
-            TamañoComboBox.Size = new Size(169, 23);
+            TamañoComboBox.Size = new Size(240, 33);
             TamañoComboBox.TabIndex = 22;
             // 
             // label2
             // 
-            label2.Location = new Point(6, 27);
+            label2.Location = new Point(9, 45);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(127, 18);
+            label2.Size = new Size(181, 30);
             label2.TabIndex = 21;
             label2.Text = "Tamaño Encomienda";
             // 
             // GenerarGuiaCDForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(812, 703);
+            ClientSize = new Size(1160, 1050);
             Controls.Add(VolverButton);
             Controls.Add(GenerarButton);
             Controls.Add(groupBox1);
             Controls.Add(groupBox2);
             Controls.Add(groupBox5);
             Controls.Add(groupBox7);
-            Margin = new Padding(2);
             Name = "GenerarGuiaCDForm";
             Text = "Generar Guía - Centro de Distribución";
             Load += ImposicionForm_Load;
