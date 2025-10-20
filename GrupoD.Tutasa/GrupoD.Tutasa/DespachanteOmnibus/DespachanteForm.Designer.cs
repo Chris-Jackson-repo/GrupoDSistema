@@ -29,15 +29,18 @@
         private void InitializeComponent()
         {
             CargaYDescargagroupBox = new GroupBox();
-            CargaGuiaslistView = new ListView();
-            DescargaGuiaslistView = new ListView();
+            BuscarPatentebutton = new Button();
+            GuiasACargarlabel = new Label();
+            GuiasADescargarlabel = new Label();
+            PatenteTextBox = new TextBox();
             IngresarPatentelabel = new Label();
-            PatentetextBox = new TextBox();
+            GuiasDescargaListView = new ListView();
             GuiaDescargarcolumnHeader = new ColumnHeader();
             CDOrigencolumnHeader = new ColumnHeader();
             DestinocolumnHeader = new ColumnHeader();
             TipoCajacolumnHeader = new ColumnHeader();
             EstadocolumnHeader = new ColumnHeader();
+            GuiasCargaListView = new ListView();
             GuiasCargacolumnHeader1 = new ColumnHeader();
             CDDestinocolumnHeader = new ColumnHeader();
             TipoCajacolumnHeader2 = new ColumnHeader();
@@ -50,10 +53,13 @@
             // 
             // CargaYDescargagroupBox
             // 
-            CargaYDescargagroupBox.Controls.Add(PatentetextBox);
+            CargaYDescargagroupBox.Controls.Add(BuscarPatentebutton);
+            CargaYDescargagroupBox.Controls.Add(GuiasACargarlabel);
+            CargaYDescargagroupBox.Controls.Add(GuiasADescargarlabel);
+            CargaYDescargagroupBox.Controls.Add(PatenteTextBox);
             CargaYDescargagroupBox.Controls.Add(IngresarPatentelabel);
-            CargaYDescargagroupBox.Controls.Add(DescargaGuiaslistView);
-            CargaYDescargagroupBox.Controls.Add(CargaGuiaslistView);
+            CargaYDescargagroupBox.Controls.Add(GuiasDescargaListView);
+            CargaYDescargagroupBox.Controls.Add(GuiasCargaListView);
             CargaYDescargagroupBox.Location = new Point(12, 7);
             CargaYDescargagroupBox.Name = "CargaYDescargagroupBox";
             CargaYDescargagroupBox.Size = new Size(759, 874);
@@ -61,27 +67,42 @@
             CargaYDescargagroupBox.TabStop = false;
             CargaYDescargagroupBox.Text = "Carga y descarga de cajas";
             // 
-            // CargaGuiaslistView
+            // BuscarPatentebutton
             // 
-            CargaGuiaslistView.CheckBoxes = true;
-            CargaGuiaslistView.Columns.AddRange(new ColumnHeader[] { GuiasCargacolumnHeader1, CDDestinocolumnHeader, TipoCajacolumnHeader2, EstadocolumnHeader2, DestinocolumnHeader2 });
-            CargaGuiaslistView.Location = new Point(17, 508);
-            CargaGuiaslistView.Name = "CargaGuiaslistView";
-            CargaGuiaslistView.Size = new Size(712, 340);
-            CargaGuiaslistView.TabIndex = 0;
-            CargaGuiaslistView.UseCompatibleStateImageBehavior = false;
-            CargaGuiaslistView.View = View.Details;
+            BuscarPatentebutton.Location = new Point(429, 47);
+            BuscarPatentebutton.Name = "BuscarPatentebutton";
+            BuscarPatentebutton.Size = new Size(101, 23);
+            BuscarPatentebutton.TabIndex = 6;
+            BuscarPatentebutton.Text = "BUSCAR";
+            BuscarPatentebutton.UseVisualStyleBackColor = true;
+            BuscarPatentebutton.Click += BuscarPatentebutton_Click;
             // 
-            // DescargaGuiaslistView
+            // GuiasACargarlabel
             // 
-            DescargaGuiaslistView.CheckBoxes = true;
-            DescargaGuiaslistView.Columns.AddRange(new ColumnHeader[] { GuiaDescargarcolumnHeader, CDOrigencolumnHeader, DestinocolumnHeader, TipoCajacolumnHeader, EstadocolumnHeader });
-            DescargaGuiaslistView.Location = new Point(17, 119);
-            DescargaGuiaslistView.Name = "DescargaGuiaslistView";
-            DescargaGuiaslistView.Size = new Size(712, 315);
-            DescargaGuiaslistView.TabIndex = 1;
-            DescargaGuiaslistView.UseCompatibleStateImageBehavior = false;
-            DescargaGuiaslistView.View = View.Details;
+            GuiasACargarlabel.AutoSize = true;
+            GuiasACargarlabel.Font = new Font("Segoe UI", 12F);
+            GuiasACargarlabel.Location = new Point(17, 484);
+            GuiasACargarlabel.Name = "GuiasACargarlabel";
+            GuiasACargarlabel.Size = new Size(109, 21);
+            GuiasACargarlabel.TabIndex = 5;
+            GuiasACargarlabel.Text = "Guías a cargar";
+            // 
+            // GuiasADescargarlabel
+            // 
+            GuiasADescargarlabel.AutoSize = true;
+            GuiasADescargarlabel.Font = new Font("Segoe UI", 12F);
+            GuiasADescargarlabel.Location = new Point(17, 95);
+            GuiasADescargarlabel.Name = "GuiasADescargarlabel";
+            GuiasADescargarlabel.Size = new Size(133, 21);
+            GuiasADescargarlabel.TabIndex = 4;
+            GuiasADescargarlabel.Text = "Guías a descargar";
+            // 
+            // PatenteTextBox
+            // 
+            PatenteTextBox.Location = new Point(185, 47);
+            PatenteTextBox.Name = "PatenteTextBox";
+            PatenteTextBox.Size = new Size(200, 23);
+            PatenteTextBox.TabIndex = 3;
             // 
             // IngresarPatentelabel
             // 
@@ -92,12 +113,16 @@
             IngresarPatentelabel.TabIndex = 2;
             IngresarPatentelabel.Text = "Patente del ómnibus";
             // 
-            // PatentetextBox
+            // GuiasDescargaListView
             // 
-            PatentetextBox.Location = new Point(185, 47);
-            PatentetextBox.Name = "PatentetextBox";
-            PatentetextBox.Size = new Size(200, 23);
-            PatentetextBox.TabIndex = 3;
+            GuiasDescargaListView.CheckBoxes = true;
+            GuiasDescargaListView.Columns.AddRange(new ColumnHeader[] { GuiaDescargarcolumnHeader, CDOrigencolumnHeader, DestinocolumnHeader, TipoCajacolumnHeader, EstadocolumnHeader });
+            GuiasDescargaListView.Location = new Point(17, 119);
+            GuiasDescargaListView.Name = "GuiasDescargaListView";
+            GuiasDescargaListView.Size = new Size(712, 315);
+            GuiasDescargaListView.TabIndex = 1;
+            GuiasDescargaListView.UseCompatibleStateImageBehavior = false;
+            GuiasDescargaListView.View = View.Details;
             // 
             // GuiaDescargarcolumnHeader
             // 
@@ -123,6 +148,17 @@
             // 
             EstadocolumnHeader.Text = "Estado";
             EstadocolumnHeader.Width = 150;
+            // 
+            // GuiasCargaListView
+            // 
+            GuiasCargaListView.CheckBoxes = true;
+            GuiasCargaListView.Columns.AddRange(new ColumnHeader[] { GuiasCargacolumnHeader1, CDDestinocolumnHeader, TipoCajacolumnHeader2, EstadocolumnHeader2, DestinocolumnHeader2 });
+            GuiasCargaListView.Location = new Point(17, 508);
+            GuiasCargaListView.Name = "GuiasCargaListView";
+            GuiasCargaListView.Size = new Size(712, 340);
+            GuiasCargaListView.TabIndex = 0;
+            GuiasCargaListView.UseCompatibleStateImageBehavior = false;
+            GuiasCargaListView.View = View.Details;
             // 
             // GuiasCargacolumnHeader1
             // 
@@ -188,10 +224,10 @@
         #endregion
 
         private GroupBox CargaYDescargagroupBox;
-        private ListView DescargaGuiaslistView;
-        private ListView CargaGuiaslistView;
+        private ListView GuiasDescargaListView;
+        private ListView GuiasCargaListView;
         private Label IngresarPatentelabel;
-        private TextBox PatentetextBox;
+        private TextBox PatenteTextBox;
         private ColumnHeader GuiaDescargarcolumnHeader;
         private ColumnHeader CDOrigencolumnHeader;
         private ColumnHeader DestinocolumnHeader;
@@ -204,5 +240,8 @@
         private ColumnHeader DestinocolumnHeader2;
         private Button Confirmarbutton;
         private Button Cancelarbutton;
+        private Label GuiasACargarlabel;
+        private Label GuiasADescargarlabel;
+        private Button BuscarPatentebutton;
     }
 }
