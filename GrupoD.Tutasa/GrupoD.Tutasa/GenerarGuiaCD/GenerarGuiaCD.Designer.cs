@@ -242,7 +242,7 @@
             DniTextBox.Name = "DniTextBox";
             DniTextBox.Size = new Size(208, 31);
             DniTextBox.TabIndex = 14;
-            DniTextBox.KeyPress += DniTextBox_KeyPress;
+            //DniTextBox.KeyPress += DniTextBox_KeyPress;
             // 
             // ApellidoTextBox
             // 

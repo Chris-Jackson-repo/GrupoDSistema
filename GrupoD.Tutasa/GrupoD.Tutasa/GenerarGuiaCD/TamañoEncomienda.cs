@@ -6,9 +6,14 @@ using System.Threading.Tasks;
 
 namespace GrupoD.Tutasa.GenerarGuiaCD
 {
-    internal class Servicio
-    {
-        public TamañoEncomiendaEnum TamañoEncomienda { get; set; }
+    
+        public enum TamañoEncomiendaEnum
+        {
+            S,
+            M,
+            L,
+            XL
+        }
 
-    }
+    
 }

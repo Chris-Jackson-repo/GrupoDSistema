@@ -1,4 +1,5 @@
 using GrupoD.Tutasa.RendirHojaDeRuta;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace GrupoD.Tutasa.GenerarGuiaCD
 {
@@ -164,7 +165,7 @@ namespace GrupoD.Tutasa.GenerarGuiaCD
 
         }
 
-        private void DniTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        /*private void DniTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Verificar que sea numérico y no tenga decimales
             if (!long.TryParse (DniTextBox.Text, out long dni))
@@ -173,7 +174,7 @@ namespace GrupoD.Tutasa.GenerarGuiaCD
                 DniTextBox.Focus();
                 return;
             }
-        }
+        }*/
 
         private void GenerarButton_Click(object sender, EventArgs e)
         {
@@ -199,13 +200,22 @@ namespace GrupoD.Tutasa.GenerarGuiaCD
                 return;
             }
 
+            
             //Validar que no esté vacío el campo DNI
             if (string.IsNullOrWhiteSpace(DniTextBox.Text))
             {
                 MessageBox.Show("El campo DNI no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
+            
+            
+            // Verificar que DNI sea numérico y no tenga decimales
+            if (!long.TryParse(DniTextBox.Text, out long dni))
+            {
+                MessageBox.Show("El DNI debe ser un número entero válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                DniTextBox.Focus();
+                return;
+            }
 
             //Validar que no esté vacío el campo Nombre
             if (string.IsNullOrWhiteSpace(NombreTextBox.Text))
@@ -221,6 +231,26 @@ namespace GrupoD.Tutasa.GenerarGuiaCD
                 MessageBox.Show("El campo Apellido no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
+
+
+           /* var nuevoDestinatario = new Destinatario
+            {
+
+                DniDesti = dniDesti,
+                Nombre = nombre,
+                Apellido = apellido,
+                Provincia = provincia,
+                Ciudad = ciudad,
+                Direccion = direccion,
+                CodigoPostal = codigoPostal
+            };*/
+
+            // modelo.ValidarDestinatario(nuevoDestinatario);
+
+
+
+
         }
     }
 }
