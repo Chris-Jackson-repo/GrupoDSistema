@@ -242,7 +242,6 @@
             DniTextBox.Name = "DniTextBox";
             DniTextBox.Size = new Size(208, 31);
             DniTextBox.TabIndex = 14;
-            //DniTextBox.KeyPress += DniTextBox_KeyPress;
             // 
             // ApellidoTextBox
             // 
@@ -330,7 +329,6 @@
             CPDestinatarioTextBox.Size = new Size(165, 31);
             CPDestinatarioTextBox.TabIndex = 18;
             CPDestinatarioTextBox.TextChanged += CPDestinatarioTextBox_TextChanged;
-            //CPDestinatarioTextBox.KeyPress += CPDestinatarioTextBox_KeyPress;
             // 
             // label35
             // 
@@ -481,6 +479,7 @@
             TamañoComboBox.Name = "TamañoComboBox";
             TamañoComboBox.Size = new Size(240, 33);
             TamañoComboBox.TabIndex = 22;
+            TamañoComboBox.SelectedIndexChanged += TamañoComboBox_SelectedIndexChanged;
             // 
             // label2
             // 

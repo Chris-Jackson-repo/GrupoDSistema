@@ -11,6 +11,9 @@ namespace GrupoD.Tutasa.GenerarGuiaCD
             InitializeComponent();
         }
 
+
+
+
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -93,6 +96,47 @@ namespace GrupoD.Tutasa.GenerarGuiaCD
 
         private void ImposicionForm_Load(object sender, EventArgs e)
         {
+            //Agregar las opciones a ProvinciaComboBox
+            ProvinciaComboBox.Items.Add("Buenos Aires");
+            ProvinciaComboBox.Items.Add("Catamarca");
+            ProvinciaComboBox.Items.Add("Chaco");
+            ProvinciaComboBox.Items.Add("Chubut");
+            ProvinciaComboBox.Items.Add("Ciudad Autónoma de Buenos Aires");
+            ProvinciaComboBox.Items.Add("Córdoba");
+            ProvinciaComboBox.Items.Add("Corrientes");
+            ProvinciaComboBox.Items.Add("Entre Ríos");
+            ProvinciaComboBox.Items.Add("Formosa");
+            ProvinciaComboBox.Items.Add("Jujuy");
+            ProvinciaComboBox.Items.Add("La Pampa");
+            ProvinciaComboBox.Items.Add("La Rioja");
+            ProvinciaComboBox.Items.Add("Mendoza");
+            ProvinciaComboBox.Items.Add("Misiones");
+            ProvinciaComboBox.Items.Add("Neuquén");
+            ProvinciaComboBox.Items.Add("Río Negro");
+            ProvinciaComboBox.Items.Add("Salta");
+            ProvinciaComboBox.Items.Add("San Juan");
+            ProvinciaComboBox.Items.Add("San Luis");
+            ProvinciaComboBox.Items.Add("Santa Cruz");
+            ProvinciaComboBox.Items.Add("Santa Fe");
+            ProvinciaComboBox.Items.Add("Santiago del Estero");
+            ProvinciaComboBox.Items.Add("Tierra del Fuego");
+            ProvinciaComboBox.Items.Add("Tucumán");
+
+
+
+
+            //Agregar las opciones tamaños a TamañoEncomiendaComboBox
+
+            TamañoComboBox.Items.Add("S");
+            TamañoComboBox.Items.Add("M");
+            TamañoComboBox.Items.Add("L");
+            TamañoComboBox.Items.Add("XL");
+
+
+            //Agregar las opciones tamaños a Tipo de Entrega ComboBox
+            TipoEntregaComboBox.Items.Add("A Domicilio");
+            TipoEntregaComboBox.Items.Add("Centro de Distribución");
+            TipoEntregaComboBox.Items.Add("Agencia");
 
         }
 
@@ -217,9 +261,9 @@ namespace GrupoD.Tutasa.GenerarGuiaCD
                 MessageBox.Show("El campo DNI no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            
 
-            
+
+
             // Verificar que DNI sea numérico y no tenga decimales
             if (!long.TryParse(DniTextBox.Text, out long dni))
             {
@@ -243,19 +287,50 @@ namespace GrupoD.Tutasa.GenerarGuiaCD
                 return;
             }
 
-
-
-           /* var nuevoDestinatario = new Destinatario
+            // Validar que no quede sin elegir opcion en el ComboBox Provincia
+            if (ProvinciaComboBox.SelectedIndex == -1)
             {
+                MessageBox.Show("Debe seleccionar una provincia de la lista", "Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ProvinciaComboBox.Focus();
+                return;
+            }
 
-                DniDesti = dniDesti,
-                Nombre = nombre,
-                Apellido = apellido,
-                Provincia = provincia,
-                Ciudad = ciudad,
-                Direccion = direccion,
-                CodigoPostal = codigoPostal
-            };*/
+            // Validar que no quede sin elegir opcion en el ComboBox de tamaño de Encomienda
+            if (TamañoComboBox.SelectedIndex == -1)
+            {
+                MessageBox.Show("Debe seleccionar un tamaño de encomienda.", "Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                TamañoComboBox.Focus();
+                return;
+            }
+
+
+
+            // Validar que no quede sin elegir opcion en el ComboBox de tipo de entrega
+            if (TipoEntregaComboBox.SelectedIndex == -1)
+            {
+                MessageBox.Show("Debe seleccionar un tipo de entrega.", "Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                TipoEntregaComboBox.Focus(); // Vuelve a enfocar el control
+                return;
+            }
+
+            
+
+
+
+            /* var nuevoDestinatario = new Destinatario
+             {
+
+                 DniDesti = dniDesti,
+                 Nombre = nombre,
+                 Apellido = apellido,
+                 Provincia = provincia,
+                 Ciudad = ciudad,
+                 Direccion = direccion,
+                 CodigoPostal = codigoPostal
+             };*/
 
             // modelo.ValidarDestinatario(nuevoDestinatario);
 
@@ -263,5 +338,11 @@ namespace GrupoD.Tutasa.GenerarGuiaCD
 
 
         }
+
+        private void TamañoComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+            
+          
     }
 }
