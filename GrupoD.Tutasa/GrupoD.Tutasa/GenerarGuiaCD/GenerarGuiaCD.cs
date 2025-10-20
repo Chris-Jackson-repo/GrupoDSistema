@@ -149,7 +149,7 @@ namespace GrupoD.Tutasa.GenerarGuiaCD
 
         }
 
-        private void CPDestinatarioTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        /*private void CPDestinatarioTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             //Este código evita que el usuario escriba letras, signos o espacios,
             //y además muestra un mensaje solo una vez si intenta hacerlo
@@ -163,7 +163,7 @@ namespace GrupoD.Tutasa.GenerarGuiaCD
             }
 
 
-        }
+        }*/
 
         /*private void DniTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -200,7 +200,17 @@ namespace GrupoD.Tutasa.GenerarGuiaCD
                 return;
             }
 
-            
+
+
+            // Verificar que Código Postal sea numérico y no tenga decimales
+            if (!int.TryParse(CPDestinatarioTextBox.Text, out int cpDestinatario))
+            {
+                MessageBox.Show("El Código Postal debe contener sólo números, sin decimales.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                DniTextBox.Focus();
+                return;
+            }
+
+
             //Validar que no esté vacío el campo DNI
             if (string.IsNullOrWhiteSpace(DniTextBox.Text))
             {
@@ -208,6 +218,7 @@ namespace GrupoD.Tutasa.GenerarGuiaCD
                 return;
             }
             
+
             
             // Verificar que DNI sea numérico y no tenga decimales
             if (!long.TryParse(DniTextBox.Text, out long dni))

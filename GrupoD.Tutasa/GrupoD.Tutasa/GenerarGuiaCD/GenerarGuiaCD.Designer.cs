@@ -330,7 +330,7 @@
             CPDestinatarioTextBox.Size = new Size(165, 31);
             CPDestinatarioTextBox.TabIndex = 18;
             CPDestinatarioTextBox.TextChanged += CPDestinatarioTextBox_TextChanged;
-            CPDestinatarioTextBox.KeyPress += CPDestinatarioTextBox_KeyPress;
+            //CPDestinatarioTextBox.KeyPress += CPDestinatarioTextBox_KeyPress;
             // 
             // label35
             // 
