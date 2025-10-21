@@ -9,23 +9,70 @@ namespace GrupoD.Tutasa.GenerarGuiaCD
 {
     internal class GenerarGuiaCDModelo
     {
-        internal List<Cliente> ValidarCliente (Cliente cuit)
+        //Cargo Provincias en el ComboBox Provincias
+        public string[] Provincias { get; } = [
+            "Buenos Aires",
+            "Catamarca",
+            "Chaco",
+            "Chubut",
+            "Córdoba",
+            "Ciudad Autónoma de Buenos Aires",
+            "Corrientes",
+            "Entre Ríos",
+            "Formosa",
+            "Jujuy",
+            "La Pampa",
+            "La Rioja",
+            "Mendoza",
+            "Misiones",
+            "Neuquén",
+            "Río Negro",
+            "Salta",
+            "San Juan",
+            "San Luis",
+            "Santa Cruz",
+            "Santa Fe",
+            "Santiago del Estero",
+            "Tierra del Fuego",
+            "Tucumán",
+
+            ];
+
+
+        //Agregar las opciones tamaños a TamañoEncomiendaComboBox
+        public string[] TamañosEncomienda { get; } = [
+            "S",
+            "M",
+            "L",
+            "XL",
+            ];
+
+
+        //Agregar las opciones tamaños a Combobox Tipos de Entrega
+        public string[] TiposEntrega { get; } = [
+            "A Domicilio",
+            "Centro de Distribución",
+            "Agencia",
+            ];
+
+        internal List<Cliente> ValidarCliente(Cliente cuit)
         {
-           /*
-            //Validar que Cuit tenga 11 digitos
-            if (cuit.Length != 11)
-            {
-                MessageBox.Show("El CUIT debe tener 11 dígitos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+            /*
+             //Validar que Cuit tenga 11 digitos
+             if (cuit.Length != 11)
+             {
+                 MessageBox.Show("El CUIT debe tener 11 dígitos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                 return;
+             }
 
 
-            //Validar que cuit no sea un numero negativo
-            if (cuit < 0)
-            {
-                MessageBox.Show("El CUIT no puede ser un número negativo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }*/
+             //Validar que cuit no sea un numero negativo
+             if (cuit < 0)
+             {
+                 MessageBox.Show("El CUIT no puede ser un número negativo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                 return;
+             }*/
+
 
             //Datos de Prueba
             return new List<Cliente>{
@@ -51,10 +98,14 @@ namespace GrupoD.Tutasa.GenerarGuiaCD
                 }
 
             };
+        }
             
 
 
-
+            internal void GenerarGuia (Guia guia)
+            { 
+                
+            }
 
 
 
@@ -87,4 +138,4 @@ namespace GrupoD.Tutasa.GenerarGuiaCD
 
         }
     }
-}
+

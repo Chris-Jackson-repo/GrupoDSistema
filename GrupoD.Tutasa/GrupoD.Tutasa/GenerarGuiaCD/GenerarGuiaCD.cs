@@ -1,4 +1,4 @@
-using GrupoD.Tutasa.RendirHojaDeRuta;
+using GrupoD.Tutasa.GenerarGuiaCD;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace GrupoD.Tutasa.GenerarGuiaCD
@@ -96,47 +96,24 @@ namespace GrupoD.Tutasa.GenerarGuiaCD
 
         private void ImposicionForm_Load(object sender, EventArgs e)
         {
-            //Agregar las opciones a ProvinciaComboBox
-            ProvinciaComboBox.Items.Add("Buenos Aires");
-            ProvinciaComboBox.Items.Add("Catamarca");
-            ProvinciaComboBox.Items.Add("Chaco");
-            ProvinciaComboBox.Items.Add("Chubut");
-            ProvinciaComboBox.Items.Add("Ciudad Autónoma de Buenos Aires");
-            ProvinciaComboBox.Items.Add("Córdoba");
-            ProvinciaComboBox.Items.Add("Corrientes");
-            ProvinciaComboBox.Items.Add("Entre Ríos");
-            ProvinciaComboBox.Items.Add("Formosa");
-            ProvinciaComboBox.Items.Add("Jujuy");
-            ProvinciaComboBox.Items.Add("La Pampa");
-            ProvinciaComboBox.Items.Add("La Rioja");
-            ProvinciaComboBox.Items.Add("Mendoza");
-            ProvinciaComboBox.Items.Add("Misiones");
-            ProvinciaComboBox.Items.Add("Neuquén");
-            ProvinciaComboBox.Items.Add("Río Negro");
-            ProvinciaComboBox.Items.Add("Salta");
-            ProvinciaComboBox.Items.Add("San Juan");
-            ProvinciaComboBox.Items.Add("San Luis");
-            ProvinciaComboBox.Items.Add("Santa Cruz");
-            ProvinciaComboBox.Items.Add("Santa Fe");
-            ProvinciaComboBox.Items.Add("Santiago del Estero");
-            ProvinciaComboBox.Items.Add("Tierra del Fuego");
-            ProvinciaComboBox.Items.Add("Tucumán");
+            //Agregar las opciones provincias a Combobox Provincia
+            foreach (var provincia in modelo.Provincias)
+            {
+                ProvinciaComboBox.Items.Add(provincia);
+            }
 
+            //Agregar las opciones tipos de entrega a Combobox Tipos de Entrega
+            foreach (var tipoEntrega in modelo.TiposEntrega)
+            {
+                TipoEntregaComboBox.Items.Add(tipoEntrega);
+            }
 
+            //Agregar las opciones tamaños a Combobox Tamaño de Encomienda
+            foreach (var tamaño in modelo.TamañosEncomienda)
+            {
+                TamañoComboBox.Items.Add(tamaño);
+            }
 
-
-            //Agregar las opciones tamaños a TamañoEncomiendaComboBox
-
-            TamañoComboBox.Items.Add("S");
-            TamañoComboBox.Items.Add("M");
-            TamañoComboBox.Items.Add("L");
-            TamañoComboBox.Items.Add("XL");
-
-
-            //Agregar las opciones tamaños a Tipo de Entrega ComboBox
-            TipoEntregaComboBox.Items.Add("A Domicilio");
-            TipoEntregaComboBox.Items.Add("Centro de Distribución");
-            TipoEntregaComboBox.Items.Add("Agencia");
 
         }
 
@@ -290,9 +267,39 @@ namespace GrupoD.Tutasa.GenerarGuiaCD
                 TipoEntregaComboBox.Focus(); // Vuelve a enfocar el control
                 return;
             }
+
+            /*// Crear el objeto Cliente requerido para la guía
+            var cliente = new Cliente
+            {
+                Cuit = CuitTextBox.Text
+                // Asignar otras propiedades si es necesario
+            };*/
+
+            var guia = new Guia
+            {
+                
+                CuitCliente = CuitTextBox.Text,
+                DniDestinatario = dni,
+                NombreDestinatario = NombreTextBox.Text,
+                ApellidoDestinatario = ApellidoTextBox.Text,
+                ProvinciaDestinatario = ProvinciaComboBox.SelectedItem.ToString(),
+                CiudadDestinatario = CiudadDestinatarioTextBox.Text,
+                DireccionDestinatario = DirecDestinatarioTextBox.Text,
+                CodigoPostalDestinatario = CPDestinatarioTextBox.Text,
+                TamañoEncomienda = TamañoComboBox.SelectedItem.ToString(),
+                TipoEntrega = TipoEntregaComboBox.SelectedItem.ToString()
+                // Asignar Destinatario y FechaGeneracion si es necesario
+            };
+
+            // Aquí puedes agregar la lógica para guardar o procesar la guía generada
+            MessageBox.Show("Guía generada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            modelo.GenerarGuia(guia);
         }
 
 
+
+       
 
 
 
