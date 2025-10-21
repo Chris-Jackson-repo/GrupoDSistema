@@ -69,6 +69,7 @@
             label1 = new Label();
             TamañoComboBox = new ComboBox();
             label2 = new Label();
+            CancelarButton = new Button();
             groupBox2.SuspendLayout();
             groupBox5.SuspendLayout();
             groupBox7.SuspendLayout();
@@ -388,10 +389,10 @@
             // 
             // GenerarButton
             // 
-            GenerarButton.Location = new Point(509, 977);
+            GenerarButton.Location = new Point(452, 960);
             GenerarButton.Margin = new Padding(4, 3, 4, 3);
             GenerarButton.Name = "GenerarButton";
-            GenerarButton.Size = new Size(220, 77);
+            GenerarButton.Size = new Size(220, 41);
             GenerarButton.TabIndex = 41;
             GenerarButton.Text = "Generar";
             GenerarButton.UseVisualStyleBackColor = true;
@@ -490,11 +491,21 @@
             label2.TabIndex = 21;
             label2.Text = "Tamaño Encomienda";
             // 
+            // CancelarButton
+            // 
+            CancelarButton.Location = new Point(949, 988);
+            CancelarButton.Name = "CancelarButton";
+            CancelarButton.Size = new Size(133, 40);
+            CancelarButton.TabIndex = 43;
+            CancelarButton.Text = "Cancelar";
+            CancelarButton.UseVisualStyleBackColor = true;
+            // 
             // GenerarGuiaCDForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1160, 1050);
+            ClientSize = new Size(1131, 1050);
+            Controls.Add(CancelarButton);
             Controls.Add(VolverButton);
             Controls.Add(GenerarButton);
             Controls.Add(groupBox1);
@@ -556,5 +567,6 @@
         private Label label1;
         private ComboBox TamañoComboBox;
         private Label label2;
+        private Button CancelarButton;
     }
 }

@@ -9,10 +9,11 @@ namespace GrupoD.Tutasa.GenerarGuiaCD
 {
     internal class GenerarGuiaCDModelo
     {
-       /* internal void ValidarRemitente (Cliente nuevoCliente)
+        internal List<Cliente> ValidarCliente (Cliente cuit)
         {
+           /*
             //Validar que Cuit tenga 11 digitos
-            if (CuitTextBox.Length != 11)
+            if (cuit.Length != 11)
             {
                 MessageBox.Show("El CUIT debe tener 11 dígitos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -24,12 +25,42 @@ namespace GrupoD.Tutasa.GenerarGuiaCD
             {
                 MessageBox.Show("El CUIT no puede ser un número negativo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
-            }
+            }*/
+
+            //Datos de Prueba
+            return new List<Cliente>{
+                new Cliente
+                {
+                    Cuit = 30205869953,
+                    RazonSocial = "EnvasesArg",
+                    Provincia = "Buenos Aires",
+                    Ciudad = "Lanus",
+                    Direccion = "9 de Julio 3821",
+                    CodigoPostal = 1824,
+                },
 
 
-        }
+                new Cliente
+                {
+                    Cuit= 30725648921,
+                    RazonSocial = "RepuestosCorSA",
+                    Provincia = "Cordoba",
+                    Ciudad = "Cordoba",
+                    Direccion = "Av. Colon 1234",
+                    CodigoPostal = 5000,
+                }
 
-        internal void ValidarDestinatario(Destinatario nuevoDestinatario)
+            };
+            
+
+
+
+
+
+
+
+
+       /* internal void ValidarDestinatario(Destinatario nuevoDestinatario)
         {
             //Validar que DNI cumple rango
             if (nuevoDestinatario.Dni < 10_000_000 || nuevoDestinatario.Dni > 99_999_999)
@@ -51,9 +82,9 @@ namespace GrupoD.Tutasa.GenerarGuiaCD
                 MessageBox.Show("El CUIT debe tener 11 dígitos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+       */
 
 
-
-        }*/
+        }
     }
 }

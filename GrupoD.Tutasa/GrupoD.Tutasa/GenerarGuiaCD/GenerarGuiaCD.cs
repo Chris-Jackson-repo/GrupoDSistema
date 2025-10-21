@@ -193,32 +193,7 @@ namespace GrupoD.Tutasa.GenerarGuiaCD
 
         }
 
-        /*private void CPDestinatarioTextBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            //Este código evita que el usuario escriba letras, signos o espacios,
-            //y además muestra un mensaje solo una vez si intenta hacerlo
 
-            // Permitir solo números y la tecla de borrado
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true; // cancela el ingreso del carácter
-                MessageBox.Show("El Código Postal debe contener solo números.",
-                                "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-
-        }*/
-
-        /*private void DniTextBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            // Verificar que sea numérico y no tenga decimales
-            if (!long.TryParse (DniTextBox.Text, out long dni))
-            {
-                MessageBox.Show("El DNI debe ser un número entero válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                DniTextBox.Focus();
-                return;
-            }
-        }*/
 
         private void GenerarButton_Click(object sender, EventArgs e)
         {
@@ -315,34 +290,36 @@ namespace GrupoD.Tutasa.GenerarGuiaCD
                 TipoEntregaComboBox.Focus(); // Vuelve a enfocar el control
                 return;
             }
-
-            
-
-
-
-            /* var nuevoDestinatario = new Destinatario
-             {
-
-                 DniDesti = dniDesti,
-                 Nombre = nombre,
-                 Apellido = apellido,
-                 Provincia = provincia,
-                 Ciudad = ciudad,
-                 Direccion = direccion,
-                 CodigoPostal = codigoPostal
-             };*/
-
-            // modelo.ValidarDestinatario(nuevoDestinatario);
-
-
-
-
         }
+
+
+
+
+
+           /* var cuitCliente = modelo.ValidarCliente(cuit);
+            if (cuitCliente == null)
+            {
+                return;
+
+            }
+
+
+            foreach (var cliente in cuitCliente)
+            {
+                var listItem = new ListViewItem(cliente.Cuit);
+                listItem.SubItems.Add(cliente.RazonSocial);
+                listItem.SubItems.Add(cliente.Provincia);
+                listItem.SubItems.Add(cliente.Ciudad);
+                listItem.SubItems.Add(cliente.Direccion);
+                listItem.SubItems.Add(cliente.CodigoPostal.ToString());
+
+            }
+        }*/
 
         private void TamañoComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
         }
-            
+           
           
     }
 }
