@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            SeleccioneNúmeroCuitComboBox = new ComboBox();
+            SeleccioneNumeroCuitComboBox = new ComboBox();
             PeríodoDesde = new Label();
             DesdedateTimePicker = new DateTimePicker();
             PeríodoHasta = new Label();
@@ -43,15 +43,16 @@
             ResultadocolumnHeader = new ColumnHeader();
             SuspendLayout();
             // 
-            // SeleccioneNúmeroCuitComboBox
+            // SeleccioneNumeroCuitComboBox
             // 
-            SeleccioneNúmeroCuitComboBox.FormattingEnabled = true;
-            SeleccioneNúmeroCuitComboBox.Location = new Point(491, 35);
-            SeleccioneNúmeroCuitComboBox.Margin = new Padding(3, 2, 3, 2);
-            SeleccioneNúmeroCuitComboBox.Name = "SeleccioneNúmeroCuitComboBox";
-            SeleccioneNúmeroCuitComboBox.Size = new Size(232, 23);
-            SeleccioneNúmeroCuitComboBox.TabIndex = 2;
-            SeleccioneNúmeroCuitComboBox.Text = "Seleccione Número  Cuit";
+            SeleccioneNumeroCuitComboBox.FormattingEnabled = true;
+            SeleccioneNumeroCuitComboBox.Location = new Point(491, 35);
+            SeleccioneNumeroCuitComboBox.Margin = new Padding(3, 2, 3, 2);
+            SeleccioneNumeroCuitComboBox.Name = "SeleccioneNumeroCuitComboBox";
+            SeleccioneNumeroCuitComboBox.Size = new Size(232, 23);
+            SeleccioneNumeroCuitComboBox.TabIndex = 2;
+            SeleccioneNumeroCuitComboBox.Text = "Seleccione Número  Cuit";
+            SeleccioneNumeroCuitComboBox.SelectedIndexChanged += SeleccioneNúmeroCuitComboBox_SelectedIndexChanged;
             // 
             // PeríodoDesde
             // 
@@ -160,7 +161,7 @@
             Controls.Add(PeríodoHasta);
             Controls.Add(DesdedateTimePicker);
             Controls.Add(PeríodoDesde);
-            Controls.Add(SeleccioneNúmeroCuitComboBox);
+            Controls.Add(SeleccioneNumeroCuitComboBox);
             Margin = new Padding(3, 2, 3, 2);
             Name = "ReporteDeCostosvsVenta";
             Text = "Reporte de Costo VS Ventas";
@@ -170,7 +171,7 @@
         }
 
         #endregion
-        private ComboBox SeleccioneNúmeroCuitComboBox;
+        private ComboBox SeleccioneNumeroCuitComboBox;
         private Label PeríodoDesde;
         private DateTimePicker DesdedateTimePicker;
         private Label PeríodoHasta;
