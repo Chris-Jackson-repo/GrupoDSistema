@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace GrupoD.Tutasa.DespachanteOmnibus
 {
@@ -22,7 +23,7 @@ namespace GrupoD.Tutasa.DespachanteOmnibus
             {
                 new GuiasParaDescargar
                 {
-                    Guia = "AC901-0001",
+                    Guia = "AC9010001",
                     CDOrigen = "CD Centro",
                     DireccionDeDestino = "Av. Primera 123",
                     TipoPaquete = "Paquete",
@@ -30,7 +31,7 @@ namespace GrupoD.Tutasa.DespachanteOmnibus
                 },
                 new GuiasParaDescargar
                 {
-                    Guia = "AC901-0002",
+                    Guia = "AC9010002",
                     CDOrigen = "CD Norte",
                     DireccionDeDestino = "Calle Segunda 45",
                     TipoPaquete = "Sobre",
@@ -42,7 +43,7 @@ namespace GrupoD.Tutasa.DespachanteOmnibus
             {
                 new GuiasParaDescargar
                 {
-                    Guia = "AE354-0001",
+                    Guia = "AE3540001",
                     CDOrigen = "CD Centro",
                     DireccionDeDestino = "Boulevard Tres 789",
                     TipoPaquete = "Paquete",
@@ -50,7 +51,7 @@ namespace GrupoD.Tutasa.DespachanteOmnibus
                 },
                 new GuiasParaDescargar
                 {
-                    Guia = "AE354-0002",
+                    Guia = "AE3540002",
                     CDOrigen = "CD Sur",
                     DireccionDeDestino = "Calle Cuatro 10",
                     TipoPaquete = "Palet",
@@ -58,7 +59,46 @@ namespace GrupoD.Tutasa.DespachanteOmnibus
                 }
             };
 
-            
+            guiasACargarPorPatente["AC901ZW"] = new List<GuiasParaCargar>
+            {
+                new GuiasParaCargar
+                {
+                    Guia = "AE354-0002",
+                    CDDestino = "CD Norte",
+                    DireccionDeDestino = "Calle Falsa 123",
+                    TipoPaquete = "Sobre",
+                    Estado = "Pendiente"
+                },
+                new GuiasParaCargar
+                {
+                    Guia = "AE3540003",
+                    CDDestino = "CD Sur",
+                    DireccionDeDestino = "Avenida Siempreviva 45",
+                    TipoPaquete = "Caja",
+                    Estado = "Pendiente"
+                }
+            };
+            guiasACargarPorPatente["AE354DF"] = new List<GuiasParaCargar>
+            {
+                new GuiasParaCargar
+                {
+                    Guia = "AE354-0004",
+                    CDDestino = "CD Centro",
+                    DireccionDeDestino = "Plaza Mayor s/n",
+                    TipoPaquete = "Paquete",
+                    Estado = "Pendiente"
+                },
+                new GuiasParaCargar
+                {
+                    Guia = "AE354-0005",
+                    CDDestino = "CD Este",
+                    DireccionDeDestino = "Ruta 9 Km 10",
+                    TipoPaquete = "Sobre",
+                    Estado = "Pendiente"
+                }
+
+
+            };
         }
 
         
@@ -93,5 +133,37 @@ namespace GrupoD.Tutasa.DespachanteOmnibus
 
             return guiasACargarPorPatente[ultimaPatenteIngresada];
         }
+
+
+        public string AceptarYCambiarEstado(List<string> guiasSeleccionadas)
+        {
+
+            var listacarga = guiasACargarPorPatente[ultimaPatenteIngresada];
+            var listadescarga = guiasADescargarPorPatente[ultimaPatenteIngresada];
+
+            // Simular el cambio de estado en la base de datos
+            foreach (var guia in listacarga.Where(g => guiasSeleccionadas.Contains(g.Guia)))
+            {
+                // Aquí se cambiaría el estado de la guía en la base de datos
+                Console.WriteLine($"Guía {guia} marcada como cargada.");
+            }
+
+            foreach (var guia in listadescarga.Where(g => guiasSeleccionadas.Contains(g.Guia)))
+            {
+                // Aquí se cambiaría el estado de la guía en la base de datos
+                Console.WriteLine($"Guía {guia} marcada como descargada.");
+            }
+
+            listacarga.RemoveAll(g => guiasSeleccionadas.Contains(g.Guia));
+            listadescarga.RemoveAll(g => guiasSeleccionadas.Contains(g.Guia));
+
+            return null;
+
+        }
+
+
+
+
+
     }
 }

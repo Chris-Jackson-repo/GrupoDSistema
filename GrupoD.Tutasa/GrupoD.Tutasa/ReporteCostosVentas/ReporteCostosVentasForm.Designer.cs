@@ -28,30 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            SeleccioneNúmeroCuitComboBox = new ComboBox();
+            SeleccioneNumeroCuitComboBox = new ComboBox();
             PeríodoDesde = new Label();
-            dateTimePicker1 = new DateTimePicker();
+            DesdedateTimePicker = new DateTimePicker();
             PeríodoHasta = new Label();
-            dateTimePicker2 = new DateTimePicker();
+            HastadateTimePicker = new DateTimePicker();
             BuscarButton = new Button();
             EmpresaTransporte = new Label();
             button1 = new Button();
-            listView1 = new ListView();
-            columnHeader1 = new ColumnHeader();
-            columnHeader2 = new ColumnHeader();
-            columnHeader3 = new ColumnHeader();
-            columnHeader4 = new ColumnHeader();
+            ReporteCostosVentaslistView = new ListView();
+            EmpresacolumnHeader = new ColumnHeader();
+            ImporteCostocolumnHeader = new ColumnHeader();
+            ImporteVentacolumnHeader = new ColumnHeader();
+            ResultadocolumnHeader = new ColumnHeader();
             SuspendLayout();
             // 
-            // SeleccioneNúmeroCuitComboBox
+            // SeleccioneNumeroCuitComboBox
             // 
-            SeleccioneNúmeroCuitComboBox.FormattingEnabled = true;
-            SeleccioneNúmeroCuitComboBox.Location = new Point(491, 35);
-            SeleccioneNúmeroCuitComboBox.Margin = new Padding(3, 2, 3, 2);
-            SeleccioneNúmeroCuitComboBox.Name = "SeleccioneNúmeroCuitComboBox";
-            SeleccioneNúmeroCuitComboBox.Size = new Size(232, 23);
-            SeleccioneNúmeroCuitComboBox.TabIndex = 2;
-            SeleccioneNúmeroCuitComboBox.Text = "Seleccione Número  Cuit";
+            SeleccioneNumeroCuitComboBox.FormattingEnabled = true;
+            SeleccioneNumeroCuitComboBox.Location = new Point(491, 35);
+            SeleccioneNumeroCuitComboBox.Margin = new Padding(3, 2, 3, 2);
+            SeleccioneNumeroCuitComboBox.Name = "SeleccioneNumeroCuitComboBox";
+            SeleccioneNumeroCuitComboBox.Size = new Size(232, 23);
+            SeleccioneNumeroCuitComboBox.TabIndex = 2;
+            SeleccioneNumeroCuitComboBox.Text = "Seleccione Número  Cuit";
+            SeleccioneNumeroCuitComboBox.SelectedIndexChanged += SeleccioneNúmeroCuitComboBox_SelectedIndexChanged;
             // 
             // PeríodoDesde
             // 
@@ -62,13 +63,13 @@
             PeríodoDesde.TabIndex = 4;
             PeríodoDesde.Text = "Período Desde";
             // 
-            // dateTimePicker1
+            // DesdedateTimePicker
             // 
-            dateTimePicker1.Location = new Point(236, 91);
-            dateTimePicker1.Margin = new Padding(3, 2, 3, 2);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(233, 23);
-            dateTimePicker1.TabIndex = 5;
+            DesdedateTimePicker.Location = new Point(236, 91);
+            DesdedateTimePicker.Margin = new Padding(3, 2, 3, 2);
+            DesdedateTimePicker.Name = "DesdedateTimePicker";
+            DesdedateTimePicker.Size = new Size(233, 23);
+            DesdedateTimePicker.TabIndex = 5;
             // 
             // PeríodoHasta
             // 
@@ -79,13 +80,13 @@
             PeríodoHasta.TabIndex = 6;
             PeríodoHasta.Text = "Período Hasta";
             // 
-            // dateTimePicker2
+            // HastadateTimePicker
             // 
-            dateTimePicker2.Location = new Point(630, 89);
-            dateTimePicker2.Margin = new Padding(3, 2, 3, 2);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(249, 23);
-            dateTimePicker2.TabIndex = 7;
+            HastadateTimePicker.Location = new Point(630, 89);
+            HastadateTimePicker.Margin = new Padding(3, 2, 3, 2);
+            HastadateTimePicker.Name = "HastadateTimePicker";
+            HastadateTimePicker.Size = new Size(249, 23);
+            HastadateTimePicker.TabIndex = 7;
             // 
             // BuscarButton
             // 
@@ -96,6 +97,7 @@
             BuscarButton.TabIndex = 8;
             BuscarButton.Text = "Buscar";
             BuscarButton.UseVisualStyleBackColor = true;
+            BuscarButton.Click += BuscarButton_Click;
             // 
             // EmpresaTransporte
             // 
@@ -116,46 +118,50 @@
             button1.Text = "CANCELAR";
             button1.UseVisualStyleBackColor = true;
             // 
-            // listView1
+            // ReporteCostosVentaslistView
             // 
-            listView1.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4 });
-            listView1.Location = new Point(116, 207);
-            listView1.Name = "listView1";
-            listView1.Size = new Size(792, 304);
-            listView1.TabIndex = 78;
-            listView1.UseCompatibleStateImageBehavior = false;
-            listView1.View = View.Details;
+            ReporteCostosVentaslistView.Columns.AddRange(new ColumnHeader[] { EmpresacolumnHeader, ImporteCostocolumnHeader, ImporteVentacolumnHeader, ResultadocolumnHeader });
+            ReporteCostosVentaslistView.Location = new Point(116, 207);
+            ReporteCostosVentaslistView.Name = "ReporteCostosVentaslistView";
+            ReporteCostosVentaslistView.Size = new Size(792, 304);
+            ReporteCostosVentaslistView.TabIndex = 78;
+            ReporteCostosVentaslistView.UseCompatibleStateImageBehavior = false;
+            ReporteCostosVentaslistView.View = View.Details;
             // 
-            // columnHeader1
+            // EmpresacolumnHeader
             // 
-            columnHeader1.Text = "Empresa";
+            EmpresacolumnHeader.Text = "Empresa";
+            EmpresacolumnHeader.Width = 150;
             // 
-            // columnHeader2
+            // ImporteCostocolumnHeader
             // 
-            columnHeader2.Text = "Costo";
+            ImporteCostocolumnHeader.Text = "Costo";
+            ImporteCostocolumnHeader.Width = 150;
             // 
-            // columnHeader3
+            // ImporteVentacolumnHeader
             // 
-            columnHeader3.Text = "Venta";
+            ImporteVentacolumnHeader.Text = "Venta";
+            ImporteVentacolumnHeader.Width = 150;
             // 
-            // columnHeader4
+            // ResultadocolumnHeader
             // 
-            columnHeader4.Text = "Resultado";
+            ResultadocolumnHeader.Text = "Resultado";
+            ResultadocolumnHeader.Width = 150;
             // 
             // ReporteDeCostosvsVenta
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1050, 616);
-            Controls.Add(listView1);
+            Controls.Add(ReporteCostosVentaslistView);
             Controls.Add(button1);
             Controls.Add(EmpresaTransporte);
             Controls.Add(BuscarButton);
-            Controls.Add(dateTimePicker2);
+            Controls.Add(HastadateTimePicker);
             Controls.Add(PeríodoHasta);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(DesdedateTimePicker);
             Controls.Add(PeríodoDesde);
-            Controls.Add(SeleccioneNúmeroCuitComboBox);
+            Controls.Add(SeleccioneNumeroCuitComboBox);
             Margin = new Padding(3, 2, 3, 2);
             Name = "ReporteDeCostosvsVenta";
             Text = "Reporte de Costo VS Ventas";
@@ -165,18 +171,18 @@
         }
 
         #endregion
-        private ComboBox SeleccioneNúmeroCuitComboBox;
+        private ComboBox SeleccioneNumeroCuitComboBox;
         private Label PeríodoDesde;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker DesdedateTimePicker;
         private Label PeríodoHasta;
-        private DateTimePicker dateTimePicker2;
+        private DateTimePicker HastadateTimePicker;
         private Button BuscarButton;
         private Label EmpresaTransporte;
         private Button button1;
-        private ListView listView1;
-        private ColumnHeader columnHeader1;
-        private ColumnHeader columnHeader2;
-        private ColumnHeader columnHeader3;
-        private ColumnHeader columnHeader4;
+        private ListView ReporteCostosVentaslistView;
+        private ColumnHeader EmpresacolumnHeader;
+        private ColumnHeader ImporteCostocolumnHeader;
+        private ColumnHeader ImporteVentacolumnHeader;
+        private ColumnHeader ResultadocolumnHeader;
     }
 }

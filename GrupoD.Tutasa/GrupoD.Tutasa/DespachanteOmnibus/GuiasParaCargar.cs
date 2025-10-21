@@ -9,7 +9,7 @@ namespace GrupoD.Tutasa.DespachanteOmnibus
     internal class GuiasParaCargar
     {
         public string Guia { get; set; }
-        public string CDOrigen { get; set; }
+        public string CDDestino { get; set; }
         public string DireccionDeDestino { get; set; }
         public string TipoPaquete { get; set; }
         public string Estado { get; set; }
