@@ -31,3 +31,4 @@ namespace GrupoD.Tutasa.Almacenes
         */
         // En el program para guardar datos del almacen: GuiasAlmacen.Grabar();
     }
+}
