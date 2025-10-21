@@ -196,6 +196,7 @@
             Confirmarbutton.TabIndex = 1;
             Confirmarbutton.Text = "Confirmar";
             Confirmarbutton.UseVisualStyleBackColor = true;
+            Confirmarbutton.Click += Confirmarbutton_Click;
             // 
             // Cancelarbutton
             // 
@@ -205,6 +206,7 @@
             Cancelarbutton.TabIndex = 2;
             Cancelarbutton.Text = "Cancelar";
             Cancelarbutton.UseVisualStyleBackColor = true;
+            Cancelarbutton.Click += Cancelarbutton_Click;
             // 
             // DespachanteForm
             // 

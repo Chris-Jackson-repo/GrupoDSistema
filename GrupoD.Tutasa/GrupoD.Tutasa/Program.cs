@@ -1,6 +1,7 @@
 //using GrupoD.Tutasa.RendirHojaDeRuta;
 using GrupoD.Tutasa.CargarFactura;
-namespace GrupoD.Tutasa.CargarFactura
+using GrupoD.Tutasa.DespachanteOmnibus;
+namespace GrupoD.Tutasa.RendirHojaDeRuta
 {
     internal static class Program
     {
@@ -13,7 +14,7 @@ namespace GrupoD.Tutasa.CargarFactura
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new CargarFactura());
+            Application.Run(new DespachanteForm());
         }
     }
 }
