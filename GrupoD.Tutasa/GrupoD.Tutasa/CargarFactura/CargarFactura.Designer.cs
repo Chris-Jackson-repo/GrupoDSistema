@@ -30,44 +30,44 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
-            listView1 = new ListView();
-            Cantidad = new ColumnHeader();
-            columnHeader1 = new ColumnHeader();
-            columnHeader2 = new ColumnHeader();
-            columnHeader3 = new ColumnHeader();
-            textBox7 = new TextBox();
+            txtTotalConIva = new TextBox();
             label11 = new Label();
             label7 = new Label();
-            textBox6 = new TextBox();
-            button3 = new Button();
-            button2 = new Button();
-            dateTimePicker2 = new DateTimePicker();
+            txtTotalFactura = new TextBox();
+            btnCancelar = new Button();
+            btnGrabarFactura = new Button();
+            dtpFechaVencimiento = new DateTimePicker();
             label10 = new Label();
-            dateTimePicker1 = new DateTimePicker();
+            dtpFechaFactura = new DateTimePicker();
             label9 = new Label();
             label8 = new Label();
-            textBox1 = new TextBox();
-            comboBox1 = new ComboBox();
+            txtNumeroFactura = new TextBox();
+            cmbEmpresa = new ComboBox();
             label1 = new Label();
+            lsvItemsFactura = new ListView();
+            Cantidad = new ColumnHeader();
+            Descripcion = new ColumnHeader();
+            Precio = new ColumnHeader();
+            PrecioConIVA = new ColumnHeader();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(listView1);
-            groupBox1.Controls.Add(textBox7);
+            groupBox1.Controls.Add(lsvItemsFactura);
+            groupBox1.Controls.Add(txtTotalConIva);
             groupBox1.Controls.Add(label11);
             groupBox1.Controls.Add(label7);
-            groupBox1.Controls.Add(textBox6);
-            groupBox1.Controls.Add(button3);
-            groupBox1.Controls.Add(button2);
-            groupBox1.Controls.Add(dateTimePicker2);
+            groupBox1.Controls.Add(txtTotalFactura);
+            groupBox1.Controls.Add(btnCancelar);
+            groupBox1.Controls.Add(btnGrabarFactura);
+            groupBox1.Controls.Add(dtpFechaVencimiento);
             groupBox1.Controls.Add(label10);
-            groupBox1.Controls.Add(dateTimePicker1);
+            groupBox1.Controls.Add(dtpFechaFactura);
             groupBox1.Controls.Add(label9);
             groupBox1.Controls.Add(label8);
-            groupBox1.Controls.Add(textBox1);
-            groupBox1.Controls.Add(comboBox1);
+            groupBox1.Controls.Add(txtNumeroFactura);
+            groupBox1.Controls.Add(cmbEmpresa);
             groupBox1.Controls.Add(label1);
             groupBox1.Location = new Point(31, 26);
             groupBox1.Name = "groupBox1";
@@ -76,39 +76,13 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "DATOS FACTURA";
             // 
-            // listView1
+            // txtTotalConIva
             // 
-            listView1.Columns.AddRange(new ColumnHeader[] { Cantidad, columnHeader1, columnHeader2, columnHeader3 });
-            listView1.Location = new Point(123, 250);
-            listView1.Name = "listView1";
-            listView1.Size = new Size(818, 164);
-            listView1.TabIndex = 27;
-            listView1.UseCompatibleStateImageBehavior = false;
-            listView1.View = View.Details;
-            // 
-            // Cantidad
-            // 
-            Cantidad.Text = "Cantidad";
-            // 
-            // columnHeader1
-            // 
-            columnHeader1.Text = "Descripcion";
-            // 
-            // columnHeader2
-            // 
-            columnHeader2.Text = "Precio";
-            // 
-            // columnHeader3
-            // 
-            columnHeader3.Text = "Precio con IVA";
-            // 
-            // textBox7
-            // 
-            textBox7.Location = new Point(581, 471);
-            textBox7.Name = "textBox7";
-            textBox7.ReadOnly = true;
-            textBox7.Size = new Size(109, 23);
-            textBox7.TabIndex = 26;
+            txtTotalConIva.Location = new Point(581, 471);
+            txtTotalConIva.Name = "txtTotalConIva";
+            txtTotalConIva.ReadOnly = true;
+            txtTotalConIva.Size = new Size(109, 23);
+            txtTotalConIva.TabIndex = 26;
             // 
             // label11
             // 
@@ -128,38 +102,40 @@
             label7.TabIndex = 24;
             label7.Text = "Total Factura";
             // 
-            // textBox6
+            // txtTotalFactura
             // 
-            textBox6.Location = new Point(377, 471);
-            textBox6.Name = "textBox6";
-            textBox6.ReadOnly = true;
-            textBox6.Size = new Size(109, 23);
-            textBox6.TabIndex = 23;
+            txtTotalFactura.Location = new Point(377, 471);
+            txtTotalFactura.Name = "txtTotalFactura";
+            txtTotalFactura.ReadOnly = true;
+            txtTotalFactura.Size = new Size(109, 23);
+            txtTotalFactura.TabIndex = 23;
             // 
-            // button3
+            // btnCancelar
             // 
-            button3.Location = new Point(806, 584);
-            button3.Name = "button3";
-            button3.Size = new Size(183, 51);
-            button3.TabIndex = 22;
-            button3.Text = "CANCELAR";
-            button3.UseVisualStyleBackColor = true;
+            btnCancelar.Location = new Point(806, 584);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(183, 51);
+            btnCancelar.TabIndex = 22;
+            btnCancelar.Text = "CANCELAR";
+            btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
             // 
-            // button2
+            // btnGrabarFactura
             // 
-            button2.Location = new Point(442, 551);
-            button2.Name = "button2";
-            button2.Size = new Size(177, 51);
-            button2.TabIndex = 21;
-            button2.Text = "GRABAR FACTURA";
-            button2.UseVisualStyleBackColor = true;
+            btnGrabarFactura.Location = new Point(442, 551);
+            btnGrabarFactura.Name = "btnGrabarFactura";
+            btnGrabarFactura.Size = new Size(177, 51);
+            btnGrabarFactura.TabIndex = 21;
+            btnGrabarFactura.Text = "GRABAR FACTURA";
+            btnGrabarFactura.UseVisualStyleBackColor = true;
+            btnGrabarFactura.Click += btnGrabarFactura_Click;
             // 
-            // dateTimePicker2
+            // dtpFechaVencimiento
             // 
-            dateTimePicker2.Location = new Point(674, 186);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(200, 23);
-            dateTimePicker2.TabIndex = 15;
+            dtpFechaVencimiento.Location = new Point(674, 186);
+            dtpFechaVencimiento.Name = "dtpFechaVencimiento";
+            dtpFechaVencimiento.Size = new Size(200, 23);
+            dtpFechaVencimiento.TabIndex = 15;
             // 
             // label10
             // 
@@ -170,12 +146,12 @@
             label10.TabIndex = 14;
             label10.Text = "Fecha de Vencimiento Factura";
             // 
-            // dateTimePicker1
+            // dtpFechaFactura
             // 
-            dateTimePicker1.Location = new Point(357, 186);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(200, 23);
-            dateTimePicker1.TabIndex = 13;
+            dtpFechaFactura.Location = new Point(357, 186);
+            dtpFechaFactura.Name = "dtpFechaFactura";
+            dtpFechaFactura.Size = new Size(200, 23);
+            dtpFechaFactura.TabIndex = 13;
             // 
             // label9
             // 
@@ -195,21 +171,21 @@
             label8.TabIndex = 10;
             label8.Text = "Numero de Factura";
             // 
-            // textBox1
+            // txtNumeroFactura
             // 
-            textBox1.Location = new Point(157, 186);
-            textBox1.Name = "textBox1";
-            textBox1.ReadOnly = true;
-            textBox1.Size = new Size(109, 23);
-            textBox1.TabIndex = 9;
+            txtNumeroFactura.Location = new Point(157, 186);
+            txtNumeroFactura.Name = "txtNumeroFactura";
+            txtNumeroFactura.ReadOnly = true;
+            txtNumeroFactura.Size = new Size(109, 23);
+            txtNumeroFactura.TabIndex = 9;
             // 
-            // comboBox1
+            // cmbEmpresa
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(442, 55);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(266, 23);
-            comboBox1.TabIndex = 6;
+            cmbEmpresa.FormattingEnabled = true;
+            cmbEmpresa.Location = new Point(442, 55);
+            cmbEmpresa.Name = "cmbEmpresa";
+            cmbEmpresa.Size = new Size(266, 23);
+            cmbEmpresa.TabIndex = 6;
             // 
             // label1
             // 
@@ -219,6 +195,33 @@
             label1.Size = new Size(52, 15);
             label1.TabIndex = 0;
             label1.Text = "Empresa";
+            // 
+            // lsvItemsFactura
+            // 
+            lsvItemsFactura.Columns.AddRange(new ColumnHeader[] { Cantidad, Descripcion, Precio, PrecioConIVA });
+            lsvItemsFactura.GridLines = true;
+            lsvItemsFactura.Location = new Point(145, 259);
+            lsvItemsFactura.Name = "lsvItemsFactura";
+            lsvItemsFactura.Size = new Size(782, 145);
+            lsvItemsFactura.TabIndex = 27;
+            lsvItemsFactura.UseCompatibleStateImageBehavior = false;
+            lsvItemsFactura.View = View.Details;
+            // 
+            // Cantidad
+            // 
+            Cantidad.Text = "Cantidad";
+            // 
+            // Descripcion
+            // 
+            Descripcion.Text = "Descripcion";
+            // 
+            // Precio
+            // 
+            Precio.Text = "Precio";
+            // 
+            // PrecioConIVA
+            // 
+            PrecioConIVA.Text = "Precio Con IVA";
             // 
             // CargarFactura
             // 
@@ -237,23 +240,23 @@
 
         private GroupBox groupBox1;
         private Label label1;
-        private ComboBox comboBox1;
-        private DateTimePicker dateTimePicker2;
+        private ComboBox cmbEmpresa;
+        private DateTimePicker dtpFechaVencimiento;
         private Label label10;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dtpFechaFactura;
         private Label label9;
         private Label label8;
-        private TextBox textBox1;
-        private Button button3;
-        private Button button2;
+        private TextBox txtNumeroFactura;
+        private Button btnCancelar;
+        private Button btnGrabarFactura;
         private Label label7;
-        private TextBox textBox6;
-        private TextBox textBox7;
+        private TextBox txtTotalFactura;
+        private TextBox txtTotalConIva;
         private Label label11;
-        private ListView listView1;
+        private ListView lsvItemsFactura;
         private ColumnHeader Cantidad;
-        private ColumnHeader columnHeader1;
-        private ColumnHeader columnHeader2;
-        private ColumnHeader columnHeader3;
+        private ColumnHeader Descripcion;
+        private ColumnHeader Precio;
+        private ColumnHeader PrecioConIVA;
     }
 }
