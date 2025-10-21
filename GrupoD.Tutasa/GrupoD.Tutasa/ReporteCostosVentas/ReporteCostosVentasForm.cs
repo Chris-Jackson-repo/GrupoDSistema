@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GrupoD.Tutasa.DespachanteOmnibus;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,10 @@ namespace GrupoD.Tutasa.ReporteCostosVentas
 {
     public partial class ReporteDeCostosvsVenta : Form
     {
+
+        public ReporteCostosVentasModelo modelo = new();
+
+
         public ReporteDeCostosvsVenta()
         {
             InitializeComponent();
@@ -36,5 +41,33 @@ namespace GrupoD.Tutasa.ReporteCostosVentas
         {
 
         }
+
+        private void BuscarButton_Click(object sender, EventArgs e)
+        {
+            if (SeleccioneNúmeroCuitComboBox.SelectedItem == null)
+            {
+                MessageBox.Show("Debe seleccionar un número de CUIT.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Validación: fecha 'Desde' no mayor que fecha 'Hasta'
+            if (DesdedateTimePicker.Value.Date >= HastadateTimePicker.Value.Date)
+            {
+                MessageBox.Show("La fecha 'Desde' no puede ser mayor que la fecha 'Hasta'.", "Rango de fechas inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                DesdedateTimePicker.Focus();
+                return;
+            }
+
+            var Cuit = SeleccioneNúmeroCuitComboBox.SelectedItem.ToString();
+            
+
+
+
+
+
+
+
+        }
+
     }
 }
