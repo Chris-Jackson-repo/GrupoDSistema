@@ -46,10 +46,9 @@
             // SeleccioneNumeroCuitComboBox
             // 
             SeleccioneNumeroCuitComboBox.FormattingEnabled = true;
-            SeleccioneNumeroCuitComboBox.Location = new Point(491, 35);
-            SeleccioneNumeroCuitComboBox.Margin = new Padding(3, 2, 3, 2);
+            SeleccioneNumeroCuitComboBox.Location = new Point(561, 47);
             SeleccioneNumeroCuitComboBox.Name = "SeleccioneNumeroCuitComboBox";
-            SeleccioneNumeroCuitComboBox.Size = new Size(232, 23);
+            SeleccioneNumeroCuitComboBox.Size = new Size(265, 28);
             SeleccioneNumeroCuitComboBox.TabIndex = 2;
             SeleccioneNumeroCuitComboBox.Text = "Seleccione Número  Cuit";
             SeleccioneNumeroCuitComboBox.SelectedIndexChanged += SeleccioneNúmeroCuitComboBox_SelectedIndexChanged;
@@ -57,43 +56,40 @@
             // PeríodoDesde
             // 
             PeríodoDesde.AutoSize = true;
-            PeríodoDesde.Location = new Point(125, 95);
+            PeríodoDesde.Location = new Point(143, 127);
             PeríodoDesde.Name = "PeríodoDesde";
-            PeríodoDesde.Size = new Size(83, 15);
+            PeríodoDesde.Size = new Size(106, 20);
             PeríodoDesde.TabIndex = 4;
             PeríodoDesde.Text = "Período Desde";
             // 
             // DesdedateTimePicker
             // 
-            DesdedateTimePicker.Location = new Point(236, 91);
-            DesdedateTimePicker.Margin = new Padding(3, 2, 3, 2);
+            DesdedateTimePicker.Location = new Point(270, 121);
             DesdedateTimePicker.Name = "DesdedateTimePicker";
-            DesdedateTimePicker.Size = new Size(233, 23);
+            DesdedateTimePicker.Size = new Size(266, 27);
             DesdedateTimePicker.TabIndex = 5;
             // 
             // PeríodoHasta
             // 
             PeríodoHasta.AutoSize = true;
-            PeríodoHasta.Location = new Point(516, 93);
+            PeríodoHasta.Location = new Point(590, 124);
             PeríodoHasta.Name = "PeríodoHasta";
-            PeríodoHasta.Size = new Size(81, 15);
+            PeríodoHasta.Size = new Size(102, 20);
             PeríodoHasta.TabIndex = 6;
             PeríodoHasta.Text = "Período Hasta";
             // 
             // HastadateTimePicker
             // 
-            HastadateTimePicker.Location = new Point(630, 89);
-            HastadateTimePicker.Margin = new Padding(3, 2, 3, 2);
+            HastadateTimePicker.Location = new Point(720, 119);
             HastadateTimePicker.Name = "HastadateTimePicker";
-            HastadateTimePicker.Size = new Size(249, 23);
+            HastadateTimePicker.Size = new Size(284, 27);
             HastadateTimePicker.TabIndex = 7;
             // 
             // BuscarButton
             // 
-            BuscarButton.Location = new Point(451, 149);
-            BuscarButton.Margin = new Padding(3, 2, 3, 2);
+            BuscarButton.Location = new Point(515, 199);
             BuscarButton.Name = "BuscarButton";
-            BuscarButton.Size = new Size(122, 22);
+            BuscarButton.Size = new Size(162, 29);
             BuscarButton.TabIndex = 8;
             BuscarButton.Text = "Buscar";
             BuscarButton.UseVisualStyleBackColor = true;
@@ -102,18 +98,19 @@
             // EmpresaTransporte
             // 
             EmpresaTransporte.AutoSize = true;
-            EmpresaTransporte.Location = new Point(329, 38);
+            EmpresaTransporte.Location = new Point(376, 51);
             EmpresaTransporte.Name = "EmpresaTransporte";
-            EmpresaTransporte.Size = new Size(127, 15);
+            EmpresaTransporte.Size = new Size(163, 20);
             EmpresaTransporte.TabIndex = 26;
             EmpresaTransporte.Text = "Empresa De Transporte";
             EmpresaTransporte.Click += EmpresaTransporte_Click;
             // 
             // button1
             // 
-            button1.Location = new Point(847, 550);
+            button1.Location = new Point(788, 199);
+            button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(150, 45);
+            button1.Size = new Size(171, 29);
             button1.TabIndex = 77;
             button1.Text = "CANCELAR";
             button1.UseVisualStyleBackColor = true;
@@ -121,9 +118,10 @@
             // ReporteCostosVentaslistView
             // 
             ReporteCostosVentaslistView.Columns.AddRange(new ColumnHeader[] { EmpresacolumnHeader, ImporteCostocolumnHeader, ImporteVentacolumnHeader, ResultadocolumnHeader });
-            ReporteCostosVentaslistView.Location = new Point(116, 207);
+            ReporteCostosVentaslistView.Location = new Point(133, 276);
+            ReporteCostosVentaslistView.Margin = new Padding(3, 4, 3, 4);
             ReporteCostosVentaslistView.Name = "ReporteCostosVentaslistView";
-            ReporteCostosVentaslistView.Size = new Size(792, 304);
+            ReporteCostosVentaslistView.Size = new Size(905, 404);
             ReporteCostosVentaslistView.TabIndex = 78;
             ReporteCostosVentaslistView.UseCompatibleStateImageBehavior = false;
             ReporteCostosVentaslistView.View = View.Details;
@@ -150,9 +148,9 @@
             // 
             // ReporteDeCostosvsVenta
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1050, 616);
+            ClientSize = new Size(1200, 821);
             Controls.Add(ReporteCostosVentaslistView);
             Controls.Add(button1);
             Controls.Add(EmpresaTransporte);
@@ -162,7 +160,6 @@
             Controls.Add(DesdedateTimePicker);
             Controls.Add(PeríodoDesde);
             Controls.Add(SeleccioneNumeroCuitComboBox);
-            Margin = new Padding(3, 2, 3, 2);
             Name = "ReporteDeCostosvsVenta";
             Text = "Reporte de Costo VS Ventas";
             Load += Form2_Load;
