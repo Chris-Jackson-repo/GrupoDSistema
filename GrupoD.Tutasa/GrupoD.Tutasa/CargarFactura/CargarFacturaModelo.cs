@@ -8,5 +8,6 @@ namespace GrupoD.Tutasa.CargarFacturaModelo
 {
     internal class CargarFacturaModelo
     {
+
     }
 }
