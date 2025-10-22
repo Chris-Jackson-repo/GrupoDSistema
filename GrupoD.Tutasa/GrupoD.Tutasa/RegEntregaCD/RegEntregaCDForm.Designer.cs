@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            CancelarButton = new Button();
+            LimpiarButton = new Button();
             RegistarEntregaButton = new Button();
             NumeroGuiaTextbox = new TextBox();
             NumeroGuiaLabel = new Label();
@@ -41,14 +41,15 @@
             DatosRetiranteGroupBox.SuspendLayout();
             SuspendLayout();
             // 
-            // CancelarButton
+            // LimpiarButton
             // 
-            CancelarButton.Location = new Point(272, 376);
-            CancelarButton.Name = "CancelarButton";
-            CancelarButton.Size = new Size(134, 29);
-            CancelarButton.TabIndex = 39;
-            CancelarButton.Text = "CANCELAR";
-            CancelarButton.UseVisualStyleBackColor = true;
+            LimpiarButton.Location = new Point(272, 376);
+            LimpiarButton.Name = "LimpiarButton";
+            LimpiarButton.Size = new Size(134, 29);
+            LimpiarButton.TabIndex = 39;
+            LimpiarButton.Text = "Limpiar";
+            LimpiarButton.UseVisualStyleBackColor = true;
+            LimpiarButton.Click += LimpiarButtonClick;
             // 
             // RegistarEntregaButton
             // 
@@ -58,6 +59,7 @@
             RegistarEntregaButton.TabIndex = 38;
             RegistarEntregaButton.Text = "Registar Entrega";
             RegistarEntregaButton.UseVisualStyleBackColor = true;
+            RegistarEntregaButton.Click += RegistrarEntregaButtonClick;
             // 
             // NumeroGuiaTextbox
             // 
@@ -146,13 +148,12 @@
             Controls.Add(EstadoActualTextBox);
             Controls.Add(DatosRetiranteGroupBox);
             Controls.Add(EstadoActualLabel);
-            Controls.Add(CancelarButton);
+            Controls.Add(LimpiarButton);
             Controls.Add(RegistarEntregaButton);
             Controls.Add(NumeroGuiaTextbox);
             Controls.Add(NumeroGuiaLabel);
             Name = "RegEntregaCDForm";
             Text = "Registrar entrega en CD";
-         //   Load += RegEntregaCD_Load;
             DatosRetiranteGroupBox.ResumeLayout(false);
             DatosRetiranteGroupBox.PerformLayout();
             ResumeLayout(false);
@@ -164,7 +165,7 @@
         private Label EstEntregadoLabel;
         private Label EstEnCDLabel;
         private Label EstEnCaminoCDLabel;
-        private Button CancelarButton;
+        private Button LimpiarButton;
         private Button RegistarEntregaButton;
         private TextBox MailRetiranteTextbox;
         private TextBox TelefonoRetiranteTextbox;

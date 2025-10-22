@@ -31,7 +31,7 @@ namespace GrupoD.Tutasa.RegEntregaCD
             };
             estadosActuales[1002] = new EstadoActual
             {
-                Dni = 87654321,
+                Dni = 27654321,
                 Estado = "Listo para retirar"
             };
             estadosActuales[1003] = new EstadoActual
@@ -42,6 +42,16 @@ namespace GrupoD.Tutasa.RegEntregaCD
 
             return this;
         }
-
+        internal void ActualizarEstado (int numeroGuia, string nuevoEstado)
+        {
+            if (estadosActuales.ContainsKey(numeroGuia))
+            {
+                estadosActuales[numeroGuia].Estado = nuevoEstado;
+            }
+            else
+            {
+                MessageBox.Show("No se encontro una guía asignada a este número.");
+            }
+        }
     }
 }
