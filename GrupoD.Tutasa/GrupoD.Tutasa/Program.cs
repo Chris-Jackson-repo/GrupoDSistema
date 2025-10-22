@@ -2,7 +2,7 @@
 //using GrupoD.Tutasa.CargarFactura;
 //using GrupoD.Tutasa.DespachanteOmnibus;
 //using GrupoD.Tutasa.ReporteCostosVentas;
-using GrupoD.Tutasa.RegEntregaCD;
+using GrupoD.Tutasa.RegEntregaAgencia;
 
 
 namespace GrupoD.Tutasa.RendirHojaDeRuta
@@ -18,7 +18,7 @@ namespace GrupoD.Tutasa.RendirHojaDeRuta
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new RegEntregaCDForm());
+            Application.Run(new RegEntregaAgenciaForm());
         }
     }
 }

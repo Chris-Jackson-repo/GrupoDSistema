@@ -31,7 +31,7 @@
             NumeroGuiaLabel = new Label();
             NumeroGuiaTextbox = new TextBox();
             RegistarEntregaButton = new Button();
-            CancelarButton = new Button();
+            LimpiarButton = new Button();
             EstadoActualLabel = new Label();
             DniLabel = new Label();
             DniTextBox = new TextBox();
@@ -69,15 +69,17 @@
             RegistarEntregaButton.TabIndex = 18;
             RegistarEntregaButton.Text = "Registar Entrega";
             RegistarEntregaButton.UseVisualStyleBackColor = true;
+            RegistarEntregaButton.Click += RegistrarEntregaButtonClick;
             // 
-            // CancelarButton
+            // LimpiarButton
             // 
-            CancelarButton.Location = new Point(215, 371);
-            CancelarButton.Name = "CancelarButton";
-            CancelarButton.Size = new Size(134, 29);
-            CancelarButton.TabIndex = 19;
-            CancelarButton.Text = "CANCELAR";
-            CancelarButton.UseVisualStyleBackColor = true;
+            LimpiarButton.Location = new Point(215, 371);
+            LimpiarButton.Name = "LimpiarButton";
+            LimpiarButton.Size = new Size(134, 29);
+            LimpiarButton.TabIndex = 19;
+            LimpiarButton.Text = "Limpiar";
+            LimpiarButton.UseVisualStyleBackColor = true;
+            LimpiarButton.Click += LimpiarButtonClick;
             // 
             // EstadoActualLabel
             // 
@@ -137,6 +139,7 @@
             BuscarButton.TabIndex = 31;
             BuscarButton.Text = "Buscar";
             BuscarButton.UseVisualStyleBackColor = true;
+            BuscarButton.Click += BuscarButtonClick;
             // 
             // RegEntregaAgenciaForm
             // 
@@ -147,7 +150,7 @@
             Controls.Add(EstadoActualTextBox);
             Controls.Add(DatosRetiranteGroupBox);
             Controls.Add(EstadoActualLabel);
-            Controls.Add(CancelarButton);
+            Controls.Add(LimpiarButton);
             Controls.Add(RegistarEntregaButton);
             Controls.Add(NumeroGuiaTextbox);
             Controls.Add(NumeroGuiaLabel);
@@ -164,7 +167,7 @@
         private Label NumeroGuiaLabel;
         private TextBox NumeroGuiaTextbox;
         private Button RegistarEntregaButton;
-        private Button CancelarButton;
+        private Button LimpiarButton;
         private Label EstadoActualLabel;
         private Label DniLabel;
         private TextBox DniTextBox;
