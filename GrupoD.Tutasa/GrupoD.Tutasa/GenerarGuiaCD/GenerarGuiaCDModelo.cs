@@ -55,23 +55,24 @@ namespace GrupoD.Tutasa.GenerarGuiaCD
             "Agencia",
             ];
 
-        internal List<Cliente> ValidarCliente(Cliente cuit)
+
+        public List<Cliente> ValidarCliente(long cuit)
         {
-            /*
-             //Validar que Cuit tenga 11 digitos
-             if (cuit.Length != 11)
-             {
-                 MessageBox.Show("El CUIT debe tener 11 dígitos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                 return;
-             }
+          /*
+            //Validar que Cuit tenga 11 digitos
+            if (cuit.Length != 11)
+            {
+                MessageBox.Show("El CUIT debe tener 11 dígitos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }*/
 
 
-             //Validar que cuit no sea un numero negativo
-             if (cuit < 0)
-             {
-                 MessageBox.Show("El CUIT no puede ser un número negativo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                 return;
-             }*/
+            //Validar que cuit no sea un numero negativo
+            if (cuit < 0)
+            {
+                MessageBox.Show("El CUIT no puede ser un número negativo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
 
 
             //Datos de Prueba
@@ -95,23 +96,32 @@ namespace GrupoD.Tutasa.GenerarGuiaCD
                     Ciudad = "Cordoba",
                     Direccion = "Av. Colon 1234",
                     CodigoPostal = 5000,
-                }
+                },
 
+                new Cliente
+                {
+                    Cuit= 20314567891,
+                    RazonSocial = "TecnologiaHoy",
+                    Provincia = "Santa Fe",
+                    Ciudad = "Rosario",
+                    Direccion = "Calle Falsa 123",
+                    CodigoPostal = 2000,
+                }
             };
         }
-            
-
-
-            internal void GenerarGuia (Guia guia)
-            { 
-                
-            }
 
 
 
+        internal void GenerarGuia(Guia guia)
+        {
+
+        }
 
 
-       /* internal void ValidarDestinatario(Destinatario nuevoDestinatario)
+
+
+        /*
+        internal void ValidarDestinatario(Destinatario nuevoDestinatario)
         {
             //Validar que DNI cumple rango
             if (nuevoDestinatario.Dni < 10_000_000 || nuevoDestinatario.Dni > 99_999_999)
@@ -132,10 +142,12 @@ namespace GrupoD.Tutasa.GenerarGuiaCD
             {
                 MessageBox.Show("El CUIT debe tener 11 dígitos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
-            }
-       */
+            }*/
 
 
-        }
+
     }
+}
+
+    
 

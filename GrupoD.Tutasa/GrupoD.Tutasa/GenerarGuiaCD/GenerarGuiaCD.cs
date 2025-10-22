@@ -154,11 +154,40 @@ namespace GrupoD.Tutasa.GenerarGuiaCD
             }
 
 
+            var Cliente = modelo.ValidarCliente(cuit);
+            if (Cliente == null)
+            {
+                return;
 
+            }
+            // Buscar el cliente
+            var cliente = Cliente.FirstOrDefault(c => c.Cuit == cuit);
 
+            if (cliente != null)
+            {
+                // Cargar los datos en los TextBox readonly
+                RazonTextBox.Text = cliente.RazonSocial;
+                ProvinciaTextBox.Text = cliente.Provincia;
+                DirecRemitenteTextBox.Text = cliente.Direccion;
+                CiudadRemitenteTextBox.Text = cliente.Ciudad;
+                CPRemitenteTextBox.Text = cliente.CodigoPostal.ToString();
+            }
+            else
+            {
+                MessageBox.Show("No se encontró un cliente con ese CUIT.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-
+                // Limpiar los campos por si había datos anteriores
+                NombreTextBox.Clear();
+                ApellidoTextBox.Clear();
+                DirecRemitenteTextBox.Clear();
+                CiudadRemitenteTextBox.Clear();
+            }
         }
+
+
+
+          
+        
 
         private void CiudadDestinatarioTextBox_TextChanged(object sender, EventArgs e)
         {
@@ -268,16 +297,10 @@ namespace GrupoD.Tutasa.GenerarGuiaCD
                 return;
             }
 
-            /*// Crear el objeto Cliente requerido para la guía
-            var cliente = new Cliente
-            {
-                Cuit = CuitTextBox.Text
-                // Asignar otras propiedades si es necesario
-            };*/
-
+            
+            
             var guia = new Guia
             {
-                
                 CuitCliente = CuitTextBox.Text,
                 DniDestinatario = dni,
                 NombreDestinatario = NombreTextBox.Text,
@@ -298,30 +321,6 @@ namespace GrupoD.Tutasa.GenerarGuiaCD
         }
 
 
-
-       
-
-
-
-           /* var cuitCliente = modelo.ValidarCliente(cuit);
-            if (cuitCliente == null)
-            {
-                return;
-
-            }
-
-
-            foreach (var cliente in cuitCliente)
-            {
-                var listItem = new ListViewItem(cliente.Cuit);
-                listItem.SubItems.Add(cliente.RazonSocial);
-                listItem.SubItems.Add(cliente.Provincia);
-                listItem.SubItems.Add(cliente.Ciudad);
-                listItem.SubItems.Add(cliente.Direccion);
-                listItem.SubItems.Add(cliente.CodigoPostal.ToString());
-
-            }
-        }*/
 
         private void TamañoComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
