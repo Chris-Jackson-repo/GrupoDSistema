@@ -58,18 +58,15 @@ namespace GrupoD.Tutasa.ReporteCostosVentas
         }
 
         private void BuscarButton_Click(object sender, EventArgs e)
-
         {
-            
-
             if (SeleccioneNumeroCuitComboBox.SelectedIndex == -1)
             {
-                                MessageBox.Show("Por favor, seleccione un CUIT.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Por favor, seleccione un CUIT.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 SeleccioneNumeroCuitComboBox.Focus();
                 return;
             }
 
-            if (!int.TryParse(SeleccioneNumeroCuitComboBox.SelectedItem.ToString(), out var cuit))
+            if (!long.TryParse(SeleccioneNumeroCuitComboBox.SelectedItem.ToString(), out var cuit))
             {
                 MessageBox.Show("El valor seleccionado no es un DNI válido.", "Error");
                 return;
@@ -78,32 +75,33 @@ namespace GrupoD.Tutasa.ReporteCostosVentas
             var desde = DesdedateTimePicker.Value.Date;
             var hasta = HastadateTimePicker.Value.Date;
 
-
-            // Validación: 'desde' no puede ser mayor que 'hasta'
             if (desde > hasta)
             {
-                MessageBox.Show("La fecha 'Desde' no puede ser mayor que la fecha 'Hasta'.", "Rango de fechas inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("La fecha 'Desde' no puede ser mayor que la fecha 'Hasta'.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 DesdedateTimePicker.Focus();
                 return;
             }
 
-         
-           var fila = modelo.ObtenerDatosReporte(cuit, desde, hasta);
+            var resultados = modelo.ObtenerResultadosParaCUITYFechas(cuit, desde, hasta);
 
-           ReporteCostosVentaslistView.Items.Clear();
+            ReporteCostosVentaslistView.Items.Clear();
 
-            foreach (var data in fila)
+            if (resultados == null || resultados.Count == 0)
             {
-                var listitem = new ListViewItem(data.Empresa);
-                
-
+                MessageBox.Show("No hay datos entre las fechas seleccionadas.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
             }
 
+            foreach (var resultado in resultados)
+            {
+                var listItem = new ListViewItem(resultado.empresa.ToString());
+                listItem.SubItems.Add(resultado.costo.ToString());
+                listItem.SubItems.Add(resultado.ventas.ToString());
+                listItem.SubItems.Add(resultado.resultado.ToString());
 
-                    
 
-
-
+                ReporteCostosVentaslistView.Items.Add(listItem);
+            }
         }
 
         private void SeleccioneNúmeroCuitComboBox_SelectedIndexChanged(object sender, EventArgs e)
