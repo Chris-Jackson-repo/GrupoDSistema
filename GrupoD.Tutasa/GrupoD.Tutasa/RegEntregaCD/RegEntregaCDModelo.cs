@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GrupoD.Tutasa.RendirHojaDeRuta;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,27 +9,39 @@ namespace GrupoD.Tutasa.RegEntregaCD
 {
     internal class RegEntregaCDModelo
     {
-        /*
-        // Validar que no esta vacío
-        if (string.IsNullOrWhiteSpace(NumeroGuiaTextbox.Text))
+        //Para guardar estados de las guías
+        private Dictionary<int, EstadoActual> estadosActuales = new();
+
+        internal EstadoActual ObtenerEstadoActual(int numeroGuia)
+        {                      
+            if (!estadosActuales.ContainsKey(numeroGuia))
+            {
+                MessageBox.Show("No se encontro una guía asignada a este número.");
+                return null;
+            }
+            return estadosActuales[numeroGuia];
+        }
+        internal RegEntregaCDModelo Ejemplo ()
         {
-        MessageBox.Show("El número de guía no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            return;
+            //Ejemplo de datos precargados
+            estadosActuales[1001] = new EstadoActual
+            {
+                Dni = 12345678,
+                Estado = "Entregado"
+            };
+            estadosActuales[1002] = new EstadoActual
+            {
+                Dni = 87654321,
+                Estado = "Listo para retirar"
+            };
+            estadosActuales[1003] = new EstadoActual
+            {
+                Dni = 40821500,
+                Estado = "Listo para retirar"
+            };
+
+            return this;
         }
 
-        // Validar que sea numérico
-        if (!int.TryParse(NumeroGuiaTextbox.Text))
-        {
-        MessageBox.Show("El número de guía debe ser numérico.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            return;
-        }
-        
-        // Validar que exista la guía
-        if (!NumeroGuia.Exists)
-        {
-        MessageBox.Show("El número de guía no existe.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            return;
-        }
-        */
     }
 }

@@ -135,6 +135,7 @@
             BuscarButton.TabIndex = 51;
             BuscarButton.Text = "Buscar";
             BuscarButton.UseVisualStyleBackColor = true;
+            BuscarButton.Click += BuscarButtonClick;
             // 
             // RegEntregaCDForm
             // 
@@ -151,7 +152,7 @@
             Controls.Add(NumeroGuiaLabel);
             Name = "RegEntregaCDForm";
             Text = "Registrar entrega en CD";
-            Load += RegEntregaCD_Load;
+         //   Load += RegEntregaCD_Load;
             DatosRetiranteGroupBox.ResumeLayout(false);
             DatosRetiranteGroupBox.PerformLayout();
             ResumeLayout(false);

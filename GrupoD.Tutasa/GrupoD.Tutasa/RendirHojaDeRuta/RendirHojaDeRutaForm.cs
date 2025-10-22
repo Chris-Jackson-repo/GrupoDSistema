@@ -19,7 +19,10 @@ namespace GrupoD.Tutasa.RendirHojaDeRuta
         {
             InitializeComponent();
         }
+        private void RegEntregaCD_Load(object sender, EventArgs e)
+        {
 
+        }
         private void Buscarbutton_Click(object sender, EventArgs e)
         {
             if (!int.TryParse(DNIFleteroTextBox.Text, out var dni))
