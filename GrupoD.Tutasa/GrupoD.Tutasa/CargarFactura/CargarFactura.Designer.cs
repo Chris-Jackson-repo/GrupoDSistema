@@ -44,10 +44,10 @@
             Descripcion = new ColumnHeader();
             Precio = new ColumnHeader();
             PrecioConIVA = new ColumnHeader();
-            txtTotalConIva = new TextBox();
+            TotalFacturaIVATextBox = new TextBox();
             label11 = new Label();
             label7 = new Label();
-            txtTotalFactura = new TextBox();
+            TotalFacturaTextBox = new TextBox();
             btnCancelar = new Button();
             btnGrabarFactura = new Button();
             FechaVencimientoDtp = new DateTimePicker();
@@ -71,10 +71,10 @@
             groupBox1.Controls.Add(CuitTextBox);
             groupBox1.Controls.Add(CuitLabel);
             groupBox1.Controls.Add(ItemsFacturaListView);
-            groupBox1.Controls.Add(txtTotalConIva);
+            groupBox1.Controls.Add(TotalFacturaIVATextBox);
             groupBox1.Controls.Add(label11);
             groupBox1.Controls.Add(label7);
-            groupBox1.Controls.Add(txtTotalFactura);
+            groupBox1.Controls.Add(TotalFacturaTextBox);
             groupBox1.Controls.Add(btnCancelar);
             groupBox1.Controls.Add(btnGrabarFactura);
             groupBox1.Controls.Add(FechaVencimientoDtp);
@@ -202,14 +202,14 @@
             // 
             PrecioConIVA.Text = "Precio Con IVA";
             // 
-            // txtTotalConIva
+            // TotalFacturaIVATextBox
             // 
-            txtTotalConIva.Location = new Point(664, 628);
-            txtTotalConIva.Margin = new Padding(3, 4, 3, 4);
-            txtTotalConIva.Name = "txtTotalConIva";
-            txtTotalConIva.ReadOnly = true;
-            txtTotalConIva.Size = new Size(124, 27);
-            txtTotalConIva.TabIndex = 26;
+            TotalFacturaIVATextBox.Location = new Point(664, 628);
+            TotalFacturaIVATextBox.Margin = new Padding(3, 4, 3, 4);
+            TotalFacturaIVATextBox.Name = "TotalFacturaIVATextBox";
+            TotalFacturaIVATextBox.ReadOnly = true;
+            TotalFacturaIVATextBox.Size = new Size(124, 27);
+            TotalFacturaIVATextBox.TabIndex = 26;
             // 
             // label11
             // 
@@ -229,14 +229,14 @@
             label7.TabIndex = 24;
             label7.Text = "Total Factura";
             // 
-            // txtTotalFactura
+            // TotalFacturaTextBox
             // 
-            txtTotalFactura.Location = new Point(431, 628);
-            txtTotalFactura.Margin = new Padding(3, 4, 3, 4);
-            txtTotalFactura.Name = "txtTotalFactura";
-            txtTotalFactura.ReadOnly = true;
-            txtTotalFactura.Size = new Size(124, 27);
-            txtTotalFactura.TabIndex = 23;
+            TotalFacturaTextBox.Location = new Point(431, 628);
+            TotalFacturaTextBox.Margin = new Padding(3, 4, 3, 4);
+            TotalFacturaTextBox.Name = "TotalFacturaTextBox";
+            TotalFacturaTextBox.ReadOnly = true;
+            TotalFacturaTextBox.Size = new Size(124, 27);
+            TotalFacturaTextBox.TabIndex = 23;
             // 
             // btnCancelar
             // 
@@ -338,8 +338,8 @@
         private Button btnCancelar;
         private Button btnGrabarFactura;
         private Label label7;
-        private TextBox txtTotalFactura;
-        private TextBox txtTotalConIva;
+        private TextBox TotalFacturaTextBox;
+        private TextBox TotalFacturaIVATextBox;
         private Label label11;
         private ListView ItemsFacturaListView;
         private ColumnHeader Cantidad;

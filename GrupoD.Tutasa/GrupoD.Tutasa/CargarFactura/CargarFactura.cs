@@ -21,11 +21,17 @@ namespace GrupoD.Tutasa.CargarFactura
         }
         private void btnGrabarFactura_Click(object sender, EventArgs e)
         {
-
+            if (string.IsNullOrWhiteSpace(TotalFacturaTextBox.Text))
+            {
+                MessageBox.Show("El campo CUIT no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            MessageBox.Show("Factura grabada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            modelo.NumeroFactura++;
         }
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            
+            this.Close();
         }
         private void BuscarButtonClick(object sender, EventArgs e)
         {
@@ -62,6 +68,8 @@ namespace GrupoD.Tutasa.CargarFactura
             FechaVencimientoDtp.Text = DateTime.Now.AddDays(30).ToShortDateString();
             //Cargar las encomiendas en el ListView
             ItemsFacturaListView.Items.Clear();
+            decimal totalFactura = 0;
+            decimal totalFacturaIVA = 0;
             foreach (var encomienda in cliente.Factura.Encomiendas)
             {
                 //Simulación de la obtención de datos desde una base de datos o servicio     
@@ -72,8 +80,11 @@ namespace GrupoD.Tutasa.CargarFactura
 
                     ItemsFacturaListView.Items.Add(listItem);
                 
-                //ItemsFacturaListView.Items.Add(encomienda.Cantidad.ToString(), encomienda.Descripcion, encomienda.Precio.ToString(), (encomienda.Precio*1.21m).ToString());
+                totalFactura += encomienda.Precio;               
+                totalFacturaIVA += encomienda.Precio * 1.21m;
             }
+            TotalFacturaTextBox.Text = totalFactura.ToString("F2");
+            TotalFacturaIVATextBox.Text = totalFacturaIVA.ToString("F2");
         }       
     }
 }
