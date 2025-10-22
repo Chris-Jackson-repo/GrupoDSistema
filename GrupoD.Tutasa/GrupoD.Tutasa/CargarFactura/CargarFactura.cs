@@ -8,11 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace GrupoD.Tutasa.CargarFactura
 {
     public partial class CargarFactura : Form
 
     {
+        internal CargarFacturaModelo.CargarFacturaModelo modelo = new CargarFacturaModelo.CargarFacturaModelo().Ejemplo();
         public CargarFactura()
         {
             InitializeComponent();
@@ -46,7 +48,32 @@ namespace GrupoD.Tutasa.CargarFactura
                 MessageBox.Show("El CUIT debe tener exactamente 11 dígitos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+           Cliente cliente = modelo.ObtenerCliente(cuit);
+            //Ya se mostró el error y se cancela
+            if (cliente == null)
+            {
+                return;
+            }
+            CuitEmpresaTextBox.Text = cliente.CuitEmpresa.ToString();
+            RazonSocialTextBox.Text = cliente.RazonSocial;
+            DireccionTextBox.Text = cliente.Direccion;
+            NumFacturaTextBox.Text = modelo.NumeroFactura.ToString();
+            FechaFacturaDtp.Text = DateTime.Now.ToShortDateString();
+            FechaVencimientoDtp.Text = DateTime.Now.AddDays(30).ToShortDateString();
+            //Cargar las encomiendas en el ListView
+            ItemsFacturaListView.Items.Clear();
+            foreach (var encomienda in cliente.Factura.Encomiendas)
+            {
+                //Simulación de la obtención de datos desde una base de datos o servicio     
+                    var listItem = new ListViewItem(encomienda.Cantidad.ToString());
+                    listItem.SubItems.Add(encomienda.Descripcion);
+                    listItem.SubItems.Add(encomienda.Precio.ToString());
+                    listItem.SubItems.Add((encomienda.Precio * 1.21m).ToString());
 
-        }
+                    ItemsFacturaListView.Items.Add(listItem);
+                
+                //ItemsFacturaListView.Items.Add(encomienda.Cantidad.ToString(), encomienda.Descripcion, encomienda.Precio.ToString(), (encomienda.Precio*1.21m).ToString());
+            }
+        }       
     }
 }

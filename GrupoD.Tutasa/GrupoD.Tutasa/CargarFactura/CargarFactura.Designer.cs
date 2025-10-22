@@ -30,7 +30,16 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
-            lsvItemsFactura = new ListView();
+            DireccionTextBox = new TextBox();
+            DireccionLabel = new Label();
+            RazonSocialTextBox = new TextBox();
+            RazonSocialLabel = new Label();
+            CuitEmpresaTextBox = new TextBox();
+            CuitEmpresaLabel = new Label();
+            BuscarButton = new Button();
+            CuitTextBox = new TextBox();
+            CuitLabel = new Label();
+            ItemsFacturaListView = new ListView();
             Cantidad = new ColumnHeader();
             Descripcion = new ColumnHeader();
             Precio = new ColumnHeader();
@@ -41,21 +50,12 @@
             txtTotalFactura = new TextBox();
             btnCancelar = new Button();
             btnGrabarFactura = new Button();
-            dtpFechaVencimiento = new DateTimePicker();
+            FechaVencimientoDtp = new DateTimePicker();
             label10 = new Label();
-            dtpFechaFactura = new DateTimePicker();
+            FechaFacturaDtp = new DateTimePicker();
             label9 = new Label();
             label8 = new Label();
-            txtNumeroFactura = new TextBox();
-            DireccionTextBox = new TextBox();
-            DireccionLabel = new Label();
-            RazonSocialTextBox = new TextBox();
-            RazonSocialLabel = new Label();
-            CuitEmpresaTextBox = new TextBox();
-            CuitEmpresaLabel = new Label();
-            BuscarButton = new Button();
-            CuitTextBox = new TextBox();
-            CuitLabel = new Label();
+            NumFacturaTextBox = new TextBox();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -70,19 +70,19 @@
             groupBox1.Controls.Add(BuscarButton);
             groupBox1.Controls.Add(CuitTextBox);
             groupBox1.Controls.Add(CuitLabel);
-            groupBox1.Controls.Add(lsvItemsFactura);
+            groupBox1.Controls.Add(ItemsFacturaListView);
             groupBox1.Controls.Add(txtTotalConIva);
             groupBox1.Controls.Add(label11);
             groupBox1.Controls.Add(label7);
             groupBox1.Controls.Add(txtTotalFactura);
             groupBox1.Controls.Add(btnCancelar);
             groupBox1.Controls.Add(btnGrabarFactura);
-            groupBox1.Controls.Add(dtpFechaVencimiento);
+            groupBox1.Controls.Add(FechaVencimientoDtp);
             groupBox1.Controls.Add(label10);
-            groupBox1.Controls.Add(dtpFechaFactura);
+            groupBox1.Controls.Add(FechaFacturaDtp);
             groupBox1.Controls.Add(label9);
             groupBox1.Controls.Add(label8);
-            groupBox1.Controls.Add(txtNumeroFactura);
+            groupBox1.Controls.Add(NumFacturaTextBox);
             groupBox1.Location = new Point(35, 35);
             groupBox1.Margin = new Padding(3, 4, 3, 4);
             groupBox1.Name = "groupBox1";
@@ -91,144 +91,6 @@
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "DATOS FACTURA";
-            // 
-            // lsvItemsFactura
-            // 
-            lsvItemsFactura.Columns.AddRange(new ColumnHeader[] { Cantidad, Descripcion, Precio, PrecioConIVA });
-            lsvItemsFactura.GridLines = true;
-            lsvItemsFactura.Location = new Point(166, 345);
-            lsvItemsFactura.Margin = new Padding(3, 4, 3, 4);
-            lsvItemsFactura.Name = "lsvItemsFactura";
-            lsvItemsFactura.Size = new Size(893, 192);
-            lsvItemsFactura.TabIndex = 27;
-            lsvItemsFactura.UseCompatibleStateImageBehavior = false;
-            lsvItemsFactura.View = View.Details;
-            // 
-            // Cantidad
-            // 
-            Cantidad.Text = "Cantidad";
-            // 
-            // Descripcion
-            // 
-            Descripcion.Text = "Descripcion";
-            // 
-            // Precio
-            // 
-            Precio.Text = "Precio";
-            // 
-            // PrecioConIVA
-            // 
-            PrecioConIVA.Text = "Precio Con IVA";
-            // 
-            // txtTotalConIva
-            // 
-            txtTotalConIva.Location = new Point(664, 628);
-            txtTotalConIva.Margin = new Padding(3, 4, 3, 4);
-            txtTotalConIva.Name = "txtTotalConIva";
-            txtTotalConIva.ReadOnly = true;
-            txtTotalConIva.Size = new Size(124, 27);
-            txtTotalConIva.TabIndex = 26;
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Location = new Point(655, 584);
-            label11.Name = "label11";
-            label11.Size = new Size(147, 20);
-            label11.TabIndex = 25;
-            label11.Text = "Total Factura con IVA";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(445, 584);
-            label7.Name = "label7";
-            label7.Size = new Size(93, 20);
-            label7.TabIndex = 24;
-            label7.Text = "Total Factura";
-            // 
-            // txtTotalFactura
-            // 
-            txtTotalFactura.Location = new Point(431, 628);
-            txtTotalFactura.Margin = new Padding(3, 4, 3, 4);
-            txtTotalFactura.Name = "txtTotalFactura";
-            txtTotalFactura.ReadOnly = true;
-            txtTotalFactura.Size = new Size(124, 27);
-            txtTotalFactura.TabIndex = 23;
-            // 
-            // btnCancelar
-            // 
-            btnCancelar.Location = new Point(921, 779);
-            btnCancelar.Margin = new Padding(3, 4, 3, 4);
-            btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(209, 68);
-            btnCancelar.TabIndex = 22;
-            btnCancelar.Text = "CANCELAR";
-            btnCancelar.UseVisualStyleBackColor = true;
-            btnCancelar.Click += btnCancelar_Click;
-            // 
-            // btnGrabarFactura
-            // 
-            btnGrabarFactura.Location = new Point(505, 735);
-            btnGrabarFactura.Margin = new Padding(3, 4, 3, 4);
-            btnGrabarFactura.Name = "btnGrabarFactura";
-            btnGrabarFactura.Size = new Size(202, 68);
-            btnGrabarFactura.TabIndex = 21;
-            btnGrabarFactura.Text = "GRABAR FACTURA";
-            btnGrabarFactura.UseVisualStyleBackColor = true;
-            btnGrabarFactura.Click += btnGrabarFactura_Click;
-            // 
-            // dtpFechaVencimiento
-            // 
-            dtpFechaVencimiento.Location = new Point(769, 274);
-            dtpFechaVencimiento.Margin = new Padding(3, 4, 3, 4);
-            dtpFechaVencimiento.Name = "dtpFechaVencimiento";
-            dtpFechaVencimiento.Size = new Size(228, 27);
-            dtpFechaVencimiento.TabIndex = 15;
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Location = new Point(785, 215);
-            label10.Name = "label10";
-            label10.Size = new Size(205, 20);
-            label10.TabIndex = 14;
-            label10.Text = "Fecha de Vencimiento Factura";
-            // 
-            // dtpFechaFactura
-            // 
-            dtpFechaFactura.Location = new Point(407, 274);
-            dtpFechaFactura.Margin = new Padding(3, 4, 3, 4);
-            dtpFechaFactura.Name = "dtpFechaFactura";
-            dtpFechaFactura.Size = new Size(228, 27);
-            dtpFechaFactura.TabIndex = 13;
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Location = new Point(470, 215);
-            label9.Name = "label9";
-            label9.Size = new Size(119, 20);
-            label9.TabIndex = 12;
-            label9.Text = "Fecha de Factura";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new Point(178, 215);
-            label8.Name = "label8";
-            label8.Size = new Size(135, 20);
-            label8.TabIndex = 10;
-            label8.Text = "Numero de Factura";
-            // 
-            // txtNumeroFactura
-            // 
-            txtNumeroFactura.Location = new Point(178, 274);
-            txtNumeroFactura.Margin = new Padding(3, 4, 3, 4);
-            txtNumeroFactura.Name = "txtNumeroFactura";
-            txtNumeroFactura.ReadOnly = true;
-            txtNumeroFactura.Size = new Size(124, 27);
-            txtNumeroFactura.TabIndex = 9;
             // 
             // DireccionTextBox
             // 
@@ -312,6 +174,144 @@
             CuitLabel.TabIndex = 28;
             CuitLabel.Text = "Cuit";
             // 
+            // ItemsFacturaListView
+            // 
+            ItemsFacturaListView.Columns.AddRange(new ColumnHeader[] { Cantidad, Descripcion, Precio, PrecioConIVA });
+            ItemsFacturaListView.GridLines = true;
+            ItemsFacturaListView.Location = new Point(166, 345);
+            ItemsFacturaListView.Margin = new Padding(3, 4, 3, 4);
+            ItemsFacturaListView.Name = "ItemsFacturaListView";
+            ItemsFacturaListView.Size = new Size(893, 192);
+            ItemsFacturaListView.TabIndex = 27;
+            ItemsFacturaListView.UseCompatibleStateImageBehavior = false;
+            ItemsFacturaListView.View = View.Details;
+            // 
+            // Cantidad
+            // 
+            Cantidad.Text = "Cantidad";
+            // 
+            // Descripcion
+            // 
+            Descripcion.Text = "Descripcion";
+            // 
+            // Precio
+            // 
+            Precio.Text = "Precio";
+            // 
+            // PrecioConIVA
+            // 
+            PrecioConIVA.Text = "Precio Con IVA";
+            // 
+            // txtTotalConIva
+            // 
+            txtTotalConIva.Location = new Point(664, 628);
+            txtTotalConIva.Margin = new Padding(3, 4, 3, 4);
+            txtTotalConIva.Name = "txtTotalConIva";
+            txtTotalConIva.ReadOnly = true;
+            txtTotalConIva.Size = new Size(124, 27);
+            txtTotalConIva.TabIndex = 26;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(655, 584);
+            label11.Name = "label11";
+            label11.Size = new Size(147, 20);
+            label11.TabIndex = 25;
+            label11.Text = "Total Factura con IVA";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(445, 584);
+            label7.Name = "label7";
+            label7.Size = new Size(93, 20);
+            label7.TabIndex = 24;
+            label7.Text = "Total Factura";
+            // 
+            // txtTotalFactura
+            // 
+            txtTotalFactura.Location = new Point(431, 628);
+            txtTotalFactura.Margin = new Padding(3, 4, 3, 4);
+            txtTotalFactura.Name = "txtTotalFactura";
+            txtTotalFactura.ReadOnly = true;
+            txtTotalFactura.Size = new Size(124, 27);
+            txtTotalFactura.TabIndex = 23;
+            // 
+            // btnCancelar
+            // 
+            btnCancelar.Location = new Point(921, 779);
+            btnCancelar.Margin = new Padding(3, 4, 3, 4);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(209, 68);
+            btnCancelar.TabIndex = 22;
+            btnCancelar.Text = "CANCELAR";
+            btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
+            // 
+            // btnGrabarFactura
+            // 
+            btnGrabarFactura.Location = new Point(505, 735);
+            btnGrabarFactura.Margin = new Padding(3, 4, 3, 4);
+            btnGrabarFactura.Name = "btnGrabarFactura";
+            btnGrabarFactura.Size = new Size(202, 68);
+            btnGrabarFactura.TabIndex = 21;
+            btnGrabarFactura.Text = "GRABAR FACTURA";
+            btnGrabarFactura.UseVisualStyleBackColor = true;
+            btnGrabarFactura.Click += btnGrabarFactura_Click;
+            // 
+            // FechaVencimientoDtp
+            // 
+            FechaVencimientoDtp.Location = new Point(769, 274);
+            FechaVencimientoDtp.Margin = new Padding(3, 4, 3, 4);
+            FechaVencimientoDtp.Name = "FechaVencimientoDtp";
+            FechaVencimientoDtp.Size = new Size(228, 27);
+            FechaVencimientoDtp.TabIndex = 15;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(785, 215);
+            label10.Name = "label10";
+            label10.Size = new Size(205, 20);
+            label10.TabIndex = 14;
+            label10.Text = "Fecha de Vencimiento Factura";
+            // 
+            // FechaFacturaDtp
+            // 
+            FechaFacturaDtp.Location = new Point(407, 274);
+            FechaFacturaDtp.Margin = new Padding(3, 4, 3, 4);
+            FechaFacturaDtp.Name = "FechaFacturaDtp";
+            FechaFacturaDtp.Size = new Size(228, 27);
+            FechaFacturaDtp.TabIndex = 13;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(470, 215);
+            label9.Name = "label9";
+            label9.Size = new Size(119, 20);
+            label9.TabIndex = 12;
+            label9.Text = "Fecha de Factura";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(178, 215);
+            label8.Name = "label8";
+            label8.Size = new Size(135, 20);
+            label8.TabIndex = 10;
+            label8.Text = "Numero de Factura";
+            // 
+            // NumFacturaTextBox
+            // 
+            NumFacturaTextBox.Location = new Point(178, 274);
+            NumFacturaTextBox.Margin = new Padding(3, 4, 3, 4);
+            NumFacturaTextBox.Name = "NumFacturaTextBox";
+            NumFacturaTextBox.ReadOnly = true;
+            NumFacturaTextBox.Size = new Size(124, 27);
+            NumFacturaTextBox.TabIndex = 9;
+            // 
             // CargarFactura
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -329,19 +329,19 @@
         #endregion
 
         private GroupBox groupBox1;
-        private DateTimePicker dtpFechaVencimiento;
+        private DateTimePicker FechaVencimientoDtp;
         private Label label10;
-        private DateTimePicker dtpFechaFactura;
+        private DateTimePicker FechaFacturaDtp;
         private Label label9;
         private Label label8;
-        private TextBox txtNumeroFactura;
+        private TextBox NumFacturaTextBox;
         private Button btnCancelar;
         private Button btnGrabarFactura;
         private Label label7;
         private TextBox txtTotalFactura;
         private TextBox txtTotalConIva;
         private Label label11;
-        private ListView lsvItemsFactura;
+        private ListView ItemsFacturaListView;
         private ColumnHeader Cantidad;
         private ColumnHeader Descripcion;
         private ColumnHeader Precio;

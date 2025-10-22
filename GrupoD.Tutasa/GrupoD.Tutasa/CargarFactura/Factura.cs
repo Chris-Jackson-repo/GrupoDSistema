@@ -12,8 +12,7 @@ namespace GrupoD.Tutasa.CargarFactura
         public DateTime FechaFactura { get; set; }
 
         public DateTime FechaVencimiento { get; set; }
-        public decimal ImporteTotal { get; set; }
-        public Cliente Cliente { get; set; }
+        public List<Encomienda> Encomiendas { get; set; } = new();
 
     }
 }

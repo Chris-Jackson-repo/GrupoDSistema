@@ -11,5 +11,6 @@ namespace GrupoD.Tutasa.CargarFactura
         public long CuitEmpresa {  get; set; }
         public string RazonSocial { get; set; }
         public string Direccion { get; set; }
+        public Factura Factura { get; set; }
     }
 }

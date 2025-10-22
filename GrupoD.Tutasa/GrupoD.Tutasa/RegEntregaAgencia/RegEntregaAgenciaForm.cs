@@ -1,11 +1,11 @@
-using GrupoD.Tutasa.RegEntregaCD;
+using GrupoD.Tutasa.RegEntregaAgencia;
 using System.Reflection;
 
 namespace GrupoD.Tutasa.RegEntregaAgencia
 {
     public partial class RegEntregaAgenciaForm : Form
     {
-        internal RegEntregaCDModelo modelo = new RegEntregaCDModelo().Ejemplo();
+        internal RegEntregaAgenciaModelo modelo = new RegEntregaAgenciaModelo().Ejemplo();
         public RegEntregaAgenciaForm()
         {
             InitializeComponent();
