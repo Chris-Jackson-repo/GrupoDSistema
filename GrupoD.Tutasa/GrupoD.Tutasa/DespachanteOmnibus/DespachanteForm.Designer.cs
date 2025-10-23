@@ -39,12 +39,10 @@
             CDOrigencolumnHeader = new ColumnHeader();
             DestinocolumnHeader = new ColumnHeader();
             TipoCajacolumnHeader = new ColumnHeader();
-            EstadocolumnHeader = new ColumnHeader();
             GuiasCargaListView = new ListView();
             GuiasCargacolumnHeader1 = new ColumnHeader();
             CDDestinocolumnHeader = new ColumnHeader();
             TipoCajacolumnHeader2 = new ColumnHeader();
-            EstadocolumnHeader2 = new ColumnHeader();
             DestinocolumnHeader2 = new ColumnHeader();
             Confirmarbutton = new Button();
             Cancelarbutton = new Button();
@@ -116,7 +114,7 @@
             // GuiasDescargaListView
             // 
             GuiasDescargaListView.CheckBoxes = true;
-            GuiasDescargaListView.Columns.AddRange(new ColumnHeader[] { GuiaDescargarcolumnHeader, CDOrigencolumnHeader, DestinocolumnHeader, TipoCajacolumnHeader, EstadocolumnHeader });
+            GuiasDescargaListView.Columns.AddRange(new ColumnHeader[] { GuiaDescargarcolumnHeader, CDOrigencolumnHeader, DestinocolumnHeader, TipoCajacolumnHeader });
             GuiasDescargaListView.Location = new Point(17, 119);
             GuiasDescargaListView.Name = "GuiasDescargaListView";
             GuiasDescargaListView.Size = new Size(712, 315);
@@ -144,15 +142,10 @@
             TipoCajacolumnHeader.Text = "Tipo de caja";
             TipoCajacolumnHeader.Width = 100;
             // 
-            // EstadocolumnHeader
-            // 
-            EstadocolumnHeader.Text = "Estado";
-            EstadocolumnHeader.Width = 150;
-            // 
             // GuiasCargaListView
             // 
             GuiasCargaListView.CheckBoxes = true;
-            GuiasCargaListView.Columns.AddRange(new ColumnHeader[] { GuiasCargacolumnHeader1, CDDestinocolumnHeader, TipoCajacolumnHeader2, EstadocolumnHeader2, DestinocolumnHeader2 });
+            GuiasCargaListView.Columns.AddRange(new ColumnHeader[] { GuiasCargacolumnHeader1, CDDestinocolumnHeader, TipoCajacolumnHeader2, DestinocolumnHeader2 });
             GuiasCargaListView.Location = new Point(17, 508);
             GuiasCargaListView.Name = "GuiasCargaListView";
             GuiasCargaListView.Size = new Size(712, 340);
@@ -175,12 +168,6 @@
             TipoCajacolumnHeader2.DisplayIndex = 3;
             TipoCajacolumnHeader2.Text = "Tipo de caja";
             TipoCajacolumnHeader2.Width = 100;
-            // 
-            // EstadocolumnHeader2
-            // 
-            EstadocolumnHeader2.DisplayIndex = 4;
-            EstadocolumnHeader2.Text = "Estado";
-            EstadocolumnHeader2.Width = 150;
             // 
             // DestinocolumnHeader2
             // 
@@ -234,11 +221,9 @@
         private ColumnHeader CDOrigencolumnHeader;
         private ColumnHeader DestinocolumnHeader;
         private ColumnHeader TipoCajacolumnHeader;
-        private ColumnHeader EstadocolumnHeader;
         private ColumnHeader GuiasCargacolumnHeader1;
         private ColumnHeader CDDestinocolumnHeader;
         private ColumnHeader TipoCajacolumnHeader2;
-        private ColumnHeader EstadocolumnHeader2;
         private ColumnHeader DestinocolumnHeader2;
         private Button Confirmarbutton;
         private Button Cancelarbutton;

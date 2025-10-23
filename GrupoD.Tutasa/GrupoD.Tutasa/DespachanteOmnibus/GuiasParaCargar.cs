@@ -12,7 +12,7 @@ namespace GrupoD.Tutasa.DespachanteOmnibus
         public string CDDestino { get; set; }
         public string DireccionDeDestino { get; set; }
         public string TipoPaquete { get; set; }
-        public string Estado { get; set; }
+        
 
 
 

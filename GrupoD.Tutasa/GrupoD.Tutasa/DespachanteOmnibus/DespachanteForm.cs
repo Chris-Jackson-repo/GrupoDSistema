@@ -50,7 +50,7 @@ namespace GrupoD.Tutasa.DespachanteOmnibus
                 listItem.SubItems.Add(guia.CDOrigen);
                 listItem.SubItems.Add(guia.DireccionDeDestino);
                 listItem.SubItems.Add(guia.TipoPaquete);
-                listItem.SubItems.Add(guia.Estado);
+               
 
                 GuiasDescargaListView.Items.Add(listItem);
             }
@@ -65,7 +65,7 @@ namespace GrupoD.Tutasa.DespachanteOmnibus
                 listItem.SubItems.Add(guia.CDDestino);
                 listItem.SubItems.Add(guia.DireccionDeDestino);
                 listItem.SubItems.Add(guia.TipoPaquete);
-                listItem.SubItems.Add(guia.Estado);
+                
 
                 GuiasCargaListView.Items.Add(listItem);
             }

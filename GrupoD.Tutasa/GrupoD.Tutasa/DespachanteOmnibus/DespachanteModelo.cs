@@ -27,7 +27,7 @@ namespace GrupoD.Tutasa.DespachanteOmnibus
                     CDOrigen = "CD Centro",
                     DireccionDeDestino = "Av. Primera 123",
                     TipoPaquete = "Paquete",
-                    Estado = "Pendiente"
+                    
                 },
                 new GuiasParaDescargar
                 {
@@ -35,7 +35,7 @@ namespace GrupoD.Tutasa.DespachanteOmnibus
                     CDOrigen = "CD Norte",
                     DireccionDeDestino = "Calle Segunda 45",
                     TipoPaquete = "Sobre",
-                    Estado = "Pendiente"
+                    
                 }
             };
 
@@ -47,7 +47,7 @@ namespace GrupoD.Tutasa.DespachanteOmnibus
                     CDOrigen = "CD Centro",
                     DireccionDeDestino = "Boulevard Tres 789",
                     TipoPaquete = "Paquete",
-                    Estado = "Pendiente"
+                    
                 },
                 new GuiasParaDescargar
                 {
@@ -55,7 +55,7 @@ namespace GrupoD.Tutasa.DespachanteOmnibus
                     CDOrigen = "CD Sur",
                     DireccionDeDestino = "Calle Cuatro 10",
                     TipoPaquete = "Palet",
-                    Estado = "Pendiente"
+                    
                 }
             };
 
@@ -67,7 +67,7 @@ namespace GrupoD.Tutasa.DespachanteOmnibus
                     CDDestino = "CD Norte",
                     DireccionDeDestino = "Calle Falsa 123",
                     TipoPaquete = "Sobre",
-                    Estado = "Pendiente"
+                    
                 },
                 new GuiasParaCargar
                 {
@@ -75,7 +75,7 @@ namespace GrupoD.Tutasa.DespachanteOmnibus
                     CDDestino = "CD Sur",
                     DireccionDeDestino = "Avenida Siempreviva 45",
                     TipoPaquete = "Caja",
-                    Estado = "Pendiente"
+                    
                 }
             };
             guiasACargarPorPatente["AE354DF"] = new List<GuiasParaCargar>
@@ -86,7 +86,7 @@ namespace GrupoD.Tutasa.DespachanteOmnibus
                     CDDestino = "CD Centro",
                     DireccionDeDestino = "Plaza Mayor s/n",
                     TipoPaquete = "Paquete",
-                    Estado = "Pendiente"
+                    
                 },
                 new GuiasParaCargar
                 {
@@ -94,7 +94,7 @@ namespace GrupoD.Tutasa.DespachanteOmnibus
                     CDDestino = "CD Este",
                     DireccionDeDestino = "Ruta 9 Km 10",
                     TipoPaquete = "Sobre",
-                    Estado = "Pendiente"
+                    
                 }
 
 
