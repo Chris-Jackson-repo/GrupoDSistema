@@ -29,7 +29,7 @@ namespace GrupoD.Tutasa.RendirHojaDeRuta
                     Guia = "574013982645",
                     Estado = "Pendiente",
                     DireccionDeDestino = "Calle Prueba 1",
-                    Autorizado = "Fletero Uno",
+                    DNIAutorizado = "33442232",
                     CUIT = "20-34123113-1",
                     TipoPaquete = "TipoA"
                 },
@@ -38,7 +38,7 @@ namespace GrupoD.Tutasa.RendirHojaDeRuta
                     Guia = "821190547306",
                     Estado = "Pendiente",
                     DireccionDeDestino = "Calle Prueba 2",
-                    Autorizado = "Fletero Uno",
+                    DNIAutorizado = "33442232",
                     CUIT = "20-34123113-2",
                     TipoPaquete = "TipoB"
                 }
@@ -51,7 +51,7 @@ namespace GrupoD.Tutasa.RendirHojaDeRuta
                     Guia = "490517336288",
                     Estado = "Pendiente",
                     DireccionDeDestino = "Avenida Test 1",
-                    Autorizado = "Fletero Dos",
+                    DNIAutorizado = "44223322",
                     CUIT = "20-38123113-1",
                     TipoPaquete = "TipoC"
                 },
@@ -60,7 +60,7 @@ namespace GrupoD.Tutasa.RendirHojaDeRuta
                     Guia = "107624953150",
                     Estado = "Pendiente",
                     DireccionDeDestino = "Avenida Test 2",
-                    Autorizado = "Fletero Dos",
+                    DNIAutorizado = "44223322",
                     CUIT = "20-38123113-2",
                     TipoPaquete = "TipoD"
                 }
@@ -73,7 +73,7 @@ namespace GrupoD.Tutasa.RendirHojaDeRuta
                     Guia = "REALIZAR3412A",
                     Estado = "En Proceso",
                     DireccionDeDestino = "Calle Luna 100",
-                    Autorizado = "Carlos López",
+                    Autorizado = "22334422",
                     CUIT = "20-34123113-3",
                     TipoPaquete = "Tipo1"
                 },
@@ -82,7 +82,7 @@ namespace GrupoD.Tutasa.RendirHojaDeRuta
                     Guia = "REALIZAR3412B",
                     Estado = "En Proceso",
                     DireccionDeDestino = "Calle Sol 200",
-                    Autorizado = "Ana Martínez",
+                    Autorizado = "22334422",
                     CUIT = "20-34123113-4",
                     TipoPaquete = "Tipo2"
                 }
@@ -95,7 +95,7 @@ namespace GrupoD.Tutasa.RendirHojaDeRuta
                     Guia = "REALIZAR3812A",
                     Estado = "En Proceso",
                     DireccionDeDestino = "Avenida Estrella 300",
-                    Autorizado = "Miguel Torres",
+                    Autorizado = "32324523",
                     CUIT = "20-38123113-3",
                     TipoPaquete = "Tipo3"
                 },
@@ -104,7 +104,7 @@ namespace GrupoD.Tutasa.RendirHojaDeRuta
                     Guia = "REALIZAR3812B",
                     Estado = "En Proceso",
                     DireccionDeDestino = "Avenida Cometa 400",
-                    Autorizado = "Sofía Ramírez",
+                    Autorizado = "32324523",
                     CUIT = "20-38123113-4",
                     TipoPaquete = "Tipo4"
                 }

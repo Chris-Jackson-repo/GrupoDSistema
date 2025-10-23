@@ -49,7 +49,7 @@ namespace GrupoD.Tutasa.RendirHojaDeRuta
                 var listItem = new ListViewItem(guia.Guia);
                 listItem.SubItems.Add(guia.Estado);
                 listItem.SubItems.Add(guia.DireccionDeDestino);
-                listItem.SubItems.Add(guia.Autorizado);
+                listItem.SubItems.Add(guia.DNIAutorizado);
                 listItem.SubItems.Add(guia.CUIT);
                 listItem.SubItems.Add(guia.TipoPaquete);
 

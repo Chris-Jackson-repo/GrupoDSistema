@@ -14,7 +14,7 @@ namespace GrupoD.Tutasa.RendirHojaDeRuta
 
         public string DireccionDeDestino { get; set; }
 
-        public string Autorizado { get; set; }
+        public string DNIAutorizado { get; set; }
 
         public string CUIT { get; set; }
 
