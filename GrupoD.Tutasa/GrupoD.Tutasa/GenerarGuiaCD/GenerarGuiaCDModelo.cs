@@ -58,13 +58,14 @@ namespace GrupoD.Tutasa.GenerarGuiaCD
 
         public List<Cliente> ValidarCliente(long cuit)
         {
-          /*
+
             //Validar que Cuit tenga 11 digitos
-            if (cuit.Length != 11)
+            string cuitString = cuit.ToString();
+            if (cuitString.Length != 11)
             {
                 MessageBox.Show("El CUIT debe tener 11 dígitos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
-            }*/
+            }
 
 
             //Validar que cuit no sea un numero negativo
