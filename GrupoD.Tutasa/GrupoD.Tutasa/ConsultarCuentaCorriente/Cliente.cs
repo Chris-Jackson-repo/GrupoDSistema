@@ -11,6 +11,6 @@ namespace GrupoD.Tutasa.ConsultarCuentaCorriente
         public long CuitEmpresa { get; set; }
         public string RazonSocial { get; set; }
         public string Direccion { get; set; }
-        public Factura Factura { get; set; }
+        public List<Comprobante> Comprobantes { get; set; } = new List<Comprobante>();
     }
 }
