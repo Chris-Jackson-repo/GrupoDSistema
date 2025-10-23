@@ -115,7 +115,17 @@ namespace GrupoD.Tutasa.GenerarGuiaCD
                 TamañoComboBox.Items.Add(tamaño);
             }
 
+            //Agregar las opciones tamaños a Combobox CentroDistribución
+            foreach (var centro in modelo.CentrosDistibucion)
+            {
+                CentroComboBox.Items.Add(centro);
+            }
 
+            //Agregar las opciones tamaños a Combobox Agencia
+            foreach (var agencia in modelo.Agencias)
+            {
+                AgenciaComboBox.Items.Add(agencia);
+            }
         }
 
         private void label9_Click(object sender, EventArgs e)

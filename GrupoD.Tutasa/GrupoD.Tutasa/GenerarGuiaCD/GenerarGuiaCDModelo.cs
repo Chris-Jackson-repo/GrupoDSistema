@@ -56,6 +56,25 @@ namespace GrupoD.Tutasa.GenerarGuiaCD
             ];
 
 
+        public string[] CentrosDistibucion { get; } = [
+            "10-CD Retiro",
+            "15-CD Rosario",
+            "20-CD Córdoba",
+            "25-CD Mendoza",
+            "30-CD Ushuaia",
+
+            ];
+
+        public string[] Agencias { get; } = [
+            "001-Microcentro",
+            "002-Palermo",
+            "003-Belgrano",
+            "004-Caballito",
+            "005-Flores",
+
+            ];
+
+
         public List<Cliente> ValidarCliente(long cuit)
         {
 
