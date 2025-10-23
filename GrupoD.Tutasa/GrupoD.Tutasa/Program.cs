@@ -2,7 +2,9 @@
 //using GrupoD.Tutasa.CargarFactura;
 //using GrupoD.Tutasa.DespachanteOmnibus;
 //using GrupoD.Tutasa.ReporteCostosVentas;
-using GrupoD.Tutasa.ConsultarCuentaCorriente;
+//using GrupoD.Tutasa.ConsultarCuentaCorriente;
+//using GrupoD.Tutasa.RegEntregaAgencia;
+using GrupoD.Tutasa.GenerarGuiaCD;
 
 
 namespace GrupoD.Tutasa.ConsultarCuentaCorriente
@@ -18,7 +20,7 @@ namespace GrupoD.Tutasa.ConsultarCuentaCorriente
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new ConsultarCuentaCorrienteForm());
+            Application.Run(new GenerarGuiaCDForm());
         }
     }
 }

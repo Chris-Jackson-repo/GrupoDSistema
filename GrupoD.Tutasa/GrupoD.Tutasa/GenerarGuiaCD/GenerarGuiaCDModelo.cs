@@ -121,24 +121,31 @@ namespace GrupoD.Tutasa.GenerarGuiaCD
 
 
 
-        /*
-        internal void ValidarDestinatario(Destinatario nuevoDestinatario)
+
+        internal bool ValidarDestinatario(long dni)
         {
+            
             //Validar que DNI cumple rango
-            if (nuevoDestinatario.Dni < 10_000_000 || nuevoDestinatario.Dni > 99_999_999)
+            
+            if (dni < 10_000_000 || dni > 99_999_999)
             {
-                MessageBox.Show("El DNI ingresado es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+                MessageBox.Show("El DNI ingresado es inválido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }return true;
+
 
             //Validar que DNI tenga 8 digitos
-            if (DniTextBox.Length != 8)
+            string dniString = dni.ToString();
+            if (dniString.Length != 8)
             {
                 MessageBox.Show("El DNI ingresado debe tener ocho dígitos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                return false;
             }
+            return true;
 
+            /*
             //Validar que Codigo Postal tenga 4 digitos
+            string codigoPostalTexto = cpDestinatario.ToString();
             if (codigoPostalTexto.Length != 4)
             {
                 MessageBox.Show("El CUIT debe tener 11 dígitos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -147,6 +154,7 @@ namespace GrupoD.Tutasa.GenerarGuiaCD
 
 
 
+        }
     }
 }
 

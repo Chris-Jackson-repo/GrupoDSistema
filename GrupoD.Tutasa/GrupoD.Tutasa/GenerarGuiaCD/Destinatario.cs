@@ -14,6 +14,6 @@ namespace GrupoD.Tutasa.GenerarGuiaCD
         public string Provincia { get; set; }
         public string Ciudad { get; set; }
         public string Direccion { get; set; }
-        public short CodigoPostal { get; set; }
+        public short cpDestinatario { get; set; }
     }
 }

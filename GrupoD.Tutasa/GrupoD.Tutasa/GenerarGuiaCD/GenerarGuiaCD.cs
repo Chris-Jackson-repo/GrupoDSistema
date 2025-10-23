@@ -252,6 +252,13 @@ namespace GrupoD.Tutasa.GenerarGuiaCD
                 DniTextBox.Focus();
                 return;
             }
+            
+            modelo.ValidarDestinatario(dni);
+            if (!modelo.ValidarDestinatario(dni))
+            {
+                // Si devuelve false, se detiene el proceso
+                return;
+            }
 
             //Validar que no esté vacío el campo Nombre
             if (string.IsNullOrWhiteSpace(NombreTextBox.Text))
@@ -311,13 +318,14 @@ namespace GrupoD.Tutasa.GenerarGuiaCD
                 CodigoPostalDestinatario = CPDestinatarioTextBox.Text,
                 TamañoEncomienda = TamañoComboBox.SelectedItem.ToString(),
                 TipoEntrega = TipoEntregaComboBox.SelectedItem.ToString()
-                // Asignar Destinatario y FechaGeneracion si es necesario
+                
             };
 
-            // Aquí puedes agregar la lógica para guardar o procesar la guía generada
+            // Si se generó la guía con éxito
             MessageBox.Show("Guía generada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             modelo.GenerarGuia(guia);
+
         }
 
 
