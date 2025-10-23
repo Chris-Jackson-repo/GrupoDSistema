@@ -2,10 +2,10 @@
 //using GrupoD.Tutasa.CargarFactura;
 //using GrupoD.Tutasa.DespachanteOmnibus;
 //using GrupoD.Tutasa.ReporteCostosVentas;
-using GrupoD.Tutasa.CargarFactura;
+using GrupoD.Tutasa.ConsultarCuentaCorriente;
 
 
-namespace GrupoD.Tutasa.CargarFactura
+namespace GrupoD.Tutasa.ConsultarCuentaCorriente
 {
     internal static class Program
     {
@@ -18,7 +18,7 @@ namespace GrupoD.Tutasa.CargarFactura
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new CargarFactura());
+            Application.Run(new ConsultarCuentaCorrienteForm());
         }
     }
 }
