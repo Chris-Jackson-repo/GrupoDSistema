@@ -330,8 +330,25 @@ namespace GrupoD.Tutasa.GenerarGuiaCD
                 return;
             }
 
-            
-            
+
+
+            string tipoEntrega = TipoEntregaComboBox.SelectedItem?.ToString() ?? "";
+            if (tipoEntrega == "Centro de Distribución" && CentroComboBox.SelectedIndex == -1)
+            {
+                MessageBox.Show("Debe seleccionar un Centro de Distribución para la entrega.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                CentroComboBox.Focus();
+                return;
+            }
+
+
+            if (tipoEntrega == "Agencia" && AgenciaComboBox.SelectedIndex == -1)
+            {
+                MessageBox.Show("Debe seleccionar una Agencia para la entrega.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                AgenciaComboBox.Focus();
+                return;
+            }
+
+
             var guia = new Guia
             {
                 CuitCliente = CuitTextBox.Text,
@@ -343,8 +360,13 @@ namespace GrupoD.Tutasa.GenerarGuiaCD
                 DireccionDestinatario = DirecDestinatarioTextBox.Text,
                 cpDestinatario = CPDestinatarioTextBox.Text,
                 TamañoEncomienda = TamañoComboBox.SelectedItem.ToString(),
-                TipoEntrega = TipoEntregaComboBox.SelectedItem.ToString()
-                
+                TipoEntrega = TipoEntregaComboBox.SelectedItem.ToString(),
+                CentroDistribucion = (tipoEntrega == "Centro de Distribución")
+                                ? (CentroComboBox.SelectedItem?.ToString() ?? "")
+                                : "",
+                Agencia = (tipoEntrega == "Agencia")
+                                ? (AgenciaComboBox.SelectedItem?.ToString() ?? "")
+                                : ""
             };
 
             // Si se generó la guía con éxito
