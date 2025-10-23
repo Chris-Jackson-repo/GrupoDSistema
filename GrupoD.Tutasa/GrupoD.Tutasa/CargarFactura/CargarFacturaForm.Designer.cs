@@ -1,7 +1,7 @@
 ﻿namespace GrupoD.Tutasa.CargarFactura
 
 {
-    partial class CargarFactura
+    partial class CargarFacturaForm
     {
         /// <summary>
         /// Required designer variable.

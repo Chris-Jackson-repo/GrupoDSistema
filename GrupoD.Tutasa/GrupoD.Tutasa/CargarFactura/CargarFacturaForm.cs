@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace GrupoD.Tutasa.CargarFactura
 {
-    public partial class CargarFactura : Form
+    public partial class CargarFacturaForm : Form
 
     {
         internal CargarFacturaModelo.CargarFacturaModelo modelo = new CargarFacturaModelo.CargarFacturaModelo().Ejemplo();
-        public CargarFactura()
+        public CargarFacturaForm()
         {
             InitializeComponent();
         }
