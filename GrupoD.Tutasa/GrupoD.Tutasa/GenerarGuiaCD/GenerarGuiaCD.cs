@@ -187,11 +187,7 @@ namespace GrupoD.Tutasa.GenerarGuiaCD
             {
                 MessageBox.Show("No se encontró un cliente con ese CUIT.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                // Limpiar los campos por si había datos anteriores
-                NombreTextBox.Clear();
-                ApellidoTextBox.Clear();
-                DirecRemitenteTextBox.Clear();
-                CiudadRemitenteTextBox.Clear();
+                
             }
         }
 
@@ -383,6 +379,27 @@ namespace GrupoD.Tutasa.GenerarGuiaCD
             MessageBox.Show("Guía generada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             modelo.GenerarGuia(guia);
+
+
+
+            // Limpiar los campos por si se quiere generar otra guía
+            CuitTextBox.Clear();
+            NombreTextBox.Clear();
+            ApellidoTextBox.Clear();
+            DniTextBox.Clear();
+            CiudadDestinatarioTextBox.Clear();
+            DirecDestinatarioTextBox.Clear();
+            CPDestinatarioTextBox.Clear();
+            RazonTextBox.Clear();
+            ProvinciaTextBox.Clear();
+            DirecRemitenteTextBox.Clear();
+            CiudadRemitenteTextBox.Clear();
+            CPRemitenteTextBox.Clear();
+            TamañoComboBox.SelectedIndex = -1;
+            TipoEntregaComboBox.SelectedIndex = -1;
+            CentroComboBox.SelectedIndex = -1;
+            AgenciaComboBox.SelectedIndex = -1;
+
 
         }
 
