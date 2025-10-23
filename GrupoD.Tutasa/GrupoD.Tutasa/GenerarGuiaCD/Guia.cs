@@ -19,7 +19,7 @@ namespace GrupoD.Tutasa.GenerarGuiaCD
         public string ProvinciaDestinatario { get; internal set; }
         public string CiudadDestinatario { get; internal set; }
         public string DireccionDestinatario { get; internal set; }
-        public string CodigoPostalDestinatario { get; internal set; }
+        public string cpDestinatario { get; internal set; }
         public DateTime FechaGeneracion { get; set; } = DateTime.Now;
 
     }

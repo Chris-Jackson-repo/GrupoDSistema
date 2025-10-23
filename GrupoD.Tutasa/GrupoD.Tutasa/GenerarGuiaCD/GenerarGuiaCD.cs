@@ -1,5 +1,6 @@
 using GrupoD.Tutasa.GenerarGuiaCD;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Text.RegularExpressions;
 
 namespace GrupoD.Tutasa.GenerarGuiaCD
 {
@@ -228,10 +229,18 @@ namespace GrupoD.Tutasa.GenerarGuiaCD
 
 
             // Verificar que Código Postal sea numérico y no tenga decimales
-            if (!int.TryParse(CPDestinatarioTextBox.Text, out int cpDestinatario))
+            if (!long.TryParse(CPDestinatarioTextBox.Text, out long cpDestinatario))
             {
                 MessageBox.Show("El Código Postal debe contener sólo números, sin decimales.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 DniTextBox.Focus();
+                return;
+            }
+
+            modelo.ValidarCodigoPostal(cpDestinatario);
+
+            if (!modelo.ValidarCodigoPostal(cpDestinatario))
+            {
+                // Si devuelve false, se detiene el proceso
                 return;
             }
 
@@ -253,17 +262,26 @@ namespace GrupoD.Tutasa.GenerarGuiaCD
                 return;
             }
             
-            modelo.ValidarDestinatario(dni);
-            if (!modelo.ValidarDestinatario(dni))
+            modelo.ValidarDni(dni);
+            if (!modelo.ValidarDni(dni))
             {
                 // Si devuelve false, se detiene el proceso
                 return;
             }
 
+           
+
+
             //Validar que no esté vacío el campo Nombre
             if (string.IsNullOrWhiteSpace(NombreTextBox.Text))
             {
                 MessageBox.Show("El campo Nombre no debe estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!Regex.IsMatch(NombreTextBox.Text, @"^[a-zA-ZáéíóúÁÉÍÓÚ\s]+$"))
+            {
+                MessageBox.Show("El nombre solo puede contener letras y espacios.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -274,6 +292,14 @@ namespace GrupoD.Tutasa.GenerarGuiaCD
                 MessageBox.Show("El campo Apellido no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
+
+            if (!Regex.IsMatch(ApellidoTextBox.Text, @"^[a-zA-ZáéíóúÁÉÍÓÚ\s]+$"))
+            {
+                MessageBox.Show("El Apellido solo puede contener letras y espacios.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
 
             // Validar que no quede sin elegir opcion en el ComboBox Provincia
             if (ProvinciaComboBox.SelectedIndex == -1)
@@ -315,7 +341,7 @@ namespace GrupoD.Tutasa.GenerarGuiaCD
                 ProvinciaDestinatario = ProvinciaComboBox.SelectedItem.ToString(),
                 CiudadDestinatario = CiudadDestinatarioTextBox.Text,
                 DireccionDestinatario = DirecDestinatarioTextBox.Text,
-                CodigoPostalDestinatario = CPDestinatarioTextBox.Text,
+                cpDestinatario = CPDestinatarioTextBox.Text,
                 TamañoEncomienda = TamañoComboBox.SelectedItem.ToString(),
                 TipoEntrega = TipoEntregaComboBox.SelectedItem.ToString()
                 
