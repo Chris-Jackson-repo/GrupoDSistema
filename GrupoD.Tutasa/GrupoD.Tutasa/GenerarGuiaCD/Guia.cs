@@ -22,7 +22,6 @@ namespace GrupoD.Tutasa.GenerarGuiaCD
         public string cpDestinatario { get; internal set; }
         public string CentroDistribucion { get; internal set; }
         public string Agencia { get; internal set; }
-        public DateTime FechaGeneracion { get; set; } = DateTime.Now;
-
+        
     }
 }

@@ -206,6 +206,36 @@ namespace GrupoD.Tutasa.GenerarGuiaCD
 
         }
 
+        private void TipoEntregaComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string tipoEntrega = TipoEntregaComboBox.SelectedItem?.ToString() ?? "";
+
+            // Si el tipo de entrega es "A domicilio"
+            if (tipoEntrega == "A Domicilio")
+            {
+                // Deshabilita los combos de agencia y centro de distribución
+                AgenciaComboBox.Enabled = false;
+                CentroComboBox.Enabled = false;
+
+                // Limpia cualquier selección anterior
+                AgenciaComboBox.SelectedIndex = -1;
+                CentroComboBox.SelectedIndex = -1;
+            }
+            // Si el tipo es "Agencia"
+            else if (tipoEntrega == "Agencia")
+            {
+                AgenciaComboBox.Enabled = true;
+                CentroComboBox.Enabled = false;
+                CentroComboBox.SelectedIndex = -1;
+            }
+            // Si el tipo es "Centro de Distribución"
+            else if (tipoEntrega == "Centro de Distribución")
+            {
+                CentroComboBox.Enabled = true;
+                AgenciaComboBox.Enabled = false;
+                AgenciaComboBox.SelectedIndex = -1;
+            }
+        }
 
 
         private void GenerarButton_Click(object sender, EventArgs e)
@@ -326,6 +356,35 @@ namespace GrupoD.Tutasa.GenerarGuiaCD
             }
 
 
+            //Validar que no esté vacío el campo CUIT 
+            if (string.IsNullOrWhiteSpace(CuitTextBox.Text))
+            {
+                MessageBox.Show("El campo CUIT no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            //Validar que se ingresó un numero en CUIT y que no es decimal
+            if (!long.TryParse(CuitTextBox.Text, out long cuit))
+            {
+                MessageBox.Show("El CUIT debe ser un número válido sin puntos, guiones ni comas.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
+            var Cliente = modelo.ValidarCliente(cuit);
+            if (Cliente == null)
+            {
+                return;
+
+            }
+            // Buscar el cliente
+            var cliente = Cliente.FirstOrDefault(c => c.Cuit == cuit);
+
+            if (cliente == null)
+            {
+                MessageBox.Show("No se encontró un cliente con ese CUIT.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
 
             // Validar que no quede sin elegir opcion en el ComboBox de tipo de entrega
             if (TipoEntregaComboBox.SelectedIndex == -1)
@@ -354,6 +413,8 @@ namespace GrupoD.Tutasa.GenerarGuiaCD
                 return;
             }
 
+
+            
 
             var guia = new Guia
             {
@@ -403,7 +464,20 @@ namespace GrupoD.Tutasa.GenerarGuiaCD
 
         }
 
+        private void CancelButton_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+                "¿Está seguro de que desea cancelar y cerrar la ventana?",
+                "Confirmar Cancelación",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning
+            );
 
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
 
         private void TamañoComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {

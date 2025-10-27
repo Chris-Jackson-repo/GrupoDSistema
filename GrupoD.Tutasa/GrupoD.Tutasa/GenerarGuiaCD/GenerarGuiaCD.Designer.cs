@@ -69,7 +69,7 @@
             label1 = new Label();
             TamañoComboBox = new ComboBox();
             label2 = new Label();
-            CancelarButton = new Button();
+            CancelButton = new Button();
             groupBox2.SuspendLayout();
             groupBox5.SuspendLayout();
             groupBox7.SuspendLayout();
@@ -462,6 +462,7 @@
             TipoEntregaComboBox.Name = "TipoEntregaComboBox";
             TipoEntregaComboBox.Size = new Size(240, 33);
             TipoEntregaComboBox.TabIndex = 24;
+            TipoEntregaComboBox.SelectedIndexChanged += TipoEntregaComboBox_SelectedIndexChanged;
             // 
             // label1
             // 
@@ -491,21 +492,23 @@
             label2.TabIndex = 21;
             label2.Text = "Tamaño Encomienda";
             // 
-            // CancelarButton
+            // CancelButton
             // 
-            CancelarButton.Location = new Point(949, 988);
-            CancelarButton.Name = "CancelarButton";
-            CancelarButton.Size = new Size(133, 40);
-            CancelarButton.TabIndex = 43;
-            CancelarButton.Text = "Cancelar";
-            CancelarButton.UseVisualStyleBackColor = true;
+            CancelButton.Location = new Point(949, 1023);
+            CancelButton.Name = "CancelButton";
+            CancelButton.Size = new Size(133, 40);
+            CancelButton.TabIndex = 43;
+            CancelButton.Text = "Cancelar";
+            CancelButton.UseVisualStyleBackColor = true;
+            CancelButton.Click += CancelButton_Click;
             // 
             // GenerarGuiaCDForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoScroll = true;
             ClientSize = new Size(1131, 1050);
-            Controls.Add(CancelarButton);
+            Controls.Add(CancelButton);
             Controls.Add(VolverButton);
             Controls.Add(GenerarButton);
             Controls.Add(groupBox1);
@@ -567,6 +570,6 @@
         private Label label1;
         private ComboBox TamañoComboBox;
         private Label label2;
-        private Button CancelarButton;
+        private Button CancelButton;
     }
 }
